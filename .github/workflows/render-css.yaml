@@ -4,11 +4,11 @@ on:
       - inst/pkgdown/assets/css/lesson.scss
       - .github/workflows/render-css.yaml
 
-name: Render README
+name: Render lesson.css
 
 jobs:
   render:
-    name: Render README
+    name: Render lesson.css 
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +23,5 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git commit README.md -m 'regenerated lesson css' || echo "No changes to commit"
+          git commit inst/pkgdown/assets/css/lesson.css -m 'regenerated lesson css' || echo "No changes to commit"
           git push origin || echo "No changes to commit"

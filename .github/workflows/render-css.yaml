@@ -18,7 +18,7 @@ jobs:
           install.packages("sass")
         shell: Rscript {0}
       - name: Render lesson css
-        run: Rscript -e 'sass(sass_file("inst/pkgdown/assets/css/lesson.scss"), output = "inst/pkgdown/assets/css/lesson.css")'
+        run: Rscript -e 'sass::sass(sass::sass_file("inst/pkgdown/assets/css/lesson.scss"), output = "inst/pkgdown/assets/css/lesson.css")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"

@@ -1,3 +1,4 @@
+<!-- START: inst/pkgdown/templates/config-docsearch.json -->
 {
   "index_name": "{{index}}",
   "start_urls": [
@@ -92,3 +93,4 @@
     ]
   }
 }
+<!-- END:   inst/pkgdown/templates/config-docsearch.json-->

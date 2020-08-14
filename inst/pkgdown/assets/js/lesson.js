@@ -7,6 +7,8 @@
     $("table").addClass("table table-striped");
 
     // Handle foldable challenges and solutions (on click and at start).
+    // ZNK: size() was deprecated in version 1.8 and removed in version 3.
+    // https://api.jquery.com/size/
     solution.click(function(event) {
       var trigger = $(event.target).has(".fold-unfold").length > 0
         || $(event.target).filter(".fold-unfold").length > 0;

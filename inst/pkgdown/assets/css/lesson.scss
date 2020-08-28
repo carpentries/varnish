@@ -34,17 +34,17 @@ $color-testimonial: #fc8dc1 !default;
     border-radius: 4px 0 0 4px;
 }
 
-.error   { @include cdSetup($color-error);   }
-.warning { @include cdSetup($color-warning); }
-.output  { @include cdSetup($color-output);  }
-.source  { @include cdSetup($color-source);  }
+pre.error   { @include cdSetup($color-error);   }
+pre.warning { @include cdSetup($color-warning); }
+pre.output  { @include cdSetup($color-output);  }
+pre.source  { @include cdSetup($color-source);  }
 
-.bash, .language-bash     { @include cdSetup($color-source); }
-.make, .language-make     { @include cdSetup($color-source); }
-.matlab, .language-matlab { @include cdSetup($color-source); }
-.python, .language-python { @include cdSetup($color-source); }
-.r, .language-r           { @include cdSetup($color-source); }
-.sql, .language-sql       { @include cdSetup($color-source); }
+pre.bash, pre.language-bash     { @include cdSetup($color-source); }
+pre.make, pre.language-make     { @include cdSetup($color-source); }
+pre.matlab, pre.language-matlab { @include cdSetup($color-source); }
+pre.python, pre.language-python { @include cdSetup($color-source); }
+pre.r, pre.language-r           { @include cdSetup($color-source); }
+pre.sql, pre.language-sql       { @include cdSetup($color-source); }
 
 pre.error::before,
 pre.warning::before,

@@ -46,32 +46,32 @@ $color-testimonial: #fc8dc1 !default;
 .r, .language-r           { @include cdSetup($color-source); }
 .sql, .language-sql       { @include cdSetup($color-source); }
 
-.error::before,
-.warning::before,
-.output::before,
-.source::before,
-.bash::before, .language-bash::before,
-.make::before, .language-make::before,
-.matlab::before, .language-matlab::before,
-.python::before, .language-python::before,
-.r::before, .language-r::before,
-.sql::before, .language-sql::before {
+pre.error::before,
+pre.warning::before,
+pre.output::before,
+pre.source::before,
+pre.bash::before, pre.language-bash::before,
+pre.make::before, pre.language-make::before,
+pre.matlab::before, pre.language-matlab::before,
+pre.python::before, pre.language-python::before,
+pre.r::before, pre.language-r::before,
+pre.sql::before, pre.language-sql::before {
     background-color: #f2eff6;
     display: block;
     font-weight: bold;
     padding: 5px 10px;
 }
 
-.error::before  { background-color: #ffebe6; content: "Error"; }
-.warning::before { background-color: #f8f4e8; content:" Warning"; }
-.output::before { background-color: #efefef; content: "Output"; }
-.source::before { content: "Code"; }
-.bash::before, .language-bash::before { content: "Bash"; }
-.make::before, .language-make::before { content: "Make"; }
-.matlab::before, .language-matlab::before { content: "Matlab"; }
-.python::before, .language-python::before { content: "Python"; }
-.r::before, .language-r::before { content: "R"; }
-.sql::before, .language-sql::before { content: "SQL"; }
+pre.error::before  { background-color: #ffebe6; content: "Error"; }
+pre.warning::before { background-color: #f8f4e8; content:" Warning"; }
+pre.output::before { background-color: #efefef; content: "Output"; }
+pre.source::before { content: "Code"; }
+pre.bash::before, pre.language-bash::before { content: "Bash"; }
+pre.make::before, pre.language-make::before { content: "Make"; }
+pre.matlab::before, pre.language-matlab::before { content: "Matlab"; }
+pre.python::before, pre.language-python::before { content: "Python"; }
+pre.r::before, pre.language-r::before { content: "R"; }
+pre.sql::before, pre.language-sql::before { content: "SQL"; }
 
 
 //----------------------------------------

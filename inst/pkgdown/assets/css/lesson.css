@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.error {
+pre.error {
   color: #bd2c00;
   border: solid 1px #bd2c00;
   border-left: solid 5px #bd2c00;
@@ -7,7 +7,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.warning {
+pre.warning {
   color: #cda01d;
   border: solid 1px #cda01d;
   border-left: solid 5px #cda01d;
@@ -15,7 +15,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.output {
+pre.output {
   color: #303030;
   border: solid 1px #303030;
   border-left: solid 5px #303030;
@@ -23,7 +23,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.source {
+pre.source {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -31,7 +31,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.bash, .language-bash {
+pre.bash, pre.language-bash {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -39,7 +39,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.make, .language-make {
+pre.make, pre.language-make {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -47,7 +47,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.matlab, .language-matlab {
+pre.matlab, pre.language-matlab {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -55,7 +55,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.python, .language-python {
+pre.python, pre.language-python {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -63,7 +63,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.r, .language-r {
+pre.r, pre.language-r {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;
@@ -71,7 +71,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.sql, .language-sql {
+pre.sql, pre.language-sql {
   color: #360084;
   border: solid 1px #360084;
   border-left: solid 5px #360084;

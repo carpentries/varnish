@@ -92,7 +92,7 @@ pre.sql::before, pre.language-sql::before {
   background-color: #f2eff6;
   display: block;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 5px 10px 5px 0px;
 }
 
 pre.error::before {

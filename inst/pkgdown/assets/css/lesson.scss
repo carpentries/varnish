@@ -111,6 +111,26 @@ $codeblock-padding: 5px !default;
     -webkit-font-smoothing: antialiased;
   }
 
+  h3 {
+    padding-top: $codeblock-padding;
+    padding-bottom: $codeblock-padding;
+    font-size: 18px;
+    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
+    border-color: $color;
+    margin-top: 0px;
+    margin-left: -$codeblock-padding; // to move back to the left margin of the enclosing blockquote
+  }
+
+  h3:before {
+    font-family: 'Glyphicons Halflings';
+    content: $glyph;
+    float: left;
+    padding-left: $codeblock-padding;
+    padding-right: $codeblock-padding;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+  }
+
 }
 
 .callout{ @include bkSetup($color-callout, "\e146"); }

@@ -2,6 +2,7 @@
 
 * update css to use em and not px
 * align logo with navbar
+* add testing phase notification to navbar
 
 # varnish 0.0.0.9006
 

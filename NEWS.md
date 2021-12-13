@@ -1,3 +1,7 @@
+# varnish 0.0.0.9008
+
+* instructor block placeholder added
+
 # varnish 0.0.0.9007
 
 * update css to use em and not px

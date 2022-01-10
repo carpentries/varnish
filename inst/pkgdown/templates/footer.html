@@ -1,50 +1,23 @@
-<!-- START: inst/pkgdown/templates/footer.html -->
-<div class="container">
-  {{#file_source}}
-  <div class="row">
-    <div class="col-xs-1">
-      <h3 class="text-left">
-        <a href="{{#site}}{{root}}{{/site}}{{page_back}}"><span class="glyphicon glyphicon-menu-{{left}}" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
-      </h3>
-    </div>
-    <div class="col-xs-10">
-      {{#site}}
-      <h3 class="maintitle"><a href="{{root}}index.html">{{title}}</a></h3>
-      {{/site}}
-    </div>
-    <div class="col-xs-1">
-      <h3 class="text-right">
-        <a href="{{#site}}{{root}}{{/site}}{{page_forward}}"><span class="glyphicon glyphicon-menu-{{right}}" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
-      </h3>
-    </div>
-  </div>
-  {{/file_source}}
-  <div class="row">
-    <div class="col-md-6 copyright" align="left">
-      Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0</a> 2018–{{#year}}{{year}}{{/year}}
-      by <a href="https://carpentries.org">The Carpentries</a>
-      <br>
-      Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0</a> 2016–2018
-      by <a href="https://softwarecarpentry.org">Software Carpentry Foundation</a>
-    </div>
-    <div class="col-md-6 help-links pull-right" align="right">
-      <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}" data-checker-ignore>Edit on GitHub</a>
-      /
-      <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md" data-checker-ignore>Contributing</a>
-      /
-      <a href="{{#yaml}}{{source}}/{{/yaml}}">Source</a>
-      /
-      <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CITATION" data-checker-ignore>Cite</a>
-      /
-      <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">Contact</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12" align="center">
-      Built with <a href="https://github.com/carpentries/sandpaper">sandpaper{{sandpaper_version}}</a>,
-      <a href="https://github.com/carpentries/pegboard">pegboard{{pegboard_version}}</a>,
-      and <a href="https://github.com/carpentries/varnish">varnish{{varnish_version}}</a>.
-    </div>
-  </div>
-</div>
-<!-- END:   inst/pkgdown/templates/footer.html-->
+		<footer class="row footer mx-md-3">
+			<hr/>
+			<div class="col-md-6">
+				<p>All Carpentry lessons are subject to the <a href="#">Code of Conduct</a></p>
+				<p><a href="#">Edit on Github</a> | <a href="#">Contributing</a> | <a href="#">Source</a></p>
+				<p><a href="#">Cite</a> | <a href="#">Contact</a> | <a href="#">About</a></p>
+			</div>
+			<div class="col-md-6">
+				<p>Licensed under <a href="#">CC-BY 4.0 2018–2021</a> by The Carpentries</p>
+				<p>Licensed under <a href="#">CC-BY 4.0 2016–2018</a> by Software Carpentry Foundation</p>
+				<p>Using <a href="#">The Carpentries style</a> version <a href="#">9.5.3</a>.</p>
+			</div>
+		</footer>
+	</div> <!-- / div.container -->
+	<div id="to-top">
+		<a href="#top">
+			<i class="search-icon" data-feather="arrow-up" role="img" aria-label="Back to top"></i><br/>
+			<span class="d-none d-sm-none d-md-none d-lg-none d-xl-block">Back</span> To Top
+		</a>
+	</div>
+	<script>
+		feather.replace();
+	</script>

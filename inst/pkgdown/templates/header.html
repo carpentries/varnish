@@ -1,13 +1,91 @@
-<!--START: inst/pkgdown/templates/header.html-->
-
-{{#yaml}}{{#life_cycle}}
-    <div class="panel panel-default life-cycle">
-      <div id="life-cycle" class="panel-body {{life_cycle}}">
-        {{#pre_alpha}} This lesson is still being designed and assembled (Pre-Alpha version) {{/pre_alpha}}
-        {{#alpha}} This lesson is in the early stages of development (Alpha version) {{/alpha}}
-        {{#beta}} This lesson is being piloted (Beta version) {{/beta}}
+<header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav {{#yaml}}{{carpentry_name}}{{/yaml}}">
+  <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+  <div class="container-fluid top-nav-container">
+    <div class="col-md-6">
+      <div class="large-logo"><img alt="carpentries logo" src="{{#site}}{{root}}{{/site}}favicons/{{#yaml}}{{carpentry}}{{/yaml}}/carpentries-logo.png"></div>
+    </div>
+    <div class="selector-container ">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          English (US)  <i data-feather="chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><button class="dropdown-item" type="button">French</button></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><button class="dropdown-item" type="button">Student View</button></li>
+        </ul>
       </div>
     </div>
-{{/life_cycle}}{{/yaml}}
+  </div>
+  <hr />
+</header>
 
-<!--END  : inst/pkgdown/templates/header.html-->
+<nav class="navbar navbar-expand-xl navbar-light bg-white bottom-nav {{#yaml}}{{carpentry_name}}{{/yaml}}" aria-label="Main Navigation">
+  <div class="container-fluid nav-container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="menu-title">Menu</span>
+    </button>
+    <div class="nav-logo">
+      <img class="small-logo" src="{{#site}}{{root}}{{/site}}favicons/{{#yaml}}{{carpentry}}{{/yaml}}/carpentries-logo-sm.png">
+    </div>
+    <div class="lesson-title-md">
+      The Unix Shell
+    </div>
+    <div class="search-icon-sm">
+      <i role="img" aria-label="search button" data-feather="search"></i>
+    </div>
+    <div class="desktop-nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <span class="lesson-title">
+            The Unix Shell
+          </span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Key Points</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Instructor Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Extract All Images</a>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            More <i data-feather="chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Learner Profiles</a></li>
+            <li><a class="dropdown-item" href="#">Discussion</a></li>
+            <li><a class="dropdown-item" href="#">Glossary</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex col-md-2 search-form">
+      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success tablet-search-button"  type="submit"><i class="search-icon" data-feather="search" role="img" aria-label="search button"></i></button>
+    </form>
+  </div>
+</nav>
+
+<div class="col-md-12 mobile-title">
+  The Unix Shell
+</div>
+
+<aside class="col-md-12 lesson-progress">
+  <div style="width: {{progress}}%" class="percentage">
+    {{progress}}%
+  </div>
+  <div class="progress {{#yaml}}{{carpentry_name}}{{/yaml}}">
+    <div class="progress-bar {{#yaml}}{{carpentry_name}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress }}" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    </div>
+  </div>
+</aside>
+

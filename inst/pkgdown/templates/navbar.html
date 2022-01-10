@@ -1,48 +1,233 @@
-<!-- START: inst/pkgdown/templates/navbar.html -->
-{{#navbar}}
-<div class="navbar navbar-{{{type}}} navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="{{#site}}{{root}}{{/site}}index.html">Home</a>
-        <a class="navbar-link" href="https://carpentries.github.io/sandpaper-docs/" 
-          aria-label="Lesson Infrastructure is in the testing phase. Read on for more information."
-          title="Lesson Infrastructure is in the testing phase.">&#128679;</a>
-{{#yaml}}
-        <!-- TODO: the logo is not centered in the nav bar and looks ugly... also there needs to be a better way of choosing the logo... probably on the R side.-->
-        <a href="https://{{#cp}}carpentries{{/cp}}{{#swc}}software-carpentry{{/swc}}{{#dc}}data-carpentry{{/dc}}{{#lc}}library-carpentry{{/lc}}.org" class="pull-left">
-          <img class="navbar-logo" src="{{#site}}{{root}}{{/site}}img/{{carpentry}}-icon-{{#cp}}blue{{/cp}}{{#swc}}blue{{/swc}}{{#dc}}black{{/dc}}{{#lc}}black{{/lc}}.svg" alt="{{carpentry_name}} logo" />
-        </a>
-{{/yaml}}
-      </span>
-    </div>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      {{#left}}
-      <ul class="nav navbar-nav">
-        {{{.}}}
-      </ul>
-      {{/left}}
-      {{#right}}
-      <ul class="nav navbar-nav navbar-right">
-        {{{.}}}
-      </ul>
-      {{/right}}
-      {{#yaml}}{{#docsearch}}
-      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
-        <div class="form-group">
-          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-        </div>
-      </form>
-      {{/docsearch}}{{/yaml}}
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-{{/navbar}}
-<!-- END:   inst/pkgdown/templates/navbar.html-->
+<div class="row">
+  <div id="sidebar-col" class="col-lg-4">
+    <div id="sidebar" class="sidebar">
+      <nav aria-labelledby="flush-headingEleven">
+        <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" ><i class="search-icon" data-feather="x" role="img"></i></button>
+        <div class="sidebar-inner">
+          <div class="row mobile-row">
+            <div class="col">
+              <div class="sidenav-view-selector">
+                <div class="accordion accordion-flush" id="accordionFlush9">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
+                      </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="#">Learner View</a>
+                      </div>
+                    </div>
+                  </div><!--/div.accordion-item-->
+                </div><!--/div.accordion-flush-->
+              </div><!--div.sidenav-view-selector -->
+            </div><!--/div.col -->
+            <div class="col">
+              <div class="sidenav-language-selector">
+                <div class="accordion accordion-flush" id="accordionFlush10">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTen">
+                      <button class="accordion-button side-language collapsed" id="language" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">English (US)
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="#">French</a>
+                      </div>
+                    </div>
+                  </div><!--/div.accordion-item-->
+                </div><!--/div.accordion-flush-->
+              </div><!--/div.sidenav-language-selector -->
+            </div><!--/div.col -->
+            <hr/>
+          </div><!--/div.mobile-row -->
+
+          <div class="accordion accordion-flush" id="accordionFlush11">
+            <div class="accordion-item">
+
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                <h2 class="accordion-header chapters" id="flush-headingEleven">
+                  CHAPTERS
+                </h2>
+              </button>
+              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+
+                <div class="accordion-body">
+                  <a href="#">Summary and Setup</a>
+                  <div class="accordion accordion-flush" id="accordionFlush1">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Introducing the Shell
+                        </button>
+                      </div>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush1">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush2">
+                    <div class="accordion-item">
+                      <div class="accordion-header " id="flush-headingTwo">
+                        <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          <span class="visually-hidden">Current Chapter</span>
+                          <span class="current-chapter">Exploring Data Frames</span>
+                        </button>
+                      </div>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush2">
+                        <div class="accordion-body">
+                          <ul>
+                            <li><a class="section-link" href="#addingcolumns">Adding columns and rows to data frames</a></li>
+                            <li><a class="section-link" href="#factors">Factors</a></li>
+                            <li><a class="section-link" href="#removingcolumns">Removing Columns</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush8">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                          Working with Files and Directories
+                        </button>
+                      </div>
+                      <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlush3">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush4">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                          Pipes and Filters
+                        </button>
+                      </div>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush4">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush5">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                          Loops
+                        </button>
+                      </div>
+                      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush3">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush6">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix " aria-expanded="false" aria-controls="flush-collapseSix">
+                          Shell Scripts
+                        </button>
+                      </div>
+                      <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlush3">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion accordion-flush" id="accordionFlush7">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                          Finding Things
+                        </button>
+                      </div>
+                      <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlush3">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>Adding columns and rows to data frames</li>
+                            <li>Factors</li>
+                            <li>Removing Columns</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="half-width"/>
+
+            <div class="accordion accordion-flush resources" id="accordionFlush12">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwelve">
+                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                    RESOURCES
+                  </button>
+                </h2>
+                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><a href="#">Key Points</a></li>
+                      <li><a href="#">Instructor Notes</a></li>
+                      <li><a href="#">Extract All Images</a></li>
+                      <li><a href="#">Learner Profiles</a></li>
+                      <li><a href="#">Discussion</a></li>
+                      <li><a href="#">Glossary</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href=#>See all in one page</a>
+
+            <hr class="d-none d-sm-block d-md-none"/>
+
+            <div class="d-grid gap-1">
+              <button class="btn btn-primary-outline">Export Lesson Outline</button>
+              <button class="btn btn-primary-outline">Export All Slides</button>
+            </div>
+          </div><!-- /div.accordion -->
+        </div><!-- /div.sidebar-inner -->
+      </nav>
+    </div><!-- /div.sidebar -->
+  </div><!-- /div.sidebar-col -->
+</div> <!-- /div.row -->

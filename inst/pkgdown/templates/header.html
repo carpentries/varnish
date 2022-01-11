@@ -1,5 +1,6 @@
 <header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav {{#yaml}}{{carpentry_name}}{{/yaml}}">
   {{#schedule}}
+  {{/schedule}}
   {{^schedule}}
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   {{/schedule}}
@@ -19,13 +20,14 @@
       </div>
       {{/language}}{{/yaml}}
       <div class="dropdown">
-        {{#yaml}}{{#instructor}}
+        {{#instructor}}
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
           <li><button class="dropdown-item" type="button">Learner View</button></li>
         </ul>
+        {{/instructor}}
         {{^instructor}}
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
@@ -34,7 +36,6 @@
           <li><button class="dropdown-item" type="button">Instructor View</button></li>
         </ul>
         {{/instructor}}
-        {{/yaml}}
       </div>
     </div>
   </div>
@@ -73,6 +74,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}/images.html">Extract All Images</a>
         </li>
+        {{/instructor}}
         {{^instructor}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}/reference.html#glossary">Glossary</a>
@@ -104,6 +106,7 @@
 </div>
 
 {{#schedule}}
+{{/schedule}}
 {{^schedule}}
 <aside class="col-md-12 lesson-progress">
   <div style="width: {{progress}}%" class="percentage">

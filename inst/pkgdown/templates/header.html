@@ -1,5 +1,8 @@
 <header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav {{#yaml}}{{carpentry_name}}{{/yaml}}">
+  {{#schedule}}
+  {{^schedule}}
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+  {{/schedule}}
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo"><img alt="carpentries logo" src="{{#site}}{{root}}{{/site}}favicons/{{#yaml}}{{carpentry}}{{/yaml}}/carpentries-logo.png"></div>
@@ -100,6 +103,8 @@
   {{#yaml}}{{carpentry_name}} -{{/yaml}}{{#site}}{{title}}{{/site}}
 </div>
 
+{{#schedule}}
+{{^schedule}}
 <aside class="col-md-12 lesson-progress">
   <div style="width: {{progress}}%" class="percentage">
     {{progress}}%
@@ -109,4 +114,4 @@
     </div>
   </div>
 </aside>
-
+{{/schedule}}

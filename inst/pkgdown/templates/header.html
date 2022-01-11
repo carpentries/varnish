@@ -6,7 +6,7 @@
   {{/schedule}}
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
-      <div class="large-logo"><img alt="carpentries logo" src="{{#site}}{{root}}{{/site}}favicons/{{#yaml}}{{carpentry}}{{/yaml}}/carpentries-logo.png"></div>
+      <div class="large-logo"><img alt="{{#yaml}}{{carpentry}}{{/yaml}} logo" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}"></div>
     </div>
     <div class="selector-container ">
       {{#yaml}}{{#language}}
@@ -49,10 +49,10 @@
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
-      <img class="small-logo" src="{{#site}}{{root}}{{/site}}favicons/{{#yaml}}{{carpentry}}{{/yaml}}/carpentries-logo-sm.png">
+      <img class="small-logo" alt="{{#yaml}}{{carpentry}}{{/yaml}} logo" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo-sm.svg{{/yaml}}">
     </div>
     <div class="lesson-title-md">
-      {{#yaml}}{{carpentry_name}} -{{/yaml}}{{#site}}{{title}}{{/site}}
+      {{#site}}{{title}}{{/site}}
     </div>
     <div class="search-icon-sm">
       <i role="img" aria-label="search button" data-feather="search"></i>
@@ -61,7 +61,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <span class="lesson-title">
-            {{#yaml}}{{carpentry_name}} -{{/yaml}}{{#site}}{{title}}{{/site}}
+            {{#site}}{{title}}{{/site}}
           </span>
         </li>
         <li class="nav-item">
@@ -102,7 +102,7 @@
 </nav>
 
 <div class="col-md-12 mobile-title">
-  {{#yaml}}{{carpentry_name}} -{{/yaml}}{{#site}}{{title}}{{/site}}
+  {{#site}}{{title}}{{/site}}
 </div>
 
 {{#schedule}}

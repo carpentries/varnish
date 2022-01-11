@@ -1,4 +1,4 @@
-<header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav {{#yaml}}{{carpentry_name}}{{/yaml}}">
+<header id="top" class="navbar navbar-expand-md navbar-light bg-white top-nav {{#yaml}}{{carpentry_icon}}{{/yaml}}">
   {{#schedule}}
   {{/schedule}}
   {{^schedule}}
@@ -42,7 +42,7 @@
   <hr />
 </header>
 
-<nav class="navbar navbar-expand-xl navbar-light bg-white bottom-nav {{#yaml}}{{carpentry_name}}{{/yaml}}" aria-label="Main Navigation">
+<nav class="navbar navbar-expand-xl navbar-light bg-white bottom-nav {{#yaml}}{{carpentry_icon}}{{/yaml}}" aria-label="Main Navigation">
   <div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -112,8 +112,8 @@
   <div style="width: {{progress}}%" class="percentage">
     {{progress}}%
   </div>
-  <div class="progress {{#yaml}}{{carpentry_name}}{{/yaml}}">
-    <div class="progress-bar {{#yaml}}{{carpentry_name}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress }}" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress {{#yaml}}{{carpentry_icon}}{{/yaml}}">
+    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress }}" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside>

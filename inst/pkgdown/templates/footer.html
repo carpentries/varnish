@@ -20,6 +20,11 @@
 			<span class="d-none d-sm-none d-md-none d-lg-none d-xl-block">Back</span> To Top
 		</a>
 	</div>
+  {{#json}}
+  <script type="application/ld+json">
+    {{& json}}
+  </script>
+  {{/json}}
 	<script>
 		feather.replace();
 	</script>

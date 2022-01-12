@@ -1,7 +1,7 @@
+<!-- START: inst/pkgdown/templates/navbar.html -->
 {{#schedule}}
 {{/schedule}}
 {{^schedule}}
-<div class="row">
   <div id="sidebar-col" class="col-lg-4">
     <div id="sidebar" class="sidebar">
       <nav aria-labelledby="flush-headingEleven">
@@ -60,11 +60,14 @@
                   <a href="#">Summary and Setup</a>
                   <div class="accordion accordion-flush" id="accordionFlush1">
                     <div class="accordion-item">
+                      <!-- Chapter name -->
                       <div class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                           Introducing the Shell
                         </button>
-                      </div>
+                      </div><!--/div.accordion-header-->
+
+                      <!-- sections -->
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush1">
                         <div class="accordion-body">
                           <ul>
@@ -72,10 +75,11 @@
                             <li>Factors</li>
                             <li>Removing Columns</li>
                           </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        </div><!--/div.accordion-body-->
+                      </div><!--/div.accordion-collapse-->
+
+                    </div><!--/div.accordion-item-->
+                  </div><!--/div.accordion-flush-->
 
                   <div class="accordion accordion-flush" id="accordionFlush2">
                     <div class="accordion-item">
@@ -232,5 +236,5 @@
       </nav>
     </div><!-- /div.sidebar -->
   </div><!-- /div.sidebar-col -->
-</div> <!-- /div.row -->
 {{/schedule}}
+<!-- END:   inst/pkgdown/templates/navbar.html-->

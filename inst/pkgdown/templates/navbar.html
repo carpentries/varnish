@@ -12,6 +12,7 @@
               <div class="sidenav-view-selector">
                 <div class="accordion accordion-flush" id="accordionFlush9">
                   <div class="accordion-item">
+        {{#instructor}}
                     <h2 class="accordion-header" id="flush-headingNine">
                       <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
@@ -19,13 +20,27 @@
                     </h2>
                     <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
                       <div class="accordion-body">
-                        <a href="#">Learner View</a>
+                        <a href="{{this_page}}">Learner View</a>
                       </div>
                     </div>
+        {{/instructor}}
+        {{^instructor}}
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
+                      </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="instructor/{{this_page}}">Instructor View</a>
+                      </div>
+                    </div>
+        {{/instructor}}
                   </div><!--/div.accordion-item-->
                 </div><!--/div.accordion-flush-->
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
+      {{#yaml}}{{#language}}
             <div class="col">
               <div class="sidenav-language-selector">
                 <div class="accordion accordion-flush" id="accordionFlush10">
@@ -43,6 +58,7 @@
                 </div><!--/div.accordion-flush-->
               </div><!--/div.sidenav-language-selector -->
             </div><!--/div.col -->
+      {{/language}}{{/yaml}}
             <hr/>
           </div><!--/div.mobile-row -->
 
@@ -57,7 +73,7 @@
               <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
 
                 <div class="accordion-body">
-                  <a href="index.html">Summary and Setup</a>
+                  <a href="index.html">Home</a>
                   {{{ sidebar }}}
                 </div>
               </div>

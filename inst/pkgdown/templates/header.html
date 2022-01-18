@@ -25,7 +25,7 @@
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><button class="dropdown-item" type="button" formaction='{{this_page}}'>Learner View</button></li>
+          <li><button class="dropdown-item" type="button" onclick="window.location.href='../{{this_page}}';">Learner View</button></li>
         </ul>
         {{/instructor}}
         {{^instructor}}
@@ -33,7 +33,7 @@
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><button class="dropdown-item" type="button" formaction='instructor/{{this_page}}'>Instructor View</button></li>
+          <li><button class="dropdown-item" type="button" onclick="window.location.href='instructor/{{this_page}}';">Instructor View</button></li>
         </ul>
         {{/instructor}}
       </div>

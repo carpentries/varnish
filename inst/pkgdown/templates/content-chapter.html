@@ -26,8 +26,8 @@
         <h1>{{& pagetitle}}</h1>
         <p>{{#updated}} Last updated on {{updated}} | {{/updated}}<a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         {{#instructor}}
-        <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> {{minutes}} minutes </p>
-        <p><button class="btn btn-primary-outline">Export Chapter Slides</button></p>
+        {{#minutes}}<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> {{minutes}} minutes </p>{{/minutes}}
+        {{#slides}}<p><button class="btn btn-primary-outline">Export Chapter Slides</button></p>{{/slides}}
         {{/instructor}}
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>

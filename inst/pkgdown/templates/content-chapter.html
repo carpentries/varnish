@@ -37,5 +37,24 @@
 
       </div> <!-- / div.lesson-content -->
     </main> <!-- / main#main-content.main-content -->
+    <nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter">
+      <div class="d-block d-sm-block d-md-none">
+        {{#page_back}}
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        {{/page_back}}
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+      </div>
+        {{/page_forward}}
+      <!-- content for large screens -->
+      <div class="d-none d-sm-none d-md-block">
+        {{#page_back}}
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous{{#back_title}}: {{back_title}}{{/back_title}}</a>
+        {{/page_back}}
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        {{/page_forward}}
+      </div>
+    </nav>
   </div> <!-- / div.primary-content.col-xs-12 -->
 <!-- END:   inst/pkgdown/templates/content-instructor.html-->

@@ -34,5 +34,19 @@
       {{{setup}}}
       {{/setup}}
     </main>
+    <nav class="bottom-pagination mx-md-4" aria-label="Next Chapter">
+      <!-- content for small screens -->
+      <div class="d-block d-sm-block d-md-none">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+      </div>
+        {{/page_forward}}
+      <!-- content for large screens -->
+      <div class="d-none d-sm-none d-md-block">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        {{/page_forward}}
+      </div>
+    </nav>
   </div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->

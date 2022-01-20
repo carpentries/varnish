@@ -64,18 +64,21 @@
             {{#site}}{{title}}{{/site}}
           </span>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{#site}}{{root}}{{/site}}reference.html">Key Points</a>
-        </li>
         {{#instructor}}
         <li class="nav-item">
-          <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor-notes.html">Instructor Notes</a>
+          <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{#site}}{{root}}{{/site}}images.html">Extract All Images</a>
+          <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
         </li>
         {{/instructor}}
         {{^instructor}}
+        <li class="nav-item">
+          <a class="nav-link" href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
         </li>
@@ -83,16 +86,16 @@
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}profiles.html">Learner Profiles</a>
         </li>
         {{/instructor}}
+        {{#more}}
         <li class="nav-item dropdown">
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{#site}}{{root}}{{/site}}profiles.html">Learner Profiles</a></li>
-            <li><a class="dropdown-item" href="{{#site}}{{root}}{{/site}}discussion.html">Discussion</a></li>
-            <li><a class="dropdown-item" href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a></li>
+            {{{more}}}
           </ul>
         </li>
+        {{/more}}
       </ul>
     </div>
     <form class="d-flex col-md-2 search-form">
@@ -113,7 +116,7 @@
     {{progress}}%
   </div>
   <div class="progress {{#yaml}}{{carpentry_icon}}{{/yaml}}">
-    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress }}" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside>

@@ -1,0 +1,28 @@
+.schedule-heading{
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+
+.schedule {
+  margin-bottom: 225px;
+}
+
+.schedule td {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg:none;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background: $light-gray;
+}
+
+@include media-breakpoint-up(md) {
+
+  tr td:first-child {
+    padding-left: 100px;
+  }
+}

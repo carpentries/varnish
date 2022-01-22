@@ -1,0 +1,41 @@
+on:
+  push: 
+    paths:
+      - .github/workflows/compile-css.yaml
+      - source/**
+      - postinstall.sh
+      - squash-a-script.sh
+      - squash-sass.sh
+      - package.json
+      - package-lock.json
+
+name: Render CSS and Javascript
+
+jobs:
+  compress-everything:
+    name: Render css/javascript
+    runs-on: macOS-11
+    steps:
+      - uses: actions/checkout@v2
+      - name: Clean
+        run: rm -rf inst/pkgdown/assets/assets/
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm install -g uglify-js
+      - name: Comple js
+        run: bash squash-a-script.sh
+      - name: Install sass
+        run: brew install sass/sass/sass
+      - name: Compile sass
+        run: bash squash-sass.sh
+      - name: Commit
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add assets/ || echo ""
+          git add inst/ || echo ""
+          git commit -m 'regenerated css/js' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
+

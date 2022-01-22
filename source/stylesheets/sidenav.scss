@@ -1,0 +1,183 @@
+.sidebar {
+  background: $light-gray;
+  padding-top: 35px;
+  margin-left: -30px;
+  height: calc(100% + 25px);
+  display: none;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+  color: $black;
+  font-size: 18px;
+  a {
+    color: $black;
+    &:hover {
+      color: $blue;
+    }
+    &:focus {
+      outline: 4px solid rgba(13, 110, 253, 0.25);
+    }
+  }
+  li {
+    margin-top:20px;
+    font-size:18px;
+  }
+  .accordion-body {
+    background: $light-gray;
+    margin: 0px;
+    padding: 0px;
+  }
+  .accordion-item {
+    background: $light-gray;
+    margin-top:20px;
+  }
+  .accordion-button {
+    background: $light-gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+    font-size: 18px;
+    box-shadow: none;
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
+    }
+    &:focus {
+      box-shadow: rgba(13, 110, 253, 0.25) 0px 0px 0px 4px;
+    }
+    &:not(.collapsed) {
+      color: $black;
+    }
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.side-language::after {
+  background-image: none;
+}
+.side-language:not(.collapsed)::after {
+  background-image: none;
+}
+
+.sidenav-view-selector {
+  margin-bottom: 15px;
+}
+
+.mobile-row {
+  margin-bottom: 60px;
+}
+
+.sidebar-collapsed {
+  background: $light-gray;
+  height: 100%;
+  width: 95px;
+  position: absolute;
+  left: 30px;
+}
+
+.collapse-toggle {
+  float: right;
+  margin-right: 10px;
+  margin-top: -25px;
+  font-size: 12px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#chapters, #resources, .accordion-header.chapters {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.sidebar-inner {
+  margin-left: 65px;
+  margin-right: 60px;
+  padding-left: 20px;
+  padding-bottom: 100px;
+}
+
+.current-chapter  {
+  font-weight: 800;
+}
+
+.current-chapter {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.accordion-body li{
+  list-style: none;
+}
+
+
+@include media-breakpoint-up(md) {
+
+  .sidebar {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+  }
+
+  .mobile-row {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+
+  .sidebar {
+    display: block;
+    position: relative;
+    top: 0px;
+    height:100%;
+    padding-top: 20px;
+  }
+
+  .sidebar-col {
+    height:100%;
+    position: relative;
+    left: 20px;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+
+  .sidebar-inner {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 100px;
+  }
+
+  .resources {
+    display: none;
+  }
+  .collapse-toggle {
+    margin-bottom:25px;
+  }
+
+}

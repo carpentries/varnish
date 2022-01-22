@@ -1,0 +1,60 @@
+.instructor-note {
+   margin-bottom: 25px;
+   .note-square {
+     width: 53px;
+     height: 53px;
+     color: #ffffff;
+     background: $magenta;
+     position: absolute;
+     top: 0;
+     left: 0;
+   }
+   .accordion-body {
+     padding: 25px 35px;
+     background: $light-gray;
+   }
+  .accordion-button {
+    position: relative;
+    background: $light-gray;
+    height: 53px;
+    border-color: $black;
+    padding-left: 10px;
+    color: $black;
+    box-shadow: 0;
+    &:focus {
+      box-shadow: #0d6efd 0px 0px 0px 4px;
+    }
+    &, h3 {
+      font-family: Mulish;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-decoration: underline;
+      text-underline-offset: 25px;
+      margin-left: 65px;
+    }
+    &.collapsed {
+      color: $black;
+      h3 {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .instructor-note .accordion-button h2 {
+    line-height: 16px;
+    text-decoration: none;
+    text-underline-offset: 1px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .instructor-note .accordion-button h2 {
+    text-underline-offset: 25px;
+  }
+}

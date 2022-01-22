@@ -1,0 +1,91 @@
+.codewrapper {
+  position: relative;
+}
+
+/* ZNK: added in 2022-01-07 */
+div.sourceCode {
+  position: relative;
+}
+/* ZNK: added in 2022-01-07 */
+
+pre {
+  font-family: 'Source Code Pro', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  padding: 25px;
+  letter-spacing: 0.01em;
+  background: $light-gray;
+  &.input {
+    border-top: 10px solid $light-blue;
+  }
+  /* ZNK: added in 2022-01-07 */
+  &.sourceCode {
+    border-top: 10px solid $light-blue;
+  }
+  /* ZNK: end */
+  &.error {
+    border-top: 10px solid $red;
+  }
+  &.warning {
+    border-top: 10px solid $orange;
+  }
+  &.output {
+    border-top: 10px solid $black;
+  }
+  /* ZNK: added in 2022-01-07 */
+  /* highlighted code uses spans that need a line break before to avoid */
+  /* overlap with the header */
+  code.sourceCode::before {
+    // https://www.w3docs.com/snippets/css/how-to-add-a-line-break-before-an-element-with-css.html
+    content: "\A";
+  }
+  /* ZNK: end */
+  code {
+    word-wrap: normal; /* Prevent wrapping to next line in code blocks */
+    /* ZNK: added in 2022-01-07 */
+    /* this allows for code highlighting via pandoc*/
+    padding: 0;
+    .sourceCode {white-space: pre; position: relative; }
+    span:empty { height: 1.2em; }
+    span { color: inherit; text-decoration: inherit; font-family: inherit; }
+    /* ZNK: end */
+  }
+}
+
+// ZNK: added in 2022-01-10
+// this prevents pkgdown syntax highlighting from destroying our wrappings
+pre, pre code {
+  white-space: pre;
+}
+
+pre.output > code::before {
+  content: "\A";
+}
+// ZNK: end
+
+// ZNK: added in 2022-01-17
+// all callout and accordion pre blocks needs a light background
+// .challenge-accordion pre {
+.callout pre {
+  background: #ffffff;
+  margin-right: 15px;
+}
+
+.accordion pre {
+  background: #ffffff;
+  margin-right: 15px;
+}
+// ZNK: end
+
+.code-label {
+  font-size: 18px;
+  border-bottom: 1px solid $black;
+  line-height: 23.4px;
+  position: absolute;
+  right: 25px;
+  margin-top:25px;
+}
+

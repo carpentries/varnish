@@ -1,0 +1,474 @@
+.bottom-nav {
+  border-top: 45px solid $dark-purple;
+  padding-bottom: 5px;
+}
+
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+.bottom-nav.data {
+  border-top: 45px solid $dark-green;
+}
+
+.bottom-nav.library{
+  border-top: 45px solid $red;
+}
+
+.bottom-nav.carpentries {
+  border-top: 45px solid $dark-blue;
+}
+
+.searchbox {
+  border: 1px solid $black;
+}
+
+.small-logo {
+  height: 32px;
+}
+
+.mobile-title {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  padding-left: 45px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  box-shadow: 0px 2px 2px rgba(60, 55, 68, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.percentage {
+  text-align: right;
+  position: relative;
+  top: 5px;
+  right: -20px;
+  color: $black;
+}
+
+.progress {
+  background: $light-purple;
+  border-radius: 20px;
+  margin: 10px;
+  height: 5px;
+}
+
+.progress-bar {
+  background: $dark-purple;
+  border-radius: 20px;
+  height:5px;
+}
+
+.progress.library {
+  background: $light-red;
+}
+
+.progress-bar.library {
+  background: $red;
+}
+
+.progress.data {
+  background: $light-green;
+}
+
+.progress-bar.data {
+  background: $dark-green;
+}
+
+.progress.carpentries {
+  background: $very-light-blue;
+}
+
+.progress-bar.carpentries {
+  background: $dark-blue;
+}
+
+.lesson-progress {
+  background: $light-gray;
+  padding: 25px;
+  margin-bottom: 25px;
+  padding-top: 5px;
+}
+
+.nav-container {
+  border-bottom: 1px solid $black;
+  padding-bottom: 5px;
+}
+
+.large-logo {
+  margin-left: 25px;
+}
+
+.navbar-toggler {
+  float: left;
+  border: none;
+  color: $black;
+  margin-left: 17px;
+}
+
+.nav-item button {
+  background:none;
+  border:none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.menu-title {
+  padding-top: 5px;
+}
+
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  bottom: 43.66%;
+}
+
+.search-icon-sm {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  bottom: 20.83%;
+}
+
+.top-nav {
+  display: none;
+}
+
+.search-icon-md {
+  display: none;
+}
+
+.top-nav-container {
+  padding-right: 25px;
+}
+
+.nav-item {
+  margin-right: 40px;
+}
+
+.nav-link a {
+  font-size: 16px;
+}
+
+.lesson-title {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  margin-left: 55px;
+  display: none;
+}
+
+.lesson-title-md {
+  display: none;
+}
+
+.top-nav .dropdown button {
+  background: #ffffff;
+  color: $black;
+  border: none;
+}
+
+.top-nav .dropdown .bordered-button {
+  background: #ffffff;
+  color: $black;
+  border-radius: 0px;
+  border-left: 1px solid $black;
+}
+
+.top-nav .icon {
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+
+.searchbox {
+  width: 100%;
+  display: none;
+}
+
+.tablet-search {
+  display: none;
+}
+
+.tablet-search-button {
+  display: none;
+}
+
+#expand-code {
+  color: $blue;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+}
+
+#expand-code:hover {
+  text-decoration: underline;
+}
+
+.chapter-link {
+  text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chapter-link:hover{
+  text-decoration-thickness: 2px;
+}
+
+.small-arrow{
+  height:14px;
+}
+
+@include media-breakpoint-up(md) {
+  .progress {
+    height: 12px;
+  }
+
+  .progress-bar {
+    height: 12px;
+  }
+
+  #to-top {
+    position: fixed;
+    text-align: center;
+    color: $blue;
+    top:70%;
+    right: 25px;
+    width: 100px;
+    cursor: pointer;
+    z-index:3;
+    display: none;
+    filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white);
+    
+  }
+
+  #to-top i {
+    box-shadow: 0px 0px 10px 10px white;
+  }
+
+  .bottom-nav.data, .bottom-nav.library, .bottom-nav.carpentries, .bottom-nav.software {
+    border: none;
+  }
+
+  .tablet-search-button {
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    border: none;
+    color: $black;
+    display: block;
+  }
+  .searchbox {
+    display: block;
+    margin-right: 50px;
+  }
+
+  .search-form {
+    margin-right: 20px;
+  }
+
+  .tablet-search {
+    display: block;
+  }
+  .tablet-search-button {
+    margin-right: -25px;
+  }
+
+  .tablet-search-button:hover {
+    background: none;
+    color: $black;
+  }
+
+  .tablet-search {
+    margin-right: 30px;
+  }
+
+  .search-icon-sm {
+    display: none;
+  }
+  .tablet-search {
+    display: block;
+  }
+  .nav-container {
+    border: none;
+  }
+  
+  .mobile-title {
+    display: none;
+  }
+
+  .large-logo {
+    margin-left: -10px;
+    margin-bottom: 20px;
+  }
+
+  .top-nav hr{
+    margin: 0px 25px 0px 25px;
+    color: $black;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .lesson-title {
+    display: none;
+  }
+
+  .lesson-title-md {
+    display: block;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    position: absolute;
+    left: 39.12%;
+    margin-bottom: 30px;
+    margin-top: 25px;
+  }
+
+  .top-nav {
+    display: block;
+    border-top: 22px solid $dark-purple;
+  }
+
+   .top-nav.data {
+    border-top: 22px solid $dark-green;
+  }
+
+  .top-nav.carpentries {
+    border-top: 22px solid $dark-blue;
+  }
+
+  .top-nav.library {
+    border-top: 22px solid $red;
+  }
+
+  .bottom-nav {
+    border:none;
+    box-shadow: 0px 2px 2px rgba(60, 55, 68, 0.15);
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+  .search-icon-md {
+    position: absolute;
+    left: -30px;
+  }
+
+  .navbar-toggler {
+    margin-left: 15px;
+  }
+
+  .top-nav-container {
+    padding-left: 55px;
+  }
+
+  .top-nav .dropdown {
+    display: inline;
+  }
+
+  .selector-container {
+    text-align:right;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+
+  .resources-side {
+    display: none;
+  }
+
+  .tablet-search-button {
+    position: absolute;
+    top: 8px;
+    right: 35px;
+  }
+
+  .desktop-search {
+    display: block;
+  }
+
+  .search-form {
+    margin-right: 0px;
+  }
+
+.lesson-title-md {
+    display: inline;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+  }
+
+  .top-nav {
+    display: block;
+    border-top: 22px solid $dark-purple;
+    padding-left: 40px;
+    padding-top: 12px;
+    padding-right: 20px
+  }
+
+  .top-nav hr {
+    margin: 0px 25px 0px 25px;
+    color: $black;
+    width: 75%;
+  }
+
+  .bottom-nav {
+    padding-right: 40px;
+  }
+
+  .lesson-title {
+    display: inline;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .lesson-title-md {
+    display: none;
+  }
+
+  .search-icon-sm {
+    display: none;
+  }
+
+  .search-icon-md {
+    position: absolute;
+    left: -30px;
+    z-index: 100;
+  }
+
+  .large-logo {
+    margin-left: -25px;
+  }
+  .progress {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+
+  .tablet-search-button {
+    margin-right: 20px;
+  }
+}

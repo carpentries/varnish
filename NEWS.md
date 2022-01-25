@@ -2,7 +2,7 @@
 
 * Breaking change; moving from the carpentries/styles theme to the new theme
   developed in 2021. Variables and layouts have changed significantly, so this
-  package gains an update. 
+  package gains a significant update.
 
 # varnish 0.0.0.9008
 

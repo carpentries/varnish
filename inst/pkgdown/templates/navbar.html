@@ -80,6 +80,7 @@
 
             <hr class="half-width"/>
 
+            {{#resources}}
             <div class="accordion accordion-flush resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
@@ -90,25 +91,26 @@
                 <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
-                      <li><a href="#">Key Points</a></li>
-                      <li><a href="#">Instructor Notes</a></li>
-                      <li><a href="#">Extract All Images</a></li>
-                      <li><a href="#">Learner Profiles</a></li>
-                      <li><a href="#">Discussion</a></li>
-                      <li><a href="#">Glossary</a></li>
+                      {{{resources}}}
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            {{/resources}}
 
-            <a href=#>See all in one page</a>
+            {{#aio}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>{{/aio}}
 
             <hr class="d-none d-sm-block d-md-none"/>
 
             <div class="d-grid gap-1">
-              <button class="btn btn-primary-outline">Export Lesson Outline</button>
-              <button class="btn btn-primary-outline">Export All Slides</button>
+            {{#yaml}}{{#handout}}
+              <form method="get" action="{{#site}}{{root}}{{/site}}{{handout}}">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
+            {{/handout}}{{/yaml}}
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->

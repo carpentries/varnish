@@ -38,7 +38,7 @@ pre {
   /* ZNK: added in 2022-01-07 */
   /* highlighted code uses spans that need a line break before to avoid */
   /* overlap with the header */
-  code.sourceCode::before {
+  code::before {
     // https://www.w3docs.com/snippets/css/how-to-add-a-line-break-before-an-element-with-css.html
     content: "\A";
   }

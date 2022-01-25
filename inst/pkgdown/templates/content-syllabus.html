@@ -1,35 +1,52 @@
 <!-- START: inst/pkgdown/templates/content-syllabus.html -->
-
-<div class="row">
-  <div class="contents col-md-12">
-    <div class="section level1 page-header">
-      <h1>{{pagetitle}}</h1>
-{{{readme}}}
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="contents col-md-12">
-    <div class="section level2" id="schedule">
-      <h2>Schedule</h2>
-    <table class="table table-striped table-responsive">
-       <tr>
-         <td class="col-md-2"></td>
-         <td class="col-md-3">
-           <a href="setup.html">Setup</a>
-         </td>
-         <td class="col-md-7">
-           Download files and setup software required for this lesson
-         </td>
-       </tr>
-  {{{syllabus}}}
-    </table>
-    <p>
+  <div class="col-xl-8 col-lg-12 primary-content">
+    <nav class="lesson-content mx-md-4" aria-label="Next Chapter">
+      <!-- content for small screens -->
+      <div class="d-block d-sm-block d-md-none">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+      </div>
+        {{/page_forward}}
+      <!-- content for large screens -->
+      <div class="d-none d-sm-none d-md-block">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        {{/page_forward}}
+      </div>
+      <hr/>
+    </nav>
+    <main id="main-content" class="main-content">
+      <h1 class="schedule-heading">{{{pagetitle}}}</h1>
+      {{{readme}}}
+      {{#syllabus}}
+      <table class="table schedule table-striped" role="presentation">
+        <tbody>
+          <tr>
+            <td></td><td><a href="setup.html">Setup Instructions</a></td><td> Download files required for the lesson</td>
+          </tr>
+          {{{syllabus}}}
+      </table>
+      <p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
-    </p>
-
-    </div>
+      </p>
+      {{/syllabus}}
+      {{#setup}}
+      {{{setup}}}
+      {{/setup}}
+    </main>
+    <nav class="bottom-pagination mx-md-4" aria-label="Next Chapter">
+      <!-- content for small screens -->
+      <div class="d-block d-sm-block d-md-none">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+      </div>
+        {{/page_forward}}
+      <!-- content for large screens -->
+      <div class="d-none d-sm-none d-md-block">
+        {{#page_forward}}
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        {{/page_forward}}
+      </div>
+    </nav>
   </div>
-</div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->

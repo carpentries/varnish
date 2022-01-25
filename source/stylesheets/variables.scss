@@ -1,0 +1,28 @@
+$font_weight_normal: 400;
+$font_weight_bold: 800;
+$asset_base_path: '../assets' !default;
+
+$black: #383838;
+$blue: #0044D7;
+$gray: #586F7C;
+$purple: #6320EE;
+$deep-purple: #491997;
+$dark-purple: #201335;
+$yellow: #FCE762;
+$teal: #1DC5CE;
+$red: #EB4F36;
+$orange: #FFB17A;
+$magenta: #CE1D9D;
+$bright-blue: #0D96F9;
+$light-gray: #F8F9F9;
+$light-blue: #3DCBF8;
+$light-purple: #D2BCF4;
+$dark-blue: #071159;
+$dark-green: #1D5959;
+$light-red: #FB9595;
+$very-light-blue: #E3E6FD;
+$light-green: #39AEAE;
+
+$accordion-button-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class='feather feather-plus'><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>");
+
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class='feather feather-minus'><line x1="5" y1="12" x2="19" y2="12"></line></svg>");

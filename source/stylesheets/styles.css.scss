@@ -1,0 +1,226 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "syntax-highlighting";
+@import "variables";
+@import "header";
+@import "callouts";
+@import "codeblocks";
+@import "instructornotes";
+@import "overview";
+@import "sidenav";
+@import "footer";
+@import "schedule";
+@import "skiplinks";
+
+
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+/// @access public
+/// @type String
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+  @return url($asset_base_path + '/' + $type + '/' + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function image($file) {
+  @return asset('images', $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function font($file) {
+  @return asset('fonts', $file);
+}
+/* mulish-regular - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  src: font('mulish-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       font('mulish-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font('mulish-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       font('mulish-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       font('mulish-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       font('mulish-v5-latin-regular.svg#Mulish') format('svg'); /* Legacy iOS */
+
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: font("Mulish-Bold.ttf") format("truetype");
+  src: font("Mulish-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Mulish', sans serif;
+  font-weight: $font_weight_normal;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 55px;
+  letter-spacing: 0.01em;
+  color: $black;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight:600;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  color: $black;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight:400;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0.01em;
+  color: $black;
+}
+
+blockquote {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary-outline {
+  border: 1px solid $blue;
+  color: $blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.btn-primary-outline:hover {
+  color: $blue;
+  background: $very-light-blue;
+}
+
+.btn-primary-outline:active {
+  color: #ffffff;
+  background: $blue;
+}
+
+.figure {
+  max-width: 100%;
+}
+
+figcaption {
+  border-top: 1px solid $black;
+  background: $light-gray;
+  margin-bottom: 25px;
+  padding: 25px;
+}
+
+.section-heading {
+  margin-top: 100px;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+}
+
+.bottom-pagination {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  border-top: 1px solid #ccc;
+}
+
+#instructor, #language{
+  line-height: 24px;
+}
+
+.sidebar .accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") ;
+  transform: scale(.7) !important;
+}
+
+.sidebar .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") ;
+  transform: rotate(180deg) scale(.7) ;
+}
+
+@include media-breakpoint-down(xl) {
+
+  .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#resources)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>") !important;
+    transform:none !important;
+  }
+
+  .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#resources)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minus'><line x1='5' y1='12' x2='19' y2='12'></line></svg>") !important;
+    transform:none !important;
+  }
+
+}
+
+.container {
+  max-width:1209px;
+}
+
+#eye{
+  display: inline;
+  margin-right:10px;
+}
+
+@include media-breakpoint-up(xl) {
+
+.sidebar .accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  transform: scale(.7) !important;
+}
+
+.sidebar .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  transform: rotate(180deg) scale(.7) !important;
+}
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+}

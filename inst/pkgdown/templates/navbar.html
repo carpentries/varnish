@@ -1,48 +1,121 @@
 <!-- START: inst/pkgdown/templates/navbar.html -->
-{{#navbar}}
-<div class="navbar navbar-{{{type}}} navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="{{#site}}{{root}}{{/site}}index.html">Home</a>
-        <a class="navbar-link" href="https://carpentries.github.io/sandpaper-docs/" 
-          aria-label="Lesson Infrastructure is in the testing phase. Read on for more information."
-          title="Lesson Infrastructure is in the testing phase.">&#128679;</a>
-{{#yaml}}
-        <!-- TODO: the logo is not centered in the nav bar and looks ugly... also there needs to be a better way of choosing the logo... probably on the R side.-->
-        <a href="https://{{#cp}}carpentries{{/cp}}{{#swc}}software-carpentry{{/swc}}{{#dc}}data-carpentry{{/dc}}{{#lc}}library-carpentry{{/lc}}.org" class="pull-left">
-          <img class="navbar-logo" src="{{#site}}{{root}}{{/site}}img/{{carpentry}}-icon-{{#cp}}blue{{/cp}}{{#swc}}blue{{/swc}}{{#dc}}black{{/dc}}{{#lc}}black{{/lc}}.svg" alt="{{carpentry_name}} logo" />
-        </a>
-{{/yaml}}
-      </span>
-    </div>
+{{#schedule}}
+{{/schedule}}
+{{^schedule}}
+  <div id="sidebar-col" class="col-lg-4">
+    <div id="sidebar" class="sidebar">
+      <nav aria-labelledby="flush-headingEleven">
+        <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" ><i class="search-icon" data-feather="x" role="img"></i></button>
+        <div class="sidebar-inner">
+          <div class="row mobile-row">
+            <div class="col">
+              <div class="sidenav-view-selector">
+                <div class="accordion accordion-flush" id="accordionFlush9">
+                  <div class="accordion-item">
+        {{#instructor}}
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
+                      </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="../{{this_page}}">Learner View</a>
+                      </div>
+                    </div>
+        {{/instructor}}
+        {{^instructor}}
+                    <h2 class="accordion-header" id="flush-headingNine">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
+                      </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="instructor/{{this_page}}">Instructor View</a>
+                      </div>
+                    </div>
+        {{/instructor}}
+                  </div><!--/div.accordion-item-->
+                </div><!--/div.accordion-flush-->
+              </div><!--div.sidenav-view-selector -->
+            </div><!--/div.col -->
+      {{#yaml}}{{#language}}
+            <div class="col">
+              <div class="sidenav-language-selector">
+                <div class="accordion accordion-flush" id="accordionFlush10">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTen">
+                      <button class="accordion-button side-language collapsed" id="language" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">English (US)
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                      <div class="accordion-body">
+                        <a href="#">French</a>
+                      </div>
+                    </div>
+                  </div><!--/div.accordion-item-->
+                </div><!--/div.accordion-flush-->
+              </div><!--/div.sidenav-language-selector -->
+            </div><!--/div.col -->
+      {{/language}}{{/yaml}}
+            <hr/>
+          </div><!--/div.mobile-row -->
 
-    <div id="navbar" class="navbar-collapse collapse">
-      {{#left}}
-      <ul class="nav navbar-nav">
-        {{{.}}}
-      </ul>
-      {{/left}}
-      {{#right}}
-      <ul class="nav navbar-nav navbar-right">
-        {{{.}}}
-      </ul>
-      {{/right}}
-      {{#yaml}}{{#docsearch}}
-      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
-        <div class="form-group">
-          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
-        </div>
-      </form>
-      {{/docsearch}}{{/yaml}}
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-{{/navbar}}
+          <div class="accordion accordion-flush" id="accordionFlush11">
+            <div class="accordion-item">
+
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                <h2 class="accordion-header chapters" id="flush-headingEleven">
+                  CHAPTERS
+                </h2>
+              </button>
+              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+
+                <div class="accordion-body">
+                  {{{ sidebar }}}
+                </div>
+              </div>
+            </div>
+
+            <hr class="half-width"/>
+
+            {{#resources}}
+            <div class="accordion accordion-flush resources" id="accordionFlush12">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwelve">
+                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                    RESOURCES
+                  </button>
+                </h2>
+                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                  <div class="accordion-body">
+                    <ul>
+                      {{{resources}}}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/resources}}
+
+            {{#aio}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>{{/aio}}
+
+            <hr class="d-none d-sm-block d-md-none"/>
+
+            <div class="d-grid gap-1">
+            {{#yaml}}{{#handout}}
+              <form method="get" action="{{#site}}{{root}}{{/site}}{{handout}}">
+                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
+              </form>
+              <!-- TODO: Generate Slides -->
+              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
+            {{/handout}}{{/yaml}}
+            </div>
+          </div><!-- /div.accordion -->
+        </div><!-- /div.sidebar-inner -->
+      </nav>
+    </div><!-- /div.sidebar -->
+  </div><!-- /div.sidebar-col -->
+{{/schedule}}
 <!-- END:   inst/pkgdown/templates/navbar.html-->

@@ -7,18 +7,9 @@
 			</div>
 			<div class="col-md-6">
         {{#yaml}}{{#license}}
-        <p>Materials licensed under the <a href="{{#site}}{{root}}{{/site}}LICENSE.html">{{license}} license</a></p>
+        <p>Materials licensed under <a href="{{#site}}{{root}}{{/site}}LICENSE.html">{{license}}</a> by the authors</p>
         {{/license}}{{/yaml}}
-        <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0 2018–{{#year}}{{year}}{{/year}}</a> by <a href="https://carpentries.org">The Carpentries</a></p>
-        {{#yaml}}
-        {{^cp}}
-        <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0 2016–2018</a> by
-        {{#swc}}Software Carpentry Foundation{{/swc}}
-        {{#dc}}Data Carpentry{{/dc}}
-        {{#lc}}Library Carpentry{{/lc}}
-        </p>
-        {{/cp}}
-        {{/yaml}}
+        <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper">sandpaper{{sandpaper_version}}</a>,
       <a href="https://github.com/carpentries/pegboard">pegboard{{pegboard_version}}</a>,
       and <a href="https://github.com/carpentries/varnish">varnish{{varnish_version}}</a>.</p>

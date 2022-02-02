@@ -1,3 +1,7 @@
+# varnish 0.1.1
+
+* Add LICENSE file clarifying MIT licensing
+
 # varnish 0.1.0
 
 * Breaking change; moving from the carpentries/styles theme to the new theme

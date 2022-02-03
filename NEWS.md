@@ -1,3 +1,7 @@
+# varnish 0.1.3
+
+* Add small version of the carpentries logo
+
 # varnish 0.1.2
 
 * Add matmo analytics in the footer (@fmichonneau, #17)

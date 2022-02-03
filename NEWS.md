@@ -1,3 +1,7 @@
+# varnish 0.1.2
+
+* Add matmo analytics in the footer (@fmichonneau, #17)
+
 # varnish 0.1.1
 
 * Add LICENSE file clarifying MIT licensing

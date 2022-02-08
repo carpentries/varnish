@@ -1,3 +1,8 @@
+# varnish 0.1.4
+
+* Removed " logo" suffix from the logo elements, as it is redundant
+  https://webaim.org/techniques/alttext/#logos
+
 # varnish 0.1.3
 
 * Add small version of the carpentries logo

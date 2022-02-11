@@ -1,13 +1,19 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Template
-Version: 0.1.0
-Authors@R: 
+Version: 0.1.4
+Authors@R: c(
     person(given = "Zhian N.",
            family = "Kamvar",
            role = c("aut", "cre"),
-           email = "zkamvar@gmail.com",
-           comment = c(ORCID = "0000-0003-1458-7108"))
-Description: This package does nothing but contain template HTML CSS and JSON files
+           email = "zkamvar@carpentries.org",
+           comment = c(ORCID = "0000-0003-1458-7108")),
+    person(given = "François",
+           family = "Michonneau",
+           role = c("ctb"),
+           email = "francois@carpentries.org"),
+    person()
+    )
+Description: This package does nothing but contain template HTML CSS and JS files.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

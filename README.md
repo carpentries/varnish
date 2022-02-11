@@ -1,4 +1,4 @@
-# Template for Carpentries Lessons
+# Template for Carpentries Lessons (with L2D themes)
 
 This project is a work in progress template for carpentries lessons adapted from
 [{pkgdown}]. There is no need to call this package directly, it is installed

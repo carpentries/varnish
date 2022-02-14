@@ -1,4 +1,4 @@
-# Template for Carpentries Lessons
+# {varnish}: Template for The Carpentries Workbench <img src='man/figure/logo.png' align='right' alt='' width=120 />
 
 This project is a work in progress template for carpentries lessons adapted from
 [{pkgdown}]. There is no need to call this package directly, it is installed

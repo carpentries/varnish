@@ -1,3 +1,9 @@
+# varnish 0.1.5
+
+* The index page now has specific sections for schedule and setup that link to
+  the `#schedule` and `#setup` anchors. This partially addresses 
+  https://github.com/carpentries/sandpaper/issues/260
+
 # varnish 0.1.4
 
 * Removed " logo" suffix from the logo elements, as it is redundant

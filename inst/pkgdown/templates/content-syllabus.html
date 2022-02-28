@@ -19,19 +19,25 @@
       <h1 class="schedule-heading">{{{pagetitle}}}</h1>
       {{{readme}}}
       {{#syllabus}}
+      <section id="schedule">
       <table class="table schedule table-striped" role="presentation">
         <tbody>
+          {{#setup}}
           <tr>
-            <td></td><td><a href="setup.html">Setup Instructions</a></td><td> Download files required for the lesson</td>
+            <td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
           </tr>
+          {{/setup}}
           {{{syllabus}}}
       </table>
       <p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
+      </section>
       {{/syllabus}}
       {{#setup}}
+      <section id="setup">
       {{{setup}}}
+      </section>
       {{/setup}}
     </main>
     <nav class="bottom-pagination mx-md-4" aria-label="Next Chapter">

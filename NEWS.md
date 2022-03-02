@@ -1,3 +1,7 @@
+# varnish 0.1.6
+
+* Tables now scroll on overflow
+
 # varnish 0.1.5
 
 * The index page now has specific sections for schedule and setup that link to

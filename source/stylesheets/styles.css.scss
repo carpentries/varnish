@@ -120,6 +120,12 @@ a:hover {
   text-decoration: underline;
 }
 
+table {
+  display: block;
+  max-width: max-content;
+  overflow: auto;
+}
+
 .btn-primary-outline {
   border: 1px solid $blue;
   color: $blue;

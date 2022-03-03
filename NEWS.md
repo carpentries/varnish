@@ -1,3 +1,7 @@
+# varnish 0.1.7
+
+* compile the changes from 0.1.6
+
 # varnish 0.1.6
 
 * Tables now scroll on overflow

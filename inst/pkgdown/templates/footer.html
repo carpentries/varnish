@@ -10,9 +10,9 @@
         <p>Materials licensed under <a href="{{#site}}{{root}}{{/site}}LICENSE.html">{{license}}</a> by the authors</p>
         {{/license}}{{/yaml}}
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper">sandpaper{{sandpaper_version}}</a>,
+        <p>Built with <a href="https://github.com/{{sandpaper_cfg}}{{^sandpaper_cfg}}carpentries/sandpaper{{/sandpaper_cfg}}">sandpaper{{sandpaper_version}}</a>,
       <a href="https://github.com/carpentries/pegboard">pegboard{{pegboard_version}}</a>,
-      and <a href="https://github.com/carpentries/varnish">varnish{{varnish_version}}</a>.</p>
+      and <a href="https://github.com/{{varnish_cfg}}{{^varnish_cfg}}carpentries/varnish{{/varnish_cfg}}">varnish{{varnish_version}}</a>.</p>
 			</div>
 		</footer>
 	</div> <!-- / div.container -->

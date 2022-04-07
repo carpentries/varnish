@@ -1,3 +1,7 @@
+# varnish 0.1.8
+
+* custom workbench engines are now properly linked in the footer
+
 # varnish 0.1.7
 
 * compile the changes from 0.1.6

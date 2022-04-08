@@ -2,6 +2,10 @@
 
 * custom workbench engines are now properly linked in the footer via the 
   `sandpaper_cfg` and `varnish_cfg` variables.
+* code of conduct link now points to the `CODE_OF_CONDUCT.md` file so authors
+  can update or modify their own code of conduct (NOTE: all Carpentries lessons
+  MUST have a code of conduct that links to the Carpentries Code of Conduct as
+  well as the reporting guidelines.
 
 # varnish 0.1.7
 

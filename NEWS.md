@@ -1,3 +1,7 @@
+# varnish 0.1.9
+
+* Fix missing pegboard version tag
+
 # varnish 0.1.8
 
 * custom workbench engines are now properly linked in the footer via the 

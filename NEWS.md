@@ -1,3 +1,7 @@
+# varnish 0.1.10
+
+* lab and incubator logos are now available.
+
 # varnish 0.1.9
 
 * Fix missing pegboard version tag

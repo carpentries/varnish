@@ -1,4 +1,9 @@
 # varnish 0.1.10
+ 
+* blockquotes are now more clearly delineated from the rest of the content
+  (reported: #27, fixed: #31)
+
+# varnish 0.1.10
 
 * lab and incubator logos are now available.
 

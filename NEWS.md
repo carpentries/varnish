@@ -1,7 +1,13 @@
-# varnish 0.1.10
+# varnish 0.1.12
+
+* dropdown navigation no longer is hidden by the sidebar on XXL screens;
+  z-index of `nav.bottom-nav` set to 3.
+  (reported: #35 by @brownsarahm, fixed: #36 by @zkamvar)
+
+# varnish 0.1.11
  
 * blockquotes are now more clearly delineated from the rest of the content
-  (reported: #27, fixed: #31)
+  (reported: #27 by @fiveop, fixed: #31 by @zkamvar)
 
 # varnish 0.1.10
 

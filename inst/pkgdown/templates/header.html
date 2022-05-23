@@ -5,6 +5,15 @@
       <div class="large-logo"><img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}"></div>
     </div>
     <div class="selector-container ">
+      {{#yaml}}{{#workbench-beta}}
+      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
+        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #5bbad5"></i>
+        Workbench Beta | 
+        <a href="https://github.com/carpentries/workbench/discussions" class="alert-link">Give Feedback</a> | 
+        <a href="https://carpentries.github.io/workbench" class="alert-link">Learn More</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {{/workbench-beta}}{{/yaml}}
       {{#yaml}}{{#language}}
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">

@@ -170,6 +170,7 @@
   display: none;
 }
 
+
 .top-nav .dropdown button {
   background: #ffffff;
   color: $black;
@@ -182,6 +183,21 @@
   border-radius: 0px;
   border-left: 1px solid $black;
 }
+
+// ZNK -------------------------------------
+// Styling the alert box for the beta phase
+// to not be so boxxy
+.top-nav .beta-alert {
+  display: inline;
+  padding: inherit;
+}
+
+// the button x centered with the text, 
+// not justified
+.top-nav .beta-alert button.btn-close {
+  padding: 0.25rem 0.25rem 0.75rem 0.25rem;
+}
+// ------------------------------------- ZNK
 
 .top-nav .icon {
   position: relative;

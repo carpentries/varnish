@@ -27,7 +27,7 @@ jobs:
       - name: Comple js
         run: bash squash-a-script.sh
       - name: Install sass
-        run: brew install sass/sass/sass
+        run: npm install -g sass
       - name: Compile sass
         run: bash squash-sass.sh
       - name: Commit

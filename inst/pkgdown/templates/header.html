@@ -2,28 +2,30 @@
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
-      <div class="large-logo"><img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}"></div>
-    </div>
-      {{#yaml}}{{#life_cycle}}
-      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
-        {{#pre-alpha}}
-        <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955"></i>
-        Pre-Alpha |
-        <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="alert-link">Learn More</a>
-        {{/pre-alpha}}
-        {{#alpha}}
-        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #FFC700"></i>
-        Alpha |
-        <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="alert-link">Learn More</a>
-        {{/alpha}}
-        {{#beta}}
-        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #001483"></i>
-        Beta |
-        <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#polishing-beta-stage" class="alert-link">Learn More</a>
-        {{/beta}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="large-logo">
+        <img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}">
+        {{#yaml}}{{#life_cycle}}
+        <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
+          {{#pre-alpha}}
+          <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955"></i>
+          Pre-Alpha |
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="alert-link">Learn More</a>
+          {{/pre-alpha}}
+          {{#alpha}}
+          <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #FFC700"></i>
+          Alpha |
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="alert-link">Learn More</a>
+          {{/alpha}}
+          {{#beta}}
+          <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #001483"></i>
+          Beta |
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#polishing-beta-stage" class="alert-link">Learn More</a>
+          {{/beta}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/life_cycle}}{{/yaml}}
       </div>
-      {{/life_cycle}}{{/yaml}}
+    </div>
     <div class="selector-container ">
       {{#yaml}}{{#workbench-beta}}
       <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">

@@ -4,6 +4,25 @@
     <div class="col-md-6">
       <div class="large-logo"><img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}"></div>
     </div>
+      {{#yaml}}{{#life_cycle}}
+      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
+        {{#pre-alpha}}
+        <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955"></i>
+        Pre-Alpha 
+        {{/pre-alpha}}
+        {{#alpha}}
+        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #FFC700"></i>
+        Alpha 
+        {{/alpha}}
+        {{#beta}}
+        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #001483"></i>
+        Beta 
+        {{/beta}}
+        |
+        <a href="https://carpentries.github.io/workbench" class="alert-link">Learn More</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {{/life_cycle}}{{/yaml}}
     <div class="selector-container ">
       {{#yaml}}{{#workbench-beta}}
       <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">

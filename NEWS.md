@@ -1,5 +1,9 @@
 # varnish 0.1.13
 
+* Alerts for lesson development stages have been added.
+
+# varnish 0.1.13
+
 * An alert for the workbench beta phase is implemented if the lesson has `workbench-beta: true` in the `config.yaml`.
 
 # varnish 0.1.12

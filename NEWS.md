@@ -1,6 +1,6 @@
-# varnish 0.1.13
+# varnish 0.1.14
 
-* Alerts for lesson development stages have been added.
+* lesson development stage support has been added (#39 by @zkamvar)
 * FIX: .lesson-title and .lesson-title-md are now inline-block elements
 
 # varnish 0.1.13

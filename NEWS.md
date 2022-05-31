@@ -1,11 +1,16 @@
 # varnish 0.1.14
 
-* lesson development stage support has been added (#39 by @zkamvar)
+* indicators for lesson development stage (pre-alpha, alpha, beta) have been 
+  added as `<abbr>` elements with a link to the appropriate section in the CDH
+  and `title` elements that describe the purpose of the stage. Visually hidden
+  text follows the `<abbr>` element for users who can not perceive the lesson
+  visually (#39 by @zkamvar, reviewed by @tobyhodges).
 * FIX: .lesson-title and .lesson-title-md are now inline-block elements
 
 # varnish 0.1.13
 
-* An alert for the workbench beta phase is implemented if the lesson has `workbench-beta: true` in the `config.yaml`.
+* An alert for the workbench beta phase is implemented if the lesson has
+  `workbench-beta: true` in the `config.yaml`.
 
 # varnish 0.1.12
 

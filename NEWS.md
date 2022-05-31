@@ -1,3 +1,8 @@
+# varnish 0.1.14
+
+* lesson development stage support has been added (#39 by @zkamvar)
+* FIX: .lesson-title and .lesson-title-md are now inline-block elements
+
 # varnish 0.1.13
 
 * An alert for the workbench beta phase is implemented if the lesson has `workbench-beta: true` in the `config.yaml`.

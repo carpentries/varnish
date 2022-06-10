@@ -1,3 +1,8 @@
+# varnish 0.1.16
+
+* CHAPTERS has been temporarily renamed to EPISODES to reduce cognative load
+  between the webpage and the source folders
+
 # varnish 0.1.15
 
 * The search field has been disabled to avoid confusion. We have not yet enabled

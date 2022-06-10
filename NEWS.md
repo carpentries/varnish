@@ -1,3 +1,10 @@
+# varnish 0.1.15
+
+* The search field has been disabled to avoid confusion. We have not yet enabled
+  search as this requires further testing. Disabling the search field means that
+  it is now more clear that search is not yet available.
+  (#44 by @zkamvar)
+
 # varnish 0.1.14
 
 * indicators for lesson development stage (pre-alpha, alpha, beta) have been 

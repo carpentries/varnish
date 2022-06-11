@@ -107,7 +107,7 @@ function getSidebarVisible() {
     if (localStorage.getItem('sidebarVisible') === null) {
       localStorage.setItem('sidebarVisible', sidebarVisible)
     } 
-    return localStorage.getItem('sidebarVisible')
+    return localStorage.getItem('sidebarVisible') == 'true'
   } else {
     return sidebarVisible
   }

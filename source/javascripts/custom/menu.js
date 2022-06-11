@@ -5,7 +5,7 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
-    // load the boolean from localStorage
+    // load the boolean from sessionStorage
     sidebarVisible = sidebarIsVisible();
     // only show the sidebar if we have determined that it is visible
     if (! sidebarVisible ) {
@@ -51,11 +51,7 @@ $( document ).ready(function() {
             if(windowSize > 1200 && ! sidebarIsVisible()) {
                 hideSidebarDesktop();
             }
-        }/* else { // this is redundant and triggers menu instability on mobile resize
-            showSidebarDesktop();
-            hideSidebarMobile();
-        }*/
-
+        }
         checkForExtraPadding();
 
         windowSize = window.innerWidth;
@@ -113,11 +109,11 @@ $( document ).ready(function() {
 
 // determine if the user has the sidebar showing
 function sidebarIsVisible() {
-    if (storageAvailable('localStorage')) {
-        if (localStorage.getItem('sidebarVisible') === null) {
-            localStorage.setItem('sidebarVisible', sidebarVisible);
+    if (storageAvailable('sessionStorage')) {
+        if (sessionStorage.getItem('sidebarVisible') === null) {
+            sessionStorage.setItem('sidebarVisible', sidebarVisible);
         } 
-        return localStorage.getItem('sidebarVisible') == 'true';
+        return sessionStorage.getItem('sidebarVisible') == 'true';
     } else {
         return sidebarVisible
     }
@@ -125,8 +121,8 @@ function sidebarIsVisible() {
 
 
 function setSidebarVisible(value) {
-    if (storageAvailable('localStorage')) {
-        localStorage.setItem('sidebarVisible', value);
+    if (storageAvailable('sessionStorage')) {
+        sessionStorage.setItem('sidebarVisible', value);
     } else {
         sidebarVisible = value;
     }

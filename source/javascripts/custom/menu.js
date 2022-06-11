@@ -7,9 +7,9 @@ $( document ).ready(function() {
     windowSize = window.innerWidth;
     sidebarVisible = getSidebarVisible();
     if (! sidebarVisible) {
-      if(window.innerWidth > 1200) {
-        hideSidebarDesktop();
-      }
+        if(window.innerWidth > 1200) {
+           hideSidebarDesktop();
+        }
     }
     //change collapse icons depending on context
     if(window.innerWidth > 1024) {
@@ -108,25 +108,26 @@ $( document ).ready(function() {
     });
 });
 
-
+// determine if the user has the sidebar showing
 function getSidebarVisible() {
-  if (storageAvailable('localStorage')) {
-    if (localStorage.getItem('sidebarVisible') === null) {
-      localStorage.setItem('sidebarVisible', sidebarVisible)
-    } 
-    return localStorage.getItem('sidebarVisible') == 'true'
-  } else {
-    return sidebarVisible
-  }
+    if (storageAvailable('localStorage')) {
+        if (localStorage.getItem('sidebarVisible') === null) {
+            localStorage.setItem('sidebarVisible', sidebarVisible);
+        } 
+        return localStorage.getItem('sidebarVisible') == 'true';
+    } else {
+        return sidebarVisible
+    }
 }
 
+
 function setSidebarVisible(value) {
-  if (storageAvailable('localStorage')) {
-    localStorage.setItem('sidebarVisible', value)
-  } else {
-    sidebarVisible = value
-  }
-  return null
+    if (storageAvailable('localStorage')) {
+        localStorage.setItem('sidebarVisible', value);
+    } else {
+        sidebarVisible = value;
+    }
+    return null
 }
 
 // check if we have local storage

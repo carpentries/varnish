@@ -5,6 +5,7 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
+    // load the boolean from localStorage
     sidebarVisible = sidebarIsVisible();
     // only show the sidebar if we have determined that it is visible
     if (! sidebarVisible ) {
@@ -27,7 +28,6 @@ $( document ).ready(function() {
     $(".collapse-toggle").click(function(){
         if(window.innerWidth > 1200) {
             if(! sidebarIsVisible() ) {
-              //show the sidebar
               showSidebarDesktop();
             } else {
               hideSidebarDesktop();
@@ -41,9 +41,11 @@ $( document ).ready(function() {
     $(window).on('resize', function(){
         //nav is shown by default on desktop only
         if(window.innerWidth > 1200) {
-            //reset css to desktop
+            //reset css to desktop only if it's visible
             if ( sidebarIsVisible() ) {
-               showSidebarDesktop();
+                showSidebarDesktop();
+            } else {
+                hideSidebarDesktop();
             }
 
             if(windowSize > 1200 && ! sidebarIsVisible()) {

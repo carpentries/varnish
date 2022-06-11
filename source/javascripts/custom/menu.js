@@ -41,7 +41,9 @@ $( document ).ready(function() {
         //nav is shown by default on desktop only
         if(window.innerWidth > 1200) {
             //reset css to desktop
-            showSidebarDesktop();
+            if ( getSidebarVisible() ) {
+               showSidebarDesktop();
+            }
 
             if(windowSize > 1200 && ! getSidebarVisible()) {
                 hideSidebarDesktop();

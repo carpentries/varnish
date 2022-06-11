@@ -5,8 +5,9 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
-    sidebarVisible = getSidebarVisible();
-    if (! sidebarVisible) {
+    sidebarVisible = sidebarIsVisible();
+    // only show the sidebar if we have determined that it is visible
+    if (! sidebarVisible ) {
         if(window.innerWidth > 1200) {
            hideSidebarDesktop();
         }
@@ -25,7 +26,7 @@ $( document ).ready(function() {
     //showing and hiding sidebar
     $(".collapse-toggle").click(function(){
         if(window.innerWidth > 1200) {
-            if(! getSidebarVisible()) {
+            if(! sidebarIsVisible() ) {
               //show the sidebar
               showSidebarDesktop();
             } else {
@@ -41,11 +42,11 @@ $( document ).ready(function() {
         //nav is shown by default on desktop only
         if(window.innerWidth > 1200) {
             //reset css to desktop
-            if ( getSidebarVisible() ) {
+            if ( sidebarIsVisible() ) {
                showSidebarDesktop();
             }
 
-            if(windowSize > 1200 && ! getSidebarVisible()) {
+            if(windowSize > 1200 && ! sidebarIsVisible()) {
                 hideSidebarDesktop();
             }
         }/* else { // this is redundant and triggers menu instability on mobile resize
@@ -109,7 +110,7 @@ $( document ).ready(function() {
 });
 
 // determine if the user has the sidebar showing
-function getSidebarVisible() {
+function sidebarIsVisible() {
     if (storageAvailable('localStorage')) {
         if (localStorage.getItem('sidebarVisible') === null) {
             localStorage.setItem('sidebarVisible', sidebarVisible);
@@ -161,7 +162,7 @@ function storageAvailable(type) {
 function checkForExtraPadding(){
     if(window.innerWidth > 1200 && window.innerWidth < 1352)
         {
-            if(getSidebarVisible() == false) {
+            if(! sidebarIsVisible()) {
                 $('.primary-content').css({
                 'padding-left': '90px'
                  });

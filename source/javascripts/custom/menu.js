@@ -6,6 +6,11 @@ $( document ).ready(function() {
 
     windowSize = window.innerWidth;
     sidebarVisible = getSidebarVisible();
+    if (! sidebarVisible) {
+      if(window.innerWidth > 1200) {
+        hideSidebarDesktop();
+      }
+    }
     //change collapse icons depending on context
     if(window.innerWidth > 1024) {
         $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());

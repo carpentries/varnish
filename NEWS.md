@@ -1,3 +1,10 @@
+# varnish 0.2.0
+
+* The sidebar state (expanded or collapsed) will now persist during navigation
+  to another page in the same window/tab. Opening the site in a new window/tab
+  will reset the sidebar state to expanded. (reported: #43 by @anenadic, fixed
+  #46, @zkamvar). This fix uses the `sessionStorage` API. 
+
 # varnish 0.1.16
 
 * CHAPTERS has been temporarily renamed to EPISODES to reduce cognative load

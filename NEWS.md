@@ -1,3 +1,9 @@
+# varnish 0.2.1
+
+* The sidebar navigation in mobile and tablet views now includes all the 
+  information that was included in the navigation bar for the desktop mode. 
+  (reported: https://github.com/carpentries/workbench/issues/16#issuecomment-1165307355 by @Athanasiamo and #49, fixed: #50 by @zkamvar)
+
 # varnish 0.2.0
 
 * The sidebar state (expanded or collapsed) will now persist during navigation

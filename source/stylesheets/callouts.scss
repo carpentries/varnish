@@ -159,6 +159,13 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background: $light-gray;
+    li {
+      list-style-type: inherit; 
+      list-style-position: inside;
+      margin-left: 0px;
+      margin-top:10px;
+      margin-bottom:20px;
+    }
   }
   h2 {
     border-left: 10px $yellow solid;

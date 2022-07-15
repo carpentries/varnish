@@ -12,6 +12,13 @@
    .accordion-body {
      padding: 25px 35px;
      background: $light-gray;
+     li {
+      list-style-type: inherit; 
+      list-style-position: inside;
+      margin-left: 0px;
+      margin-top:10px;
+      margin-bottom:20px;
+     }
    }
   .accordion-button {
     position: relative;

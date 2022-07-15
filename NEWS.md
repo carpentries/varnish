@@ -1,3 +1,9 @@
+# varnish 0.2.2
+
+* Formatting of list elements in the solutions and instructor notes now follows
+  the same formatting as the rest of the content (reported: #51 by @tobyhodges, 
+  fixed: #52 by @zkamvar)
+
 # varnish 0.2.1
 
 * The sidebar navigation in mobile and tablet views now includes all the 

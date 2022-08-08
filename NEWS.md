@@ -1,3 +1,9 @@
+# varnish 0.2.3
+
+* Add support for displaying anchor links (requested @fiveop, 
+  https://github.com/carpentries/sandpaper/issues/285 and @anenadic, 
+  https://github.com/carpentries/workbench/issues/28; added: #54 by @zkamvar)
+
 # varnish 0.2.2
 
 * Formatting of list elements in the solutions and instructor notes now follows

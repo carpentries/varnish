@@ -1,3 +1,15 @@
+# varnish 0.2.4
+
+* Callout block titles have been improved: The underline height for titles have
+  been fixed to not look wonky when titles have multiple lines (reported:
+  @anenadic, #53; fixed @zkamvar, #55). Moreover, the text transformation will
+  no longer affect `code` and `kbd` elements. 
+* Heading element sizes have been recoded to use relative units. There was not 
+  enough specification in the original CSS to properly distinguish between H3
+  and H4 elements; moreover, on tablet and mobile devices, the H1 heading looked
+  smallter than the H2 heading due to a copy/paste error. This has been fixed by
+  using relative calcualtions (@zkamvar, #55)
+
 # varnish 0.2.3
 
 * Add support for displaying anchor links (requested @fiveop, 

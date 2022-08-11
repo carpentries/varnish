@@ -15,6 +15,11 @@
   #56)
 * The collapsed sidebar label no longer reverts to saying "collapse" on a new
   page. 
+* The hamburger menu for mobile devices now has a border so it's more clear
+  that it is a menu (suggested by @drmowinckels,
+  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar, 
+  #57)
+
 
 # varnish 0.2.3
 

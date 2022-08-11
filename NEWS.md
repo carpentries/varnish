@@ -9,6 +9,12 @@
   and H4 elements; moreover, on tablet and mobile devices, the H1 heading looked
   smallter than the H2 heading due to a copy/paste error. This has been fixed by
   using relative calcualtions (@zkamvar, #55)
+* Sidebar navigation now says "Episodes" instead of "Expand" when collapsed so 
+  that it is less confusing for folks. (suggested by @drmowinckels,
+  https://github.com/carpentries/workbench/issues/16 (#47); fixed by @zkamvar, 
+  #56)
+* The collapsed sidebar label no longer reverts to saying "collapse" on a new
+  page. 
 
 # varnish 0.2.3
 

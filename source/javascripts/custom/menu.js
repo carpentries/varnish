@@ -15,7 +15,11 @@ $( document ).ready(function() {
     }
     //change collapse icons depending on context
     if(window.innerWidth > 1024) {
+      if ( sidebarVisible ) {
         $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());
+      } else {
+        $(".collapse-toggle").html("Episodes " + feather.icons['chevron-right'].toSvg());
+      }
     }else{
         $(".collapse-toggle").html(feather.icons['x'].toSvg());
     }
@@ -246,7 +250,7 @@ function hideSidebarDesktop(){
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $sidebarInner.css('visibility', 'hidden');
-    $collapseToggle.html("Expand " + feather.icons['chevron-right'].toSvg());
+    $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
     $sidebarCol.css({
         position: 'absolute',
         left: '-10px',

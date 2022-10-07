@@ -1,3 +1,10 @@
+# varnish 0.2.5
+
+* Workbench Beta messaging has been modified to be more visible and to link back
+  to the original lesson if possible.
+- The icon for lessons in "alpha" has been updated so it has a yellow background
+  with a grey glyph so that the icon shows up better.
+
 # varnish 0.2.4
 
 * Callout block titles have been improved: The underline height for titles have

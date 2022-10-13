@@ -1,3 +1,10 @@
+# varnish 0.2.6
+
+* For lessons that use `workbench-beta: true`, the feedback URL has changed from
+  <https://github.com/carpentries/workbench/discussions/> to 
+  <https://carpentries.typeform.com/to/KRBl4IZM>, so that we can get more
+  specific feedback.
+
 # varnish 0.2.5
 
 * Workbench Beta messaging has been modified to be more visible and to link back

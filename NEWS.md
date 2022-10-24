@@ -1,3 +1,8 @@
+# varnish 0.2.7
+
+* Lessons in different phases of the workbench beta phase will now have the URLs
+  redirect to a site that explains the purpose of the phase.
+
 # varnish 0.2.6
 
 * For lessons that use `workbench-beta: true`, the feedback URL has changed from

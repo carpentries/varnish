@@ -24,7 +24,18 @@
     <main id="main-content" class="main-content">
       <div class="container lesson-content">
         <h1>{{& pagetitle}}</h1>
-        <p>{{#updated}} Last updated on {{updated}} | {{/updated}}<a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p>{{#updated}} Last updated on {{updated}} | {{/updated}}
+        {{#yaml}}
+        {{^beta-date}}{{^pre-beta-date}}
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        {{/pre-beta-date}}{{/beta-date}}
+        {{#pre-beta-date}}
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        {{/pre-beta-date}}
+        {{#beta-date}}{{^pre-beta-date}}
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        {{/pre-beta-date}}{{/beta-date}}
+        {{/yaml}}
         {{#instructor}}
         {{#minutes}}<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> {{minutes}} minutes </p>{{/minutes}}
         {{#slides}}<p><button class="btn btn-primary-outline">Export Chapter Slides</button></p>{{/slides}}

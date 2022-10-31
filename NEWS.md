@@ -1,7 +1,7 @@
 # varnish 0.2.8
 
 - Workbench Beta phase "Edit on GitHub" links are now formatted correctly.
-  (reported: @zkamvar, #65; fixed @zkamvar, #67)
+  (reported: @zkamvar, #65; fixed @zkamvar, #66)
 
 # varnish 0.2.7
 

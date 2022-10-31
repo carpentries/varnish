@@ -2,19 +2,20 @@
 			<hr/>
 			<div class="col-md-6">
 				<p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
-				<p><a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on Github</a> 
         {{#yaml}}
-        {{^beta-date}}{{^pre-beta-date}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a></p>
-        {{/pre-beta-date}}{{/beta-date}}
+        <p>
+        {{^old-url}}
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
+        {{/old-url}}
         {{#pre-beta-date}}
-        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a></p>
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
         {{/pre-beta-date}}
-        {{#beta-date}}{{^pre-beta-date}}
-        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a></p>
-        {{/pre-beta-date}}{{/beta-date}}
+        {{#beta-date}}
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
+        {{/beta-date}}
         {{/yaml}}
-        | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">Contributing</a> | <a href="{{#yaml}}{{source}}/{{/yaml}}">Source</a></p>
+        | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">Contributing</a> 
+        | <a href="{{#yaml}}{{source}}/{{/yaml}}">Source</a></p>
 				<p><a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CITATION">Cite</a> | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">Contact</a> | <a href="https://carpentries.org/about/">About</a></p>
 			</div>
 			<div class="col-md-6">

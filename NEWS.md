@@ -1,3 +1,7 @@
+# varnish 0.2.9
+
+- temporarily turn off matomo analytics
+
 # varnish 0.2.8
 
 - Workbench Beta phase "Edit on GitHub" links are now formatted correctly.

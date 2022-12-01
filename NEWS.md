@@ -1,5 +1,10 @@
 # varnish 0.2.9
 
+* Fix issue with bullet points in callouts being mis-aligned 
+  (reported: @sstevens2, #68; fixed: @zkamvar, #69)
+
+# varnish 0.2.9
+
 - temporarily turn off matomo analytics
 
 # varnish 0.2.8

@@ -1,4 +1,4 @@
-# varnish 0.2.9
+# varnish 0.2.10
 
 * Fix issue with bullet points in callouts being mis-aligned 
   (reported: @sstevens2, #68; fixed: @zkamvar, #69)

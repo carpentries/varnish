@@ -1,5 +1,11 @@
 # varnish 0.2.10
 
+* Formatted print media to avoid breaking in important contexts (code blocks,
+  callout blocks, instructor notes) and shows solutions and instructor notes.
+  (reported: Anonymous, #70; fixed: @zkamvar, #71)
+
+# varnish 0.2.10
+
 * Fix issue with bullet points in callouts being mis-aligned 
   (reported: @sstevens2, #68; fixed: @zkamvar, #69)
 

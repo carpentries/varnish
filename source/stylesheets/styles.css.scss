@@ -268,7 +268,10 @@ figcaption {
   .accordion-collapse {
     display: unset !important;
   }
-  // 
+  // do not display navigation or search forms or extraneous decoration
+  button, nav, form.search-form, #to-top, div.callout-square {
+    display: none !important;
+  }
   // source: <https://css-tricks.com/almanac/properties/p/page-break/#aa-example>
   h2 { 
     page-break-before: always;
@@ -279,5 +282,8 @@ figcaption {
   pre, blockquote, .callout, .instructor-note, .challenge-accordion {
     page-break-inside: avoid;
   }
-
+  // add solution heading before the solution
+  .challenge-accordion::before {
+    content: "<h3>Solution</h3>"
+  }
 }

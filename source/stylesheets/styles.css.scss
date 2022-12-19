@@ -269,12 +269,12 @@ figcaption {
     display: unset !important;
   }
   // do not display navigation or search forms or extraneous decoration
-  button, nav, form.search-form, #to-top, div.callout-square {
+  button, nav, footer, form.search-form, #to-top, div.callout-square, .lesson-progress {
     display: none !important;
   }
   // source: <https://css-tricks.com/almanac/properties/p/page-break/#aa-example>
   h2 { 
-    page-break-before: always;
+    page-break-before: auto;
   }
   h3, h4 {
     page-break-after: avoid;
@@ -284,6 +284,18 @@ figcaption {
   }
   // add solution heading before the solution
   .challenge-accordion::before {
-    content: "<h3>Solution</h3>"
+    content: "Solution";
+    display: block;
+    text-size: 18pt;
+    text-decoration: underline;
+  }
+  .instructor-note::before {
+    content: "Instructor Note";
+    display: block;
+    text-size: 18pt;
+    text-decoration: underline;
+  }
+  pre {
+    overflow: unset !important;
   }
 }

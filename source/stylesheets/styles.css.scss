@@ -281,6 +281,7 @@ figcaption {
   }
   pre, blockquote, .callout, .instructor-note, .challenge-accordion {
     page-break-inside: avoid;
+    border-style: solid;
   }
   // add solution heading before the solution
   .challenge-accordion::before {

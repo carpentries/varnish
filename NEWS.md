@@ -1,4 +1,10 @@
-# varnish 0.2.10
+# varnish 0.2.12
+
+* Table formatting has been fixed to no longer include 100px padding in the
+  first row (reported: @marklcrowe, #72; fixed: @zkamvar, #73)
+- All tables will now be striped for accessibility
+
+# varnish 0.2.11
 
 * Formatted print media to avoid breaking in important contexts (code blocks,
   callout blocks, instructor notes) and shows solutions and instructor notes.

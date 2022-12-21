@@ -158,6 +158,23 @@ table {
   overflow: auto;
 }
 
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg:none;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background: $light-gray;
+}
+
+tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg:none;
+}
+
+tbody > tr:nth-of-type(even) > * {
+  background: $light-gray;
+}
+
+
 .btn-primary-outline {
   border: 1px solid $blue;
   color: $blue;

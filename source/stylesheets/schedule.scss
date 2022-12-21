@@ -12,14 +12,6 @@
   padding-bottom: 25px;
 }
 
-tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg:none;
-}
-
-tbody > tr:nth-of-type(even) > * {
-  background: $light-gray;
-}
-
 @include media-breakpoint-up(md) {
 
   .schedule tr td:first-child {

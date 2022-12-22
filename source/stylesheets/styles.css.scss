@@ -158,6 +158,11 @@ table {
   overflow: auto;
 }
 
+thead > tr > th {
+  font-weight: $font-weight-bold;
+  vertical-align: baseline;
+}
+
 .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg:none;
 }

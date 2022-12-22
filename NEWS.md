@@ -1,7 +1,14 @@
+# varnish 0.2.13
+
+* Table display CSS is set to `table` as opposed to `block`, thus ensuring it is
+  represented correctly in the accessibility tree (see 
+  <https://developer.mozilla.org/en-US/docs/Web/CSS/display#tables>).
+  (fixed: @zkamvar, #74)
+
 # varnish 0.2.12
 
 * Table formatting has been fixed to no longer include 100px padding in the
-  first row (reported: @marklcrowe, #72; fixed: @zkamvar, #73)
+  first row (reported: @marklcrowe, #72; fixed: @zkamvar, 4385602)
 - All tables will now be striped for accessibility
 
 # varnish 0.2.11

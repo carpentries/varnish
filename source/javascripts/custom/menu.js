@@ -176,7 +176,6 @@ function checkForExtraPadding(){
 }
 
 function showSidebarMobile(){
-    // console.log('showSidebarMobile');
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -214,7 +213,6 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    // console.log('showSidebarDesktop');
     setSidebarVisible(true);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -242,7 +240,6 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    // console.log('hideSidebarDesktop');
     setSidebarVisible(false);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -251,14 +248,19 @@ function hideSidebarDesktop(){
     var $collapseToggle = $('.collapse-toggle');
     $sidebarInner.css('visibility', 'hidden');
     $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
+    // resize primary content before sidebar col
+    // when the primary content adjusts its size, the vertical content shrinks
+    // and we need to account fo that. 
+    $primaryContent.attr('class', "col-lg-12 primary-content");
+    // Here, we squish the sidebar to the left and readjust its height to be
+    // equal to the primary content
     $sidebarCol.css({
         position: 'absolute',
         left: '-10px',
         width:'115px',
-        height: ($('#sidebar-col').height())
+        height: ($primaryContent.height())
     });
     $sidebarCol.attr('class', 'col-lg-1');
-    $primaryContent.attr('class', "col-lg-12 primary-content");
     $sidebar.attr('tabindex', '-1');
     $sidebar.attr('aria-hidden', 'true');
     $collapseToggle.attr('aria-expanded', 'false');

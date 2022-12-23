@@ -153,9 +153,14 @@ a:hover {
 }
 
 table {
-  display: block;
+  display: table;
   max-width: max-content;
   overflow: auto;
+}
+
+thead > tr > th {
+  font-weight: $font-weight-bold;
+  vertical-align: baseline;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {

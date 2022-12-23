@@ -4,6 +4,9 @@
   represented correctly in the accessibility tree (see 
   <https://developer.mozilla.org/en-US/docs/Web/CSS/display#tables>).
   (fixed: @zkamvar, #74)
+* Table headings are now bold to easily distinguish from table contents.
+* Collapsing the sidebar no longer results in extra room at the bottom of the
+  page.
 
 # varnish 0.2.12
 

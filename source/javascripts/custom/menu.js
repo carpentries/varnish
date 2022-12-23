@@ -176,7 +176,6 @@ function checkForExtraPadding(){
 }
 
 function showSidebarMobile(){
-    // console.log('showSidebarMobile');
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -214,7 +213,6 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    // console.log('showSidebarDesktop');
     setSidebarVisible(true);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -242,7 +240,6 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    // console.log('hideSidebarDesktop');
     setSidebarVisible(false);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');

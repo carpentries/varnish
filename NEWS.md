@@ -1,3 +1,8 @@
+# varnish 0.2.14
+
+* Workbench Beta Phase `Edit on GitHub` links no longer redirect people to the
+  beta phase intermediate page during the second stage of the beta phase.
+
 # varnish 0.2.13
 
 * Table display CSS is set to `table` as opposed to `block`, thus ensuring it is

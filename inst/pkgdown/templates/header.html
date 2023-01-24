@@ -2,9 +2,69 @@
   <a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
-      <div class="large-logo"><img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}"></div>
+      <div class="large-logo">
+        <img alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}">
+        {{#yaml}}{{#life_cycle}}
+        {{#pre_alpha}}
+        <abbr class="icon" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="text-decoration: unset">
+          &nbsp;
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="alert-link" style="color: #383838">Pre-Alpha
+            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="color: #FF4955; border-radius: 5px"></i>
+          </a>
+          <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+        </abbr>
+        {{/pre_alpha}}
+        {{#alpha}}
+        <abbr class="icon" title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback." style="text-decoration: unset">
+          &nbsp;
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="alert-link" style="color: #383838">Alpha
+            <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="background: #FFC700; border-radius: 5px"></i>
+          </a>
+          <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
+        </abbr>
+        {{/alpha}}
+        {{#beta}}
+        <abbr class="icon" title="This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team." style="text-decoration: unset">
+          &nbsp;
+          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#polishing-beta-stage" class="alert-link" style="color: #383838">Beta
+            <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #001483; border-radius: 5px"></i>
+          </a>
+          <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
+        </abbr>
+        {{/beta}}
+        {{/life_cycle}}{{/yaml}}
+      </div>
     </div>
     <div class="selector-container ">
+      {{#yaml}}{{#workbench-beta}}
+      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
+        {{#pre-beta-date}}
+        <abbr class="icon" title="This lesson is in the Workbench Beta Phase (pre-beta stage) and is a snapshot of {{&title}} from {{pre-beta-date}}. Editing this page will have no effect on the lesson. Click here to go back to the styles version." style="text-decoration: unset">
+          <span class="visually-hidden">This lesson is in the Workbench Beta Phase (pre-beta stage) and is a snapshot of {{&title}} from {{pre-beta-date}}. Editing this page will have no effect on the lesson.</span>
+          <a href="{{old-url}}" class="alert-link" style="color: #383838">
+            <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="background: #FFC700; border-radius: 5px"></i>
+            <span class="visually-hidden">Visit the styles version of the lesson</span>
+          </a>
+        </abbr>
+        {{/pre-beta-date}}
+        {{#beta-date}}
+        <abbr class="icon" title="This lesson is in the Workbench Beta Phase (beta stage). Click here to visit a snapshot of the styles version from {{beta-date}}." style="text-decoration: unset">
+            <span class="visually-hidden">This lesson is in the Workbench Beta Phase (beta stage).</span>
+          <a href="{{old-url}}" class="alert-link" style="color: #383838">
+            <i aria-hidden="true" class="icon" data-feather="alert-circle" style="background: #719eff; border-radius: 5px"></i>
+            <span class="visually-hidden">Visit a snapshot of the styles version from {{beta-date}}</span>
+          </a>
+        </abbr>
+        {{/beta-date}}
+        {{^beta-date}}{{^pre-beta-date}}
+        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #5bbad5"></i>
+        {{/pre-beta-date}}{{/beta-date}}
+        Workbench Beta | 
+        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> | 
+        <a href="https://carpentries.github.io/workbench/beta-phase.html" class="alert-link">Learn More</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {{/workbench-beta}}{{/yaml}}
       {{#yaml}}{{#language}}
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,7 +111,9 @@
       {{#site}}{{title}}{{/site}}
     </div>
     <div class="search-icon-sm">
+      <!-- TODO: do not show until we have search
       <i role="img" aria-label="search button" data-feather="search"></i>
+      -->
     </div>
     <div class="desktop-nav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -95,7 +157,12 @@
       </ul>
     </div>
     <form class="d-flex col-md-2 search-form">
-      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success tablet-search-button"  type="submit"><i class="search-icon" data-feather="search" role="img" aria-label="search button"></i></button>
+      <fieldset disabled>
+      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"> 
+        <button class="btn btn-outline-success tablet-search-button"  type="submit">
+          <i class="search-icon" data-feather="search" role="img" aria-label="search button"></i>
+        </button>
+      </fieldset>
     </form>
   </div><!--/div.container-fluid -->
 </nav>

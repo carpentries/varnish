@@ -26,18 +26,21 @@
 .callout-title {
   position: relative;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0px 0px 25px 0px;
   padding: 24px 0px 0px 0px;
   text-decoration: underline;
-  text-underline-offset: 25px;
+  text-underline-offset: 6px;
+  code, kbd {
+    text-transform: none;
+  }
 }
+
 
 .callout li {
   margin-left: 0px;
-  list-style-position: inside;
   margin-top:10px;
   margin-bottom:20px;
 }
@@ -159,6 +162,13 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background: $light-gray;
+    li {
+      list-style-type: inherit; 
+      list-style-position: inside;
+      margin-left: 0px;
+      margin-top:10px;
+      margin-bottom:20px;
+    }
   }
   h2 {
     border-left: 10px $yellow solid;

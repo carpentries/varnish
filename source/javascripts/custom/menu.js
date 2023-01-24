@@ -5,9 +5,21 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
+    // load the boolean from sessionStorage
+    sidebarVisible = sidebarIsVisible();
+    // only show the sidebar if we have determined that it is visible
+    if (! sidebarVisible ) {
+        if(window.innerWidth > 1200) {
+           hideSidebarDesktop();
+        }
+    }
     //change collapse icons depending on context
     if(window.innerWidth > 1024) {
+      if ( sidebarVisible ) {
         $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());
+      } else {
+        $(".collapse-toggle").html("Episodes " + feather.icons['chevron-right'].toSvg());
+      }
     }else{
         $(".collapse-toggle").html(feather.icons['x'].toSvg());
     }
@@ -19,8 +31,7 @@ $( document ).ready(function() {
     //showing and hiding sidebar
     $(".collapse-toggle").click(function(){
         if(window.innerWidth > 1200) {
-            if(! sidebarVisible) {
-              //show the sidebar
+            if(! sidebarIsVisible() ) {
               showSidebarDesktop();
             } else {
               hideSidebarDesktop();
@@ -30,26 +41,21 @@ $( document ).ready(function() {
         }
     });
 
-    // var codeLabel = "<h3 class='code-label'>CODE<i aria-hidden='true' data-feather='chevron-left'></i><i aria-hidden='true' data-feather='chevron-right'></i></h3>"
-    // $("div.sourceCode > pre.sourceCode").attr("tabindex", "0");
-    // $("div.sourceCode").addClass("codewrapper");
-    // $(codeLabel).prependTo(".sourceCode .codewrapper");
-    // feather.replace();
     //attempt to smoothly handle resizing windows
     $(window).on('resize', function(){
         //nav is shown by default on desktop only
         if(window.innerWidth > 1200) {
-            //reset css to desktop
-            showSidebarDesktop();
-
-            if(windowSize > 1200 && ! sidebarVisible) {
+            //reset css to desktop only if it's visible
+            if ( sidebarIsVisible() ) {
+                showSidebarDesktop();
+            } else {
                 hideSidebarDesktop();
             }
-        }/* else { // this is redundant and triggers menu instability on mobile resize
-            showSidebarDesktop();
-            hideSidebarMobile();
-        }*/
 
+            if(windowSize > 1200 && ! sidebarIsVisible()) {
+                hideSidebarDesktop();
+            }
+        }
         checkForExtraPadding();
 
         windowSize = window.innerWidth;
@@ -105,11 +111,60 @@ $( document ).ready(function() {
     });
 });
 
+// determine if the user has the sidebar showing
+function sidebarIsVisible() {
+    if (storageAvailable('sessionStorage')) {
+        if (sessionStorage.getItem('sidebarVisible') === null) {
+            sessionStorage.setItem('sidebarVisible', sidebarVisible);
+        } 
+        return sessionStorage.getItem('sidebarVisible') == 'true';
+    } else {
+        return sidebarVisible
+    }
+}
+
+
+function setSidebarVisible(value) {
+    if (storageAvailable('sessionStorage')) {
+        sessionStorage.setItem('sidebarVisible', value);
+    } else {
+        sidebarVisible = value;
+    }
+    return null
+}
+
+// check if we have local storage
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
+}
+
+
 //needed to avoid the collapsed navbar overlapping main content
 function checkForExtraPadding(){
     if(window.innerWidth > 1200 && window.innerWidth < 1352)
         {
-            if(sidebarVisible == false) {
+            if(! sidebarIsVisible()) {
                 $('.primary-content').css({
                 'padding-left': '90px'
                  });
@@ -121,14 +176,13 @@ function checkForExtraPadding(){
 }
 
 function showSidebarMobile(){
-    // console.log('showSidebarMobile');
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $collapseToggle.html(feather.icons['x'].toSvg());
-    sidebarVisible = true;
+    setSidebarVisible(true);
     if(window.innerWidth < 768) {
         $sidebar.css({
             position: 'absolute',
@@ -151,7 +205,7 @@ function showSidebarMobile(){
 
 function hideSidebarMobile(){
     // console.log('hideSidebarMobile');
-    sidebarVisible = false;
+    setSidebarVisible(false);
     var $sidebar = $('#sidebar');
     $sidebar.hide();
     $sidebar.attr('tabindex', '-1'); // remove from tab order
@@ -159,8 +213,7 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    // console.log('showSidebarDesktop');
-    sidebarVisible = true;
+    setSidebarVisible(true);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -187,23 +240,27 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    // console.log('hideSidebarDesktop');
-    sidebarVisible = false;
+    setSidebarVisible(false);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $sidebarInner.css('visibility', 'hidden');
-    $collapseToggle.html("Expand " + feather.icons['chevron-right'].toSvg());
+    $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
+    // resize primary content before sidebar col
+    // when the primary content adjusts its size, the vertical content shrinks
+    // and we need to account fo that. 
+    $primaryContent.attr('class', "col-lg-12 primary-content");
+    // Here, we squish the sidebar to the left and readjust its height to be
+    // equal to the primary content
     $sidebarCol.css({
         position: 'absolute',
         left: '-10px',
         width:'115px',
-        height: ($('#sidebar-col').height())
+        height: ($primaryContent.height())
     });
     $sidebarCol.attr('class', 'col-lg-1');
-    $primaryContent.attr('class', "col-lg-12 primary-content");
     $sidebar.attr('tabindex', '-1');
     $sidebar.attr('aria-hidden', 'true');
     $collapseToggle.attr('aria-expanded', 'false');

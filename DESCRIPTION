@@ -1,6 +1,6 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Template
-Version: 0.1.4
+Version: 0.2.14
 Authors@R: c(
     person(given = "Zhian N.",
            family = "Kamvar",
@@ -18,4 +18,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
+URL: https://carpentries.github.io/varnish/
+BugReports: https://github.com/carpentries/varnish/issues/

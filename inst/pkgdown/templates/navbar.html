@@ -67,7 +67,7 @@
 
               <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
                 <h2 class="accordion-header chapters" id="flush-headingEleven">
-                  CHAPTERS
+                  EPISODES
                 </h2>
               </button>
               <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
@@ -91,12 +91,35 @@
                 <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
+                      {{#instructor}}
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
+                      </li>
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
+                      </li>
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
+                      </li>
+                      {{/instructor}}
+                      {{^instructor}}
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
+                      </li>
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
+                      </li>
+                      <li>
+                        <a href="{{#site}}{{root}}{{/site}}profiles.html">Learner Profiles</a>
+                      </li>
+                      {{/instructor}}
                       {{{resources}}}
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            <hr class="half-width resources"/>
             {{/resources}}
 
             {{#aio}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>{{/aio}}

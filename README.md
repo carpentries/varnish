@@ -1,4 +1,5 @@
-# {varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# Template for Carpentries Lessons (with L2D themes)
+
 
 [![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
 

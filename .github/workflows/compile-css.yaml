@@ -3,6 +3,7 @@ on:
     paths:
       - .github/workflows/compile-css.yaml
       - source/**
+      - source/**/**
       - postinstall.sh
       - squash-a-script.sh
       - squash-sass.sh

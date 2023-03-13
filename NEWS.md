@@ -1,3 +1,11 @@
+# varnish 0.2.15
+
+- The Carpentries Lab logo has been updated (reported: @tobyhodges, #59; fixed:
+  @tobyhodges, #76)
+- The size for large logos are now capped at 64px so contributors do not need
+  to force their logos to a particular size when exporting SVG (fixed: @zkamvar,
+  #76)
+
 # varnish 0.2.14
 
 * Workbench Beta Phase `Edit on GitHub` links no longer redirect people to the

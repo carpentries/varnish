@@ -1,3 +1,63 @@
+# varnish 0.2.14
+
+* Workbench Beta Phase `Edit on GitHub` links no longer redirect people to the
+  beta phase intermediate page during the second stage of the beta phase.
+
+# varnish 0.2.13
+
+* Table display CSS is set to `table` as opposed to `block`, thus ensuring it is
+  represented correctly in the accessibility tree (see 
+  <https://developer.mozilla.org/en-US/docs/Web/CSS/display#tables>).
+  (fixed: @zkamvar, #74)
+* Table headings are now bold to easily distinguish from table contents.
+* Collapsing the sidebar no longer results in extra room at the bottom of the
+  page.
+
+# varnish 0.2.12
+
+* Table formatting has been fixed to no longer include 100px padding in the
+  first row (reported: @marklcrowe, #72; fixed: @zkamvar, 4385602)
+- All tables will now be striped for accessibility
+
+# varnish 0.2.11
+
+* Formatted print media to avoid breaking in important contexts (code blocks,
+  callout blocks, instructor notes) and shows solutions and instructor notes.
+  (reported: Anonymous, #70; fixed: @zkamvar, #71)
+
+# varnish 0.2.10
+
+* Fix issue with bullet points in callouts being mis-aligned 
+  (reported: @sstevens2, #68; fixed: @zkamvar, #69)
+
+# varnish 0.2.9
+
+- temporarily turn off matomo analytics
+
+# varnish 0.2.8
+
+- Workbench Beta phase "Edit on GitHub" links are now formatted correctly.
+  (reported: @zkamvar, #65; fixed @zkamvar, #66)
+
+# varnish 0.2.7
+
+* Lessons in different phases of the workbench beta phase will now have the URLs
+  redirect to a site that explains the purpose of the phase.
+
+# varnish 0.2.6
+
+* For lessons that use `workbench-beta: true`, the feedback URL has changed from
+  <https://github.com/carpentries/workbench/discussions/> to 
+  <https://carpentries.typeform.com/to/KRBl4IZM>, so that we can get more
+  specific feedback.
+
+# varnish 0.2.5
+
+* Workbench Beta messaging has been modified to be more visible and to link back
+  to the original lesson if possible.
+- The icon for lessons in "alpha" has been updated so it has a yellow background
+  with a grey glyph so that the icon shows up better.
+
 # varnish 0.2.4
 
 * Callout block titles have been improved: The underline height for titles have

@@ -153,10 +153,32 @@ a:hover {
 }
 
 table {
-  display: block;
+  display: table;
   max-width: max-content;
   overflow: auto;
 }
+
+thead > tr > th {
+  font-weight: $font-weight-bold;
+  vertical-align: baseline;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg:none;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background: $light-gray;
+}
+
+tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg:none;
+}
+
+tbody > tr:nth-of-type(even) > * {
+  background: $light-gray;
+}
+
 
 .btn-primary-outline {
   border: 1px solid $blue;
@@ -261,4 +283,42 @@ figcaption {
     font-size: 32px;
   }
 
+}
+
+@media print {
+  // force solutions and instructor notes to show on print
+  .accordion-collapse {
+    display: unset !important;
+  }
+  // do not display navigation or search forms or extraneous decoration
+  button, nav, footer, form.search-form, #to-top, div.callout-square, .lesson-progress {
+    display: none !important;
+  }
+  // source: <https://css-tricks.com/almanac/properties/p/page-break/#aa-example>
+  h2 { 
+    page-break-before: auto;
+  }
+  h3, h4 {
+    page-break-after: avoid;
+  }
+  pre, blockquote, .callout, .instructor-note, .challenge-accordion {
+    page-break-inside: avoid;
+    border-style: solid;
+  }
+  // add solution heading before the solution
+  .challenge-accordion::before {
+    content: "Solution";
+    display: block;
+    text-size: 18pt;
+    text-decoration: underline;
+  }
+  .instructor-note::before {
+    content: "Instructor Note";
+    display: block;
+    text-size: 18pt;
+    text-decoration: underline;
+  }
+  pre {
+    overflow: unset !important;
+  }
 }

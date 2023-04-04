@@ -1,3 +1,7 @@
+# varnish 0.2.16
+
+* font weight for anything in definition terms is now inherited.
+
 # varnish 0.2.15
 
 - The Carpentries Lab logo has been updated (reported: @tobyhodges, #59; fixed:

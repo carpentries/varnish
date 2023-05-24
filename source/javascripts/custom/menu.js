@@ -1,4 +1,5 @@
-var sidebarVisible = true;
+var sidebarVisible = null;
+var menu = null;
 var codeExpanded = false;
 var windowSize = 0;
 
@@ -6,6 +7,7 @@ $( document ).ready(function() {
 
     windowSize = window.innerWidth;
     // load the boolean from sessionStorage
+    console.log("LOADING");
     sidebarVisible = sidebarIsVisible();
     // only show the sidebar if we have determined that it is visible
     if (! sidebarVisible ) {
@@ -111,12 +113,32 @@ $( document ).ready(function() {
     });
 });
 
+function getMenuQuery() {
+    const parsedURL = new URL(document.URL);
+    menu = parsedURL.searchParams.get("menu");
+}
+
 // determine if the user has the sidebar showing
 function sidebarIsVisible() {
+    if (sidebarVisible === null) {
+        switch (menu) {
+            case('false'):
+                sidebarVisible = 'false';
+                break;
+            case('true'):
+                sidebarVisible = 'true';
+                break;
+            default:
+                sidebarVisible = 'true';
+                break;
+        }
+    }
     if (storageAvailable('sessionStorage')) {
-        if (sessionStorage.getItem('sidebarVisible') === null) {
+        item = sessionStorage.getItem('sidebarVisible')
+        if (item === null || item !== sidebarVisible) {
             sessionStorage.setItem('sidebarVisible', sidebarVisible);
-        } 
+        }
+        console.log("I AM " + sidebarVisible);
         return sessionStorage.getItem('sidebarVisible') == 'true';
     } else {
         return sidebarVisible

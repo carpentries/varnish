@@ -1,3 +1,8 @@
+# varnish 0.2.17
+
+* The margin below the schedule table in instructor view is now 25px instead of
+  225px (reported: @bencomp, #81; fixed: @bencomp, #82). 
+
 # varnish 0.2.16
 
 * font weight for anything in definition terms is now inherited.

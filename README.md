@@ -31,7 +31,7 @@ the [`source/`](source/) folder with directives to include their dependencies
 (bootstrap, jquery, feather).
 
 The minified versions are built via GitHub actions any time one of the source
-files is changed. 
+files is changed.
 
 Instructions to build locally forthcoming.
 
@@ -98,7 +98,7 @@ template:
 
 Each of these parameters can be accessed via the `{{ yaml }}` mustache context.
 For example, this adds a paragraph describing the license provided that the
-`{{ license }}` parameter is present in the yaml: 
+`{{ license }}` parameter is present in the yaml:
 
 ```html
 {{#yaml}}{{#license}}
@@ -115,8 +115,9 @@ For example, this adds a paragraph describing the license provided that the
 
  - `{{ instructor }}`: a boolean indicating instructor view
  - `{{ aio }}`: a boolean indicating that the aio page should be included
+ - `{{ aio_pdf }}`: a boolean indicating that the aio PDF page should be included
  - `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
- - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes. 
+ - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes.
  - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements avaialable in mobile view.
 
 [{pkgdown}]: https://r-lib.github.io/pkgdown

@@ -109,6 +109,76 @@ $( document ).ready(function() {
             $("#expand-code").html("Collapse All Solutions " + feather.icons['minus'].toSvg());
         }
     });
+    /* Search --------------------------*/
+    /* Adapted from https://github.com/r-lib/pkgdown/blob/ae7363faac9040a473a54fb3d770decdfb8dfec1/inst/BS5/assets/pkgdown.js#L83-L152 */
+    // Initialise search index on focus
+    var fuse;
+    $("#search-input").focus(async function(e) {
+      if (fuse) {
+        return;
+      }
+
+      $(e.target).addClass("loading");
+      var response = await fetch($("#search-input").data("search-index"));
+      var data = await response.json();
+
+      var options = {
+        keys: ["what", "text", "code"],
+        ignoreLocation: true,
+        threshold: 0.1,
+        includeMatches: true,
+        includeScore: true,
+      };
+      fuse = new Fuse(data, options);
+
+      $(e.target).removeClass("loading");
+    });
+
+    // Use algolia autocomplete
+    var options = {
+      autoselect: true,
+      debug: true,
+      hint: false,
+      minLength: 2,
+    };
+    var q;
+    async function searchFuse(query, callback) {
+      await fuse;
+
+      var items;
+      if (!fuse) {
+        items = [];
+      } else {
+        q = query;
+        var results = fuse.search(query, { limit: 20 });
+        items = results
+          .filter((x) => x.score <= 0.75)
+          .map((x) => x.item);
+        if (items.length === 0) {
+          items = [{dir:"Sorry 😿",previous_headings:"",title:"No results found.",what:"No results found.",path:window.location.href}];
+        }
+      }
+      callback(items);
+    }
+    $("#search-input").autocomplete(options, [
+      {
+        name: "content",
+        source: searchFuse,
+        templates: {
+          suggestion: (s) => {
+            if (s.title == s.what) {
+              return `${s.dir} >	<div class="search-details"> ${s.title}</div>`;
+            } else if (s.previous_headings == "") {
+              return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.what}`;
+            } else {
+              return `${s.dir} >	<div class="search-details"> ${s.title}</div> > ${s.previous_headings} > ${s.what}`;
+            }
+          },
+        },
+      },
+    ]).on('autocomplete:selected', function(event, s) {
+      window.location.href = s.path + "?q=" + q + "#" + s.id;
+    });
 });
 
 // determine if the user has the sidebar showing

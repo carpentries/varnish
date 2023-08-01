@@ -155,11 +155,10 @@
       </ul>
     </div>
     <form class="d-flex col-md-2 search-form">
-      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search">
+      <input type="search" class="form-control me-sm-2 searchbox" aria-label="{{#translate}}{{toggle_nav}}{{/translate}}" name="search-input" data-search-index="{{#site}}{{root}}{{/site}}search.json" id="search-input" placeholder="{{#translate}}{{search_for}}{{/translate}}" autocomplete="off">
       <button class="btn btn-outline-success tablet-search-button"  type="submit">
         <i class="search-icon" data-feather="search" role="img" aria-label="search button"></i>
       </button>
-      <input type="search" class="form-control me-sm-2" aria-label="{{#translate}}{{toggle_nav}}{{/translate}}" name="search-input" data-search-index="{{#site}}{{root}}{{/site}}search.json" id="search-input" placeholder="{{#translate}}{{search_for}}{{/translate}}" autocomplete="off">
       <!-- <input class="form-control me-2 searchbox" name="search-input" id="search-input" data-search-index="{{#site}}{{root}}{{/site}}search.json" type="search" placeholder="Search" aria-label="Search"> --> 
       <!-- <button class="btn btn-outline-success tablet-search-button" type="submit"><i class="search-icon" data-feather="search" role="img" aria-label="search button"></i></button> -->
       <!-- <fieldset disabled> -->

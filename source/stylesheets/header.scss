@@ -492,3 +492,48 @@
     margin-right: 20px;
   }
 }
+
+/* search =================================================================== */
+
+
+mark {
+  background: linear-gradient(-100deg,
+    change-color($very-light-blue, $alpha: 0.2),
+    change-color($very-light-blue, $alpha: 0.7) 95%,
+    change-color($very-light-blue, $alpha: 0.1)
+  )
+}
+
+
+.algolia-autocomplete .aa-hint {
+  color: $black;
+}
+
+/* Taken from https://github.com/r-lib/pkgdown/blob/c9206802f2888992de92aa41f517ba7812f05331/inst/BS5/assets/pkgdown.scss#L458-L497 */
+/* "Max" needed until libsass supports https://sass-lang.com/documentation/syntax/special-functions#min-and-max */
+.algolia-autocomplete .aa-dropdown-menu {
+  width: Max(100%, 20rem);
+  background-color: #ffffff;
+  border: $border-width solid $black;
+  margin-top: 2px;
+
+
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px $light-gray solid;
+  font-size: 0.9rem;
+  color: $black;
+}
+.search-details {
+  font-size: 0.9rem;
+  color: $black;
+  display: inline;
+  font-weight: bolder;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: mix($black, #ffffff, 10%);
+}

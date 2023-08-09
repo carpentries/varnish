@@ -1,3 +1,7 @@
+# varnish 0.3.0
+
+* Lesson overview pages are now supported.
+
 # varnish 0.2.17
 
 * The margin below the schedule table in instructor view is now 25px instead of

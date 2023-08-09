@@ -198,10 +198,7 @@ function showSidebarMobile(){
             right: '0px'
         });
     }
-    $sidebarCol.css({
-      position: '', 
-      display:  'block'
-    });
+    $sidebarCol.css({position:''});
     $sidebar.show();
     $sidebar.attr('aria-hidden', 'false');
 }
@@ -210,9 +207,6 @@ function hideSidebarMobile(){
     // console.log('hideSidebarMobile');
     setSidebarVisible(false);
     var $sidebar = $('#sidebar');
-    var $sidebarCol = $('#sidebar-col');
-    // unset the display when hidden
-    $sidebarCol.css({display:''});
     $sidebar.hide();
     $sidebar.attr('tabindex', '-1'); // remove from tab order
     $sidebar.attr('aria-hidden', 'true'); // ensure not read by screen readers
@@ -225,7 +219,6 @@ function showSidebarDesktop(){
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
-    $sidebarCol.css({display: ''})
     $sidebar.css({
             position: 'relative',
             top: '0px'
@@ -253,7 +246,6 @@ function hideSidebarDesktop(){
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
-    $sidebarCol.css({display: ''})
     $sidebarInner.css('visibility', 'hidden');
     $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
     // resize primary content before sidebar col

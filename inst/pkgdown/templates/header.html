@@ -35,7 +35,7 @@
         {{/life_cycle}}{{/yaml}}
       </div>
     </div>
-    <div class="selector-container ">
+    <div class="selector-container">
       {{#yaml}}{{#workbench-beta}}
       <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
         {{#pre-beta-date}}
@@ -134,9 +134,11 @@
         </li>
         {{/instructor}}
         {{^instructor}}
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
         </li>
+        {{/overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
         </li>
@@ -171,6 +173,7 @@
   {{#site}}{{title}}{{/site}}
 </div>
 
+{{^overview}}
 <aside class="col-md-12 lesson-progress">
   <div style="width: {{progress}}%" class="percentage">
     {{progress}}%
@@ -180,3 +183,4 @@
     </div>
   </div>
 </aside>
+{{/overview}}

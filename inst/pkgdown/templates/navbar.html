@@ -63,6 +63,7 @@
           </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
+            {{^overview}}
             <div class="accordion-item">
 
               <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
@@ -77,6 +78,7 @@
                 </div>
               </div>
             </div>
+            {{/overview}}
 
             <hr class="half-width"/>
 
@@ -103,9 +105,11 @@
                       </li>
                       {{/instructor}}
                       {{^instructor}}
+                      {{^overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
                       </li>
+                      {{/overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
                       </li>

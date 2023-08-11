@@ -13,35 +13,34 @@ $( document ).ready(function() {
     }
     // load the boolean from sessionStorage
     sidebarVisible = sidebarIsVisible();
-    
     // only show the sidebar if we have determined that it is visible
     if (! sidebarVisible ) {
-        if(window.innerWidth > 1200) {
-           hideSidebarDesktop();
+        if (window.innerWidth > 1200) {
+            hideSidebarDesktop();
         }
     }
     //change collapse icons depending on context
-    if(window.innerWidth > 1024) {
-      if ( sidebarVisible ) {
-        $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());
-      } else {
-        $(".collapse-toggle").html("Episodes " + feather.icons['chevron-right'].toSvg());
-      }
-    }else{
+    if (window.innerWidth > 1024) {
+        if ( sidebarVisible ) {
+            $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());
+        } else {
+            $(".collapse-toggle").html("Episodes " + feather.icons['chevron-right'].toSvg());
+        }
+    } else {
         $(".collapse-toggle").html(feather.icons['x'].toSvg());
     }
     //show mobile sidebar
     $(".navbar-toggler").click(function(){
         showSidebarMobile();
-     });
+    });
 
     //showing and hiding sidebar
     $(".collapse-toggle").click(function(){
-        if(window.innerWidth > 1200) {
-            if(! sidebarIsVisible() ) {
-              showSidebarDesktop();
+        if (window.innerWidth > 1200) {
+            if (! sidebarIsVisible() ) {
+                showSidebarDesktop();
             } else {
-              hideSidebarDesktop();
+                hideSidebarDesktop();
             }
         } else {
             hideSidebarMobile();
@@ -51,7 +50,7 @@ $( document ).ready(function() {
     //attempt to smoothly handle resizing windows
     $(window).on('resize', function(){
         //nav is shown by default on desktop only
-        if(window.innerWidth > 1200) {
+        if (window.innerWidth > 1200) {
             //reset css to desktop only if it's visible
             if ( sidebarIsVisible() ) {
                 showSidebarDesktop();
@@ -59,7 +58,7 @@ $( document ).ready(function() {
                 hideSidebarDesktop();
             }
 
-            if(windowSize > 1200 && ! sidebarIsVisible()) {
+            if (windowSize > 1200 && ! sidebarIsVisible()) {
                 hideSidebarDesktop();
             }
         }
@@ -67,9 +66,9 @@ $( document ).ready(function() {
 
         windowSize = window.innerWidth;
 
-        if(window.innerWidth < 768) {
-          var $toTop = $('#to-top');
-          $toTop.hide();
+        if (window.innerWidth < 768) {
+            var $toTop = $('#to-top');
+            $toTop.hide();
         }
     });
 
@@ -77,36 +76,36 @@ $( document ).ready(function() {
     $(document).scroll(function() {
         var scrollTimer = window.scrollTimer || null;
         if (scrollTimer) {
-          clearTimeout(scrollTimer);
+            clearTimeout(scrollTimer);
         }
         window.scrollTimer = window.setTimeout(
-          function() {
-            var $this     = $(this);
-            var y         = $this.scrollTop();
-            var $toTop    = $('#to-top');
-            var isVisible = $toTop.is(':visible');
-            if (y > 500) {
-                if(window.innerWidth > 768 && ! isVisible) {
-                    $toTop.fadeIn();
+            function() {
+                var $this     = $(this);
+                var y         = $this.scrollTop();
+                var $toTop    = $('#to-top');
+                var isVisible = $toTop.is(':visible');
+                if (y > 500) {
+                    if (window.innerWidth > 768 && ! isVisible) {
+                        $toTop.fadeIn();
+                    }
+                } else if (isVisible) {
+                    $toTop.fadeOut();
                 }
-            } else if (isVisible) {
-                $toTop.fadeOut();
-            }
-          },
-          100
+            },
+            100
         );
     });
 
     //hide the mobile menu if a chapter section link is clicked
     $('.section-link').click(function(){
-        if(window.innerWidth < 1200) {
+        if (window.innerWidth < 1200) {
             hideSidebarMobile();
         }
     });
 
     //expand all code button
     $("#expand-code").click(function(){
-        if(codeExpanded == true) {
+        if (codeExpanded == true) {
             $(".solution-button").not(".collapsed").click();
             codeExpanded = false;
             $("#expand-code").html("Expand All Solutions " + feather.icons['plus'].toSvg());
@@ -123,7 +122,7 @@ function sidebarIsVisible() {
     if (storageAvailable('sessionStorage')) {
         if (sessionStorage.getItem('sidebarVisible') === null) {
             sessionStorage.setItem('sidebarVisible', sidebarVisible);
-        } 
+        }
         return sessionStorage.getItem('sidebarVisible') == 'true';
     } else {
         return sidebarVisible
@@ -201,7 +200,7 @@ function showSidebarMobile(){
             right: '0px'
         });
     } else {
-       $sidebar.css({
+        $sidebar.css({
             display: '',
             position: 'absolute',
             top: '200px',
@@ -273,7 +272,7 @@ function hideSidebarDesktop(){
     $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
     // resize primary content before sidebar col
     // when the primary content adjusts its size, the vertical content shrinks
-    // and we need to account fo that. 
+    // and we need to account fo that.
     $primaryContent.attr('class', "col-lg-12 primary-content");
     // Here, we squish the sidebar to the left and readjust its height to be
     // equal to the primary content

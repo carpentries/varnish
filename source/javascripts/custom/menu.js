@@ -258,7 +258,6 @@ function hideSidebarDesktop(){
       hideSidebarOverview();
       return(true)
     }
-    var display         = (is_overview) ? 'none' : ''
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -273,13 +272,11 @@ function hideSidebarDesktop(){
     // Here, we squish the sidebar to the left and readjust its height to be
     // equal to the primary content
     $sidebarCol.css({
-        display: display,
         position: 'absolute',
         left: '-10px',
         width:'115px',
         height: ($primaryContent.height())
     });
-    $sidebarCol.attr('class', 'col-lg-1');
     $sidebar.attr('tabindex', '-1');
     $sidebar.attr('aria-hidden', 'true');
     $collapseToggle.attr('aria-expanded', 'false');
@@ -289,7 +286,6 @@ function hideSidebarDesktop(){
 function hideSidebarOverview(){
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
-    var display         = (is_overview) ? 'none' : ''
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');

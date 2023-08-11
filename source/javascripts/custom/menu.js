@@ -306,7 +306,7 @@ function hideSidebarOverview(){
         position: 'absolute',
         left: '-10px',
         width:'0px',
-        height: '0px')
+        height: '0px'
     });
     $sidebarCol.attr('class', 'col-lg-1');
     $sidebarCol.attr('tabindex', '-1');

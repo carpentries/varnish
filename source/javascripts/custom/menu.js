@@ -5,12 +5,7 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
-    is_overview = $(".overview-sidebar").length > 0;
     // load the boolean from sessionStorage
-    if (is_overview) {
-      setSidebarVisible(false);
-      hideSidebarOverview();
-    }
     sidebarVisible = sidebarIsVisible();
     
     // only show the sidebar if we have determined that it is visible

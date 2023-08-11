@@ -5,8 +5,14 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
+    is_overview = $(".overview-sidebar").length > 0;
     // load the boolean from sessionStorage
+    if (is_overview) {
+      setSidebarVisible(false);
+      hideSidebarDesktop();
+    }
     sidebarVisible = sidebarIsVisible();
+    
     // only show the sidebar if we have determined that it is visible
     if (! sidebarVisible ) {
         if(window.innerWidth > 1200) {
@@ -245,6 +251,8 @@ function showSidebarDesktop(){
 
 function hideSidebarDesktop(){
     setSidebarVisible(false);
+    var is_overview     = $('.overview-sidebar').length > 0;
+    var display         = (is_overview) ? 'none' : ''
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -259,6 +267,7 @@ function hideSidebarDesktop(){
     // Here, we squish the sidebar to the left and readjust its height to be
     // equal to the primary content
     $sidebarCol.css({
+        display: display,
         position: 'absolute',
         left: '-10px',
         width:'115px',

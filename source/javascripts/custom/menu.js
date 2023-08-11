@@ -198,7 +198,7 @@ function showSidebarMobile(){
             right: '0px'
         });
     }
-    $sidebarCol.css({position:''});
+    $sidebarCol.css({position: ''});
     $sidebar.show();
     $sidebar.attr('aria-hidden', 'false');
 }
@@ -213,6 +213,9 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
+    if ($('.sidebar-overview').length == 0) {
+      return(true)
+    }
     setSidebarVisible(true);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -240,6 +243,9 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
+    if ($('.sidebar-overview').length == 0) {
+      return(true)
+    }
     setSidebarVisible(false);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');

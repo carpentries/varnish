@@ -1,6 +1,7 @@
 var sidebarVisible = true;
 var codeExpanded = false;
 var windowSize = 0;
+var is_overview = false;
 
 $( document ).ready(function() {
 
@@ -9,6 +10,7 @@ $( document ).ready(function() {
     // mobile mode.
     is_overview = $(".overview-sidebar").length > 0 && windowSize >= 768;
     if (is_overview) {
+        console.log("init overview");
         setSidebarVisible(false);
     }
     // load the boolean from sessionStorage
@@ -215,7 +217,7 @@ function showSidebarMobile(){
 }
 
 function hideSidebarMobile(){
-    console.log('hideSidebarMobile');
+    console.log('hideSidebarMobile()');
     setSidebarVisible(false);
     var $sidebar = $('#sidebar');
     $sidebar.hide();
@@ -224,7 +226,7 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    console.log("sidebar!");
+    console.log("showSidebarDesktop()");
     setSidebarVisible(true);
     if ($('.overview-sidebar').length > 0) {
         hideSidebarOverview();
@@ -256,7 +258,7 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    console.log("no sidebar");
+    console.log("hideSidebarDesktop()");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     if (is_overview) {
@@ -289,7 +291,7 @@ function hideSidebarDesktop(){
 }
 
 function hideSidebarOverview(){
-    console.log("I am hiding!");
+    console.log("hideSidebarOverview()");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     var $sidebar        = $('#sidebar');

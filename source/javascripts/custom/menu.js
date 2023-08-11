@@ -191,6 +191,7 @@ function showSidebarMobile(){
     setSidebarVisible(true);
     if(window.innerWidth < 768) {
         $sidebar.css({
+            display: '',
             position: 'absolute',
             top: '150px',
             left: '0px',
@@ -198,13 +199,14 @@ function showSidebarMobile(){
         });
     } else {
        $sidebar.css({
+            display: '',
             position: 'absolute',
             top: '200px',
             left: '0px',
             right: '0px'
         });
     }
-    $sidebarCol.css({position: ''});
+    $sidebarCol.css({position: '', display: ''});
     $sidebar.show();
     $sidebar.attr('aria-hidden', 'false');
 }
@@ -301,6 +303,7 @@ function hideSidebarOverview(){
     // and we need to account fo that. 
     // Here, we squish the sidebar to the left and readjust its height to be
     // equal to the primary content
+    $sidebar.css({display: 'none'});
     $sidebarCol.css({
         display: 'none',
         position: 'absolute',

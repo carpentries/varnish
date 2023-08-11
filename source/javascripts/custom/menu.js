@@ -9,7 +9,7 @@ $( document ).ready(function() {
     // load the boolean from sessionStorage
     if (is_overview) {
       setSidebarVisible(false);
-      hideSidebarDesktop();
+      hideSidebarOverview();
     }
     sidebarVisible = sidebarIsVisible();
     
@@ -220,7 +220,7 @@ function hideSidebarMobile(){
 
 function showSidebarDesktop(){
     if ($('.overview-sidebar').length > 0) {
-      hideSidebarDesktop();
+      hideSidebarOverview();
       return(true)
     }
     setSidebarVisible(true);
@@ -252,6 +252,10 @@ function showSidebarDesktop(){
 function hideSidebarDesktop(){
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
+    if (is_overview) {
+      hideSidebarOverview();
+      return(true)
+    }
     var display         = (is_overview) ? 'none' : ''
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -274,6 +278,39 @@ function hideSidebarDesktop(){
         height: ($primaryContent.height())
     });
     $sidebarCol.attr('class', 'col-lg-1');
+    $sidebar.attr('tabindex', '-1');
+    $sidebar.attr('aria-hidden', 'true');
+    $collapseToggle.attr('aria-expanded', 'false');
+    checkForExtraPadding();
+}
+
+function hideSidebarOverview(){
+    setSidebarVisible(false);
+    var is_overview     = $('.overview-sidebar').length > 0;
+    var display         = (is_overview) ? 'none' : ''
+    var $sidebar        = $('#sidebar');
+    var $sidebarCol     = $('#sidebar-col');
+    var $primaryContent = $('.primary-content');
+    var $sidebarInner   = $('.sidebar-inner');
+    var $collapseToggle = $('.collapse-toggle');
+    $primaryContent.attr('class', "col-lg-12 primary-content");
+    $sidebarInner.css('visibility', 'hidden');
+    $collapseToggle.css({display: 'none'})
+    // resize primary content before sidebar col
+    // when the primary content adjusts its size, the vertical content shrinks
+    // and we need to account fo that. 
+    // Here, we squish the sidebar to the left and readjust its height to be
+    // equal to the primary content
+    $sidebarCol.css({
+        display: 'none',
+        position: 'absolute',
+        left: '-10px',
+        width:'0px',
+        height: '0px')
+    });
+    $sidebarCol.attr('class', 'col-lg-1');
+    $sidebarCol.attr('tabindex', '-1');
+    $sidebarCol.attr('aria-hidden', 'true');
     $sidebar.attr('tabindex', '-1');
     $sidebar.attr('aria-hidden', 'true');
     $collapseToggle.attr('aria-expanded', 'false');

@@ -10,7 +10,7 @@ $( document ).ready(function() {
     // mobile mode.
     is_overview = $(".overview-sidebar").length > 0 && windowSize >= 768;
     if (is_overview) {
-        console.log("init overview");
+        // console.log("init overview");
         setSidebarVisible(false);
     }
     // load the boolean from sessionStorage
@@ -184,7 +184,7 @@ function checkForExtraPadding(){
 }
 
 function showSidebarMobile(){
-    console.log("showSidebarMobile()");
+    // console.log("showSidebarMobile()");
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
@@ -217,7 +217,7 @@ function showSidebarMobile(){
 }
 
 function hideSidebarMobile(){
-    console.log('hideSidebarMobile()');
+    // console.log('hideSidebarMobile()');
     setSidebarVisible(false);
     var $sidebar = $('#sidebar');
     $sidebar.hide();
@@ -226,7 +226,7 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    console.log("showSidebarDesktop()");
+    // console.log("showSidebarDesktop()");
     setSidebarVisible(true);
     if ($('.overview-sidebar').length > 0) {
         hideSidebarOverview();
@@ -258,7 +258,7 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    console.log("hideSidebarDesktop()");
+    // console.log("hideSidebarDesktop()");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     if (is_overview) {
@@ -291,7 +291,7 @@ function hideSidebarDesktop(){
 }
 
 function hideSidebarOverview(){
-    console.log("hideSidebarOverview()");
+    // console.log("hideSidebarOverview()");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     var $sidebar        = $('#sidebar');

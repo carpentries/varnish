@@ -213,7 +213,8 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    if ($('.sidebar-overview').length == 0) {
+    if ($('.overview-sidebar').length > 0) {
+      hideSidebarDesktop();
       return(true)
     }
     setSidebarVisible(true);
@@ -243,9 +244,6 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
-    if ($('.sidebar-overview').length == 0) {
-      return(true)
-    }
     setSidebarVisible(false);
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');

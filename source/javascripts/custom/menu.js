@@ -5,6 +5,12 @@ var windowSize = 0;
 $( document ).ready(function() {
 
     windowSize = window.innerWidth;
+    // When the page loads check if we have an overview page and we are not in
+    // mobile mode.
+    is_overview = $(".overview-sidebar").length > 0 && windowSize >= 768;
+    if (is_overview) {
+        setSidebarVisible(false);
+    }
     // load the boolean from sessionStorage
     sidebarVisible = sidebarIsVisible();
     
@@ -163,28 +169,30 @@ function storageAvailable(type) {
 
 //needed to avoid the collapsed navbar overlapping main content
 function checkForExtraPadding(){
-    if(window.innerWidth > 1200 && window.innerWidth < 1352)
-        {
-            if(! sidebarIsVisible()) {
-                $('.primary-content').css({
-                'padding-left': '90px'
-                 });
-            }
-        } else {
+    if (window.innerWidth > 1200 && window.innerWidth < 1352)
+    {
+        if (! sidebarIsVisible()) {
             $('.primary-content').css({
-                'padding-left': ''});
+                'padding-left': '90px'
+            });
         }
+    } else {
+        $('.primary-content').css({
+            'padding-left': ''});
+    }
 }
 
 function showSidebarMobile(){
+    console.log("showSidebarMobile()");
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
+    $collapseToggle.css({display: ''});
     $collapseToggle.html(feather.icons['x'].toSvg());
     setSidebarVisible(true);
-    if(window.innerWidth < 768) {
+    if (window.innerWidth < 768) {
         $sidebar.css({
             display: '',
             position: 'absolute',
@@ -202,12 +210,13 @@ function showSidebarMobile(){
         });
     }
     $sidebarCol.css({position: '', display: ''});
+    $sidebarInner.css('visibility', 'visible');
     $sidebar.show();
     $sidebar.attr('aria-hidden', 'false');
 }
 
 function hideSidebarMobile(){
-    // console.log('hideSidebarMobile');
+    console.log('hideSidebarMobile');
     setSidebarVisible(false);
     var $sidebar = $('#sidebar');
     $sidebar.hide();
@@ -216,20 +225,21 @@ function hideSidebarMobile(){
 }
 
 function showSidebarDesktop(){
-    if ($('.overview-sidebar').length > 0) {
-      hideSidebarOverview();
-      return(true)
-    }
+    console.log("sidebar!");
     setSidebarVisible(true);
+    if ($('.overview-sidebar').length > 0) {
+        hideSidebarOverview();
+        return(true)
+    }
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
     var $primaryContent = $('.primary-content');
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $sidebar.css({
-            position: 'relative',
-            top: '0px'
-        });
+        position: 'relative',
+        top: '0px'
+    });
     $sidebarCol.attr('class', 'col-lg-4');
     $sidebarCol.css({
         position: 'relative',
@@ -247,11 +257,12 @@ function showSidebarDesktop(){
 }
 
 function hideSidebarDesktop(){
+    console.log("no sidebar");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     if (is_overview) {
-      hideSidebarOverview();
-      return(true)
+        hideSidebarOverview();
+        return(true)
     }
     var $sidebar        = $('#sidebar');
     var $sidebarCol     = $('#sidebar-col');
@@ -279,6 +290,7 @@ function hideSidebarDesktop(){
 }
 
 function hideSidebarOverview(){
+    console.log("I am hiding!");
     setSidebarVisible(false);
     var is_overview     = $('.overview-sidebar').length > 0;
     var $sidebar        = $('#sidebar');
@@ -291,16 +303,12 @@ function hideSidebarOverview(){
     $collapseToggle.css({display: 'none'})
     // resize primary content before sidebar col
     // when the primary content adjusts its size, the vertical content shrinks
-    // and we need to account fo that. 
+    // and we need to account fo that.
     // Here, we squish the sidebar to the left and readjust its height to be
     // equal to the primary content
     $sidebar.css({display: 'none'});
     $sidebarCol.css({
-        display: 'none',
-        position: 'absolute',
-        left: '-10px',
-        width:'0px',
-        height: '0px'
+        display: 'none'
     });
     $sidebarCol.attr('class', 'col-lg-1');
     $sidebarCol.attr('tabindex', '-1');

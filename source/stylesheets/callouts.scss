@@ -118,10 +118,9 @@
   color: $black;
 }
 
-/* Challenge Accordion */
+/* Parent Class for Accordions in Learner View */
 
-.challenge-accordion {
-  margin: -25px 0 25px 0;
+.learner-accordion {
   .accordion-button {
     background: $yellow;
     height: 43px;
@@ -164,7 +163,7 @@
     padding-bottom: 25px;
     background: $light-gray;
     li {
-      list-style-type: inherit; 
+      list-style-type: inherit;
       list-style-position: inside;
       margin-left: 0px;
       margin-top:10px;
@@ -175,6 +174,23 @@
     border-left: 10px $yellow solid;
   }
 }
+
+/* Child classes for solution and spoiler accordions */
+
+.challenge-accordion {
+  @extend .learner-accordion;
+  margin: -25px 0 25px 0;
+}
+
+.spoiler-accordion {
+  @extend .learner-accordion;
+  margin: 25px 0 25px 0;
+  .accordion-button {
+    background: $very-light-blue;
+    height: 53px;
+  }
+}
+
 
 /* Move icon, adjust margins on medium/large screens */
 

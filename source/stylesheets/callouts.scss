@@ -185,9 +185,13 @@
 .spoiler-accordion {
   @extend .learner-accordion;
   margin: 25px 0 25px 0;
-  .accordion-button {
+  .spoiler-button {
     background: $very-light-blue;
     height: 53px;
+    padding-left: 15px;
+  }
+  .spoiler-icon {
+    margin-right: 15px;
   }
 }
 

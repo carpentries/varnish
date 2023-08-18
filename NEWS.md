@@ -1,7 +1,7 @@
 # varnish 0.2.18
 
 * Non-math elements on the same line will no longer be treated as math
-  (reported: @marklcrowe, #88; fixed: @zkamvar, #89)
+  (reported: @marklcrowe, #88; fixed: @zkamvar, #90)
 
 # varnish 0.2.17
 

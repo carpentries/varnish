@@ -1,3 +1,8 @@
+# varnish 0.2.18
+
+* Non-math elements on the same line will no longer be treated as math
+  (reported: @marklcrowe, #88; fixed: @zkamvar, #89)
+
 # varnish 0.2.17
 
 * The margin below the schedule table in instructor view is now 25px instead of

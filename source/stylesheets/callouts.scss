@@ -186,12 +186,44 @@
   @extend .learner-accordion;
   margin: 25px 0 25px 0;
   .spoiler-button {
-    background: $very-light-blue;
+    background: $light-gray;
     height: 53px;
     padding-left: 15px;
+    position: relative;
+    border-color: $black;
+    padding-left: 10px;
+    color: $black;
+    box-shadow: 0;
+    &:focus {
+      box-shadow: #0d6efd 0px 0px 0px 4px;
+    }
+    &, h3 {
+      font-family: Mulish;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-decoration: underline;
+      text-underline-offset: 25px;
+      margin-left: 65px;
+    }
+    &.collapsed {
+      color: $black;
+      h3 {
+        text-decoration: none;
+      }
+    }
   }
-  .spoiler-icon {
-    margin-right: 15px;
+  .note-square {
+    width: 53px;
+    height: 53px;
+    color: $black;
+    background: $very-light-blue;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 

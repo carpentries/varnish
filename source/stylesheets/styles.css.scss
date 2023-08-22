@@ -66,8 +66,9 @@
   font-style: normal;
 }
 
-* {
+body {
   font-family: 'Mulish', sans serif;
+  font-weight: $font_weight_normal;
 }
 
 h1 {

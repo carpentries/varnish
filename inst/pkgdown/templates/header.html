@@ -59,8 +59,8 @@
         {{^beta-date}}{{^pre-beta-date}}
         <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #5bbad5"></i>
         {{/pre-beta-date}}{{/beta-date}}
-        Workbench Beta | 
-        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> | 
+        Workbench Beta |
+        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> |
         <a href="https://carpentries.github.io/workbench/beta-phase.html" class="alert-link">Learn More</a>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
@@ -123,15 +123,19 @@
           </span>
         </li>
         {{#instructor}}
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
         </li>
+        {{/overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
         </li>
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
         </li>
+        {{/overview}}
         {{/instructor}}
         {{^instructor}}
         {{^overview}}
@@ -160,7 +164,7 @@
     </div>
     <form class="d-flex col-md-2 search-form">
       <fieldset disabled>
-      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"> 
+      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success tablet-search-button"  type="submit">
           <i class="search-icon" data-feather="search" role="img" aria-label="search button"></i>
         </button>

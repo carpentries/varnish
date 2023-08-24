@@ -122,6 +122,13 @@
             {{#site}}{{title}}{{/site}}
           </span>
         </li>
+        {{#overview}}
+        {{! We want to include a setup link prominently in the resources for overview pages }}
+        <li>
+          {{! NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview }}
+          <a class="nav-link" href="index.html#setup">Setup</a>
+        </li>
+        {{/overview}}
         {{#instructor}}
         {{^overview}}
         <li class="nav-item">

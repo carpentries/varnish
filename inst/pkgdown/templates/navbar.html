@@ -95,6 +95,13 @@
                 <div id="flush-collapseTwelve" class="accordion-collapse {{#overview}}show {{/overview}}collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
+                      {{#overview}}
+                      {{! We want to include a setup link prominently in the resources for overview pages }}
+                      <li>
+                        {{! NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview }}
+                        <a href="index.html#setup">Setup</a>
+                      </li>
+                      {{/overview}}
                       {{#instructor}}
                       {{^overview}}
                       <li>

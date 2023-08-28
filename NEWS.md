@@ -2,6 +2,12 @@
 
 * Lesson overview pages are now supported.
 
+## MISC
+
+* The build process for css/js bundles is now self-contained in the node
+  dev dependencies. Running `npm install` will install everything needed to
+  re-compile the js and css.
+
 # varnish 0.2.18
 
 * Non-math elements on the same line will no longer be treated as math

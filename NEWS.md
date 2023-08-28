@@ -2,6 +2,13 @@
 
 * Lesson overview pages are now supported.
 
+# varnish 0.2.18
+
+* Non-math elements on the same line will no longer be treated as math
+  (reported: @marklcrowe, #88; fixed: @zkamvar, #90)
+* Bold italic text will now render correctly
+  (reported: @marklcrowe, #89; fixed: @zkamvar, #91)
+
 # varnish 0.2.17
 
 * The margin below the schedule table in instructor view is now 25px instead of

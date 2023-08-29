@@ -3,6 +3,7 @@ on:
     paths:
       - .github/workflows/compile-css.yaml
       - source/**
+      - source/**/**
       - postinstall.sh
       - squash-a-script.sh
       - squash-sass.sh
@@ -20,14 +21,9 @@ jobs:
       - name: Clean
         run: rm -rf inst/pkgdown/assets/assets/
       - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
       - run: npm install
-      - run: npm install -g uglify-js
       - name: Comple js
         run: bash squash-a-script.sh
-      - name: Install sass
-        run: npm install -g sass
       - name: Compile sass
         run: bash squash-sass.sh
       - name: Commit

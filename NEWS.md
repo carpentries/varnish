@@ -1,6 +1,8 @@
 # varnish 0.3.0
 
 * Lesson overview pages are now supported.
+* The `spoiler` dropdown item has been implemented (implemented: @tobyhodges,
+  #92)
 
 ## MISC
 

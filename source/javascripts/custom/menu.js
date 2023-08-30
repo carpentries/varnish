@@ -101,10 +101,12 @@ $( document ).ready(function() {
     $("#expand-code").click(function(){
         if(codeExpanded == true) {
             $(".solution-button").not(".collapsed").click();
+            $(".spoiler-button").not(".collapsed").click();
             codeExpanded = false;
             $("#expand-code").html("Expand All Solutions " + feather.icons['plus'].toSvg());
         } else {
             $(".solution-button.collapsed").click();
+            $(".spoiler-button.collapsed").click();
             codeExpanded = true;
             $("#expand-code").html("Collapse All Solutions " + feather.icons['minus'].toSvg());
         }
@@ -116,7 +118,7 @@ function sidebarIsVisible() {
     if (storageAvailable('sessionStorage')) {
         if (sessionStorage.getItem('sidebarVisible') === null) {
             sessionStorage.setItem('sidebarVisible', sidebarVisible);
-        } 
+        }
         return sessionStorage.getItem('sidebarVisible') == 'true';
     } else {
         return sidebarVisible

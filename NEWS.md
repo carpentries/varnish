@@ -1,3 +1,10 @@
+# varnish 0.3.0
+
+* The `spoiler` dropdown item has been implemented (implemented: @tobyhodges,
+  #92)
+* The build process for css and javascript has been localised to node dev
+  dependencies.
+
 # varnish 0.2.18
 
 * Non-math elements on the same line will no longer be treated as math

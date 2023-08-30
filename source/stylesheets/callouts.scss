@@ -117,10 +117,9 @@
   color: $black;
 }
 
-/* Challenge Accordion */
+/* Parent Class for Accordions in Learner View */
 
-.challenge-accordion {
-  margin: -25px 0 25px 0;
+.learner-accordion {
   .accordion-button {
     background: $yellow;
     height: 43px;
@@ -163,7 +162,7 @@
     padding-bottom: 25px;
     background: $light-gray;
     li {
-      list-style-type: inherit; 
+      list-style-type: inherit;
       list-style-position: inside;
       margin-left: 0px;
       margin-top:10px;
@@ -174,6 +173,59 @@
     border-left: 10px $yellow solid;
   }
 }
+
+/* Child classes for solution and spoiler accordions */
+
+.challenge-accordion {
+  @extend .learner-accordion;
+  margin: -25px 0 25px 0;
+}
+
+.spoiler-accordion {
+  @extend .learner-accordion;
+  margin: 25px 0 25px 0;
+  .spoiler-button {
+    background: $light-gray;
+    height: 53px;
+    padding-left: 15px;
+    position: relative;
+    border-color: $black;
+    padding-left: 10px;
+    color: $black;
+    box-shadow: 0;
+    &:focus {
+      box-shadow: #0d6efd 0px 0px 0px 4px;
+    }
+    &, h3 {
+      font-family: Mulish;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-decoration: underline;
+      text-underline-offset: 25px;
+      margin-left: 65px;
+    }
+    &.collapsed {
+      color: $black;
+      h3 {
+        text-decoration: none;
+      }
+    }
+  }
+  .note-square {
+    width: 53px;
+    height: 53px;
+    color: $black;
+    background: $very-light-blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 
 /* Move icon, adjust margins on medium/large screens */
 

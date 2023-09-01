@@ -35,7 +35,7 @@
         {{/life_cycle}}{{/yaml}}
       </div>
     </div>
-    <div class="selector-container ">
+    <div class="selector-container">
       {{#yaml}}{{#workbench-beta}}
       <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
         {{#pre-beta-date}}
@@ -59,8 +59,8 @@
         {{^beta-date}}{{^pre-beta-date}}
         <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #5bbad5"></i>
         {{/pre-beta-date}}{{/beta-date}}
-        Workbench Beta | 
-        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> | 
+        Workbench Beta |
+        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> |
         <a href="https://carpentries.github.io/workbench/beta-phase.html" class="alert-link">Learn More</a>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
@@ -122,21 +122,34 @@
             {{#site}}{{title}}{{/site}}
           </span>
         </li>
+        {{#overview}}
+        {{! We want to include a setup link prominently in the resources for overview pages }}
+        <li>
+          {{! NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview }}
+          <a class="nav-link" href="index.html#setup">Setup</a>
+        </li>
+        {{/overview}}
         {{#instructor}}
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
         </li>
+        {{/overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
         </li>
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
         </li>
+        {{/overview}}
         {{/instructor}}
         {{^instructor}}
+        {{^overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
         </li>
+        {{/overview}}
         <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
         </li>
@@ -158,7 +171,7 @@
     </div>
     <form class="d-flex col-md-2 search-form">
       <fieldset disabled>
-      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search"> 
+      <input class="form-control me-2 searchbox" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success tablet-search-button"  type="submit">
           <i class="search-icon" data-feather="search" role="img" aria-label="search button"></i>
         </button>
@@ -171,6 +184,7 @@
   {{#site}}{{title}}{{/site}}
 </div>
 
+{{^overview}}
 <aside class="col-md-12 lesson-progress">
   <div style="width: {{progress}}%" class="percentage">
     {{progress}}%
@@ -180,3 +194,4 @@
     </div>
   </div>
 </aside>
+{{/overview}}

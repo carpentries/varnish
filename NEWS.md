@@ -1,9 +1,23 @@
 # varnish 0.3.0
 
-* The `spoiler` dropdown item has been implemented (implemented: @tobyhodges,
-  #92)
-* The build process for css and javascript has been localised to node dev
-  dependencies.
+* Lesson overview pages are now supported (reported: @zkamvar,
+  https://github.com/carpentries/workbench/issues/65; implemented: @zkamvar,
+  #87). These overview pages do not have a sidebar and have extra navigation
+  back to home and the setup page in the menu bar.
+- new 'overview' template is implemented to always contain links back to the
+  home page.
+* The `spoiler` dropdown item has been implemented to allow authors to create
+  stand-alone accordions that will hide optinal content from users without using
+  a `solution` class (implemented: @tobyhodges, #92)
+
+## MISC
+
+* The build process for css/js bundles is now self-contained in the node
+  dev dependencies. Running `npm install` will install everything needed to
+  re-compile the js and css.
+* The README has been updated with instructions to build locally
+* An `.editorconfig` file has been added to ensure the JS content is indented
+  properly
 
 # varnish 0.2.18
 

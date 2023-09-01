@@ -46,9 +46,16 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.0" id="varnish-030">varnish 0.3.0<a class="anchor" aria-label="anchor" href="#varnish-030"></a></h2>
-<ul><li>The <code>spoiler</code> dropdown item has been implemented (implemented: <a href="https://github.com/tobyhodges" class="external-link">@tobyhodges</a>, <a href="https://github.com/carpentries/varnish/issues/92" class="external-link">#92</a>)</li>
-<li>The build process for css and javascript has been localised to node dev dependencies.</li>
+<ul><li>Lesson overview pages are now supported (reported: <a href="https://github.com/zkamvar" class="external-link">@zkamvar</a>, <a href="https://github.com/carpentries/workbench/issues/65" class="external-link uri">https://github.com/carpentries/workbench/issues/65</a>; implemented: <a href="https://github.com/zkamvar" class="external-link">@zkamvar</a>, <a href="https://github.com/carpentries/varnish/issues/87" class="external-link">#87</a>). These overview pages do not have a sidebar and have extra navigation back to home and the setup page in the menu bar.</li>
+<li>new ‘overview’ template is implemented to always contain links back to the home page.</li>
+<li>The <code>spoiler</code> dropdown item has been implemented to allow authors to create stand-alone accordions that will hide optinal content from users without using a <code>solution</code> class (implemented: <a href="https://github.com/tobyhodges" class="external-link">@tobyhodges</a>, <a href="https://github.com/carpentries/varnish/issues/92" class="external-link">#92</a>)</li>
+</ul><div class="section level3">
+<h3 id="misc-0-3-0">MISC<a class="anchor" aria-label="anchor" href="#misc-0-3-0"></a></h3>
+<ul><li>The build process for css/js bundles is now self-contained in the node dev dependencies. Running <code>npm install</code> will install everything needed to re-compile the js and css.</li>
+<li>The README has been updated with instructions to build locally</li>
+<li>An <code>.editorconfig</code> file has been added to ensure the JS content is indented properly</li>
 </ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.18" id="varnish-0218">varnish 0.2.18<a class="anchor" aria-label="anchor" href="#varnish-0218"></a></h2>
 <ul><li>Non-math elements on the same line will no longer be treated as math (reported: <a href="https://github.com/marklcrowe" class="external-link">@marklcrowe</a>, <a href="https://github.com/carpentries/varnish/issues/88" class="external-link">#88</a>; fixed: <a href="https://github.com/zkamvar" class="external-link">@zkamvar</a>, <a href="https://github.com/carpentries/varnish/issues/90" class="external-link">#90</a>)</li>

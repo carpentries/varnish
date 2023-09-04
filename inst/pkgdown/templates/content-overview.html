@@ -1,0 +1,38 @@
+<!-- START: inst/pkgdown/templates/content-syllabus.html -->
+<div class="col-xl-12 col-lg-12">
+    <main id="main-content" class="main-content">
+      <h1>{{{pagetitle}}}</h1>
+      <div class="container lesson-content">
+        <p>
+          {{#updated}} Last updated on {{updated}} | {{/updated}}
+          <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}index.md{{/file_source}}">
+            Edit this page <i aria-hidden="true" data-feather="edit"></i>
+          </a>
+        </p>
+
+      {{{readme}}}
+
+      {{#syllabus}}
+      <section id="schedule">
+      <table class="table schedule table-striped" role="presentation">
+        <tbody>
+          {{#setup}}
+          <tr>
+            <td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
+          </tr>
+          {{/setup}}
+          {{{syllabus}}}
+      </table>
+      <p>
+      The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+      </p>
+      </section>
+      {{/syllabus}}
+      {{#setup}}
+      <section id="setup">
+      {{{setup}}}
+      </section>
+      {{/setup}}
+    </main>
+  </div>
+<!-- END  : inst/pkgdown/templates/content-syllabus.html -->

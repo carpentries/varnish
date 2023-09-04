@@ -66,7 +66,7 @@
   font-style: normal;
 }
 
-* {
+body {
   font-family: 'Mulish', sans serif;
   font-weight: $font_weight_normal;
 }
@@ -179,6 +179,9 @@ tbody > tr:nth-of-type(even) > * {
   background: $light-gray;
 }
 
+dt > * {
+  font-weight: inherit;
+}
 
 .btn-primary-outline {
   border: 1px solid $blue;

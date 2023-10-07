@@ -108,7 +108,7 @@
       <img class="small-logo" alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo-sm.svg{{/yaml}}">
     </div>
     <div class="lesson-title-md">
-      {{#site}}{{title}}{{/site}}
+      {{#site}}{{&title}}{{/site}}
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -119,7 +119,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <span class="lesson-title">
-            {{#site}}{{title}}{{/site}}
+            {{#site}}{{&title}}{{/site}}
           </span>
         </li>
         {{#overview}}
@@ -181,7 +181,7 @@
 </nav>
 
 <div class="col-md-12 mobile-title">
-  {{#site}}{{title}}{{/site}}
+  {{#site}}{{&title}}{{/site}}
 </div>
 
 {{^overview}}

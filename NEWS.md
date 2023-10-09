@@ -1,3 +1,7 @@
+# varnish 0.3.1
+
+* Lesson titles no longer escape ampersands (reported and fixed: @Robadob, #95)
+
 # varnish 0.3.0
 
 * Lesson overview pages are now supported (reported: @zkamvar,

@@ -32,6 +32,14 @@
           <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
         </abbr>
         {{/beta}}
+        {{#stable}}
+        {{#doi}}
+        <abbr class="badge badge-light" title="This lesson has passed peer review">
+            <i aria-hidden="true" class="icon" data-feather="user-check" style="color: #383838; border-radius: 5px"></i>
+            <a href="{{doi}}" class="external-link alert-link" style="color: #383838;">DOI: {{doi}}</a>
+        </abbr>
+        {{/doi}}
+        {{/stable}}
         {{/life_cycle}}{{/yaml}}
       </div>
     </div>

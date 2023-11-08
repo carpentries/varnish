@@ -1,4 +1,4 @@
-# varnish 0.3.1.9000
+# varnish 0.3.2
 
 * Provide an improved contrast to inline code within callout blocks by
   setting the background-color to #FFFFFF (reported: @sarahmbrown, 

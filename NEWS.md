@@ -1,3 +1,10 @@
+# varnish 0.3.1.9000
+
+* Provide an improved contrast to inline code within callout blocks by
+  setting the background-color to #FFFFFF (reported: @sarahmbrown, 
+  https://github.com/carpentries/workbench/issues/76 (#99); fixed 
+  @froggleston, #100)
+
 # varnish 0.3.1
 
 * Lesson titles no longer escape ampersands (reported and fixed: @Robadob, #95)

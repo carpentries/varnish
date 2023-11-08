@@ -4,6 +4,10 @@
   setting the background-color to #FFFFFF (reported: @sarahmbrown, 
   https://github.com/carpentries/workbench/issues/76 (#99); fixed 
   @froggleston, #100)
+* Back and forward navigation titles have been fixed to keep raw content and
+  not escape characters (reported: @tobyhodges, 
+  https://github.com/carpentries/workbench/issues/71 (#98); fixed
+  @froggleston, #101)
 
 # varnish 0.3.1
 

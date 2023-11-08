@@ -28,7 +28,7 @@ Authors@R: c(
            family = "Davey",
            role = c("ctb"),
            email = "robertdavey@carpentries.org",
-           comment = c(ORCID = "0000-0002-5589-7754")),           
+           comment = c(ORCID = "0000-0002-5589-7754")),
     person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.

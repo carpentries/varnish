@@ -1,3 +1,9 @@
+# varnish 0.3.3.9000
+
+* life cycle icons are now displayed as badges for better visibility
+* lessons that are stable with peer-reviewed doi releases will now have a doi
+  badge displayed with a link to the publication.
+
 # varnish 0.3.3
 
 * Code blocks in narrative no longer have a white background on top of the grey

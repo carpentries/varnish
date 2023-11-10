@@ -1,3 +1,21 @@
+# varnish 0.3.3
+
+* Code blocks in narrative no longer have a white background on top of the grey
+  background of the code block (fixed: @zkamvar, #103). 
+- The colour of the inline code has been changed from the bootstrap default to
+  black (fixed: @zkamvar, #103). 
+
+# varnish 0.3.2
+
+* Provide an improved contrast to inline code within callout blocks by
+  setting the background-color to #FFFFFF (reported: @sarahmbrown, 
+  https://github.com/carpentries/workbench/issues/76 (#99); fixed 
+  @froggleston, #100)
+* Back and forward navigation titles have been fixed to keep raw content and
+  not escape characters (reported: @tobyhodges, 
+  https://github.com/carpentries/workbench/issues/71 (#98); fixed
+  @froggleston, #101)
+
 # varnish 0.3.1
 
 * Lesson titles no longer escape ampersands (reported and fixed: @Robadob, #95)

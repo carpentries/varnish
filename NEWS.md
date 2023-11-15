@@ -1,3 +1,59 @@
+# varnish 0.3.3.9000
+
+* life cycle icons are now displayed as badges for better visibility
+* lessons that are stable with peer-reviewed doi releases will now have a doi
+  badge displayed with a link to the publication.
+
+# varnish 0.3.3
+
+* Code blocks in narrative no longer have a white background on top of the grey
+  background of the code block (fixed: @zkamvar, #103). 
+- The colour of the inline code has been changed from the bootstrap default to
+  black (fixed: @zkamvar, #103). 
+
+# varnish 0.3.2
+
+* Provide an improved contrast to inline code within callout blocks by
+  setting the background-color to #FFFFFF (reported: @sarahmbrown, 
+  https://github.com/carpentries/workbench/issues/76 (#99); fixed 
+  @froggleston, #100)
+* Back and forward navigation titles have been fixed to keep raw content and
+  not escape characters (reported: @tobyhodges, 
+  https://github.com/carpentries/workbench/issues/71 (#98); fixed
+  @froggleston, #101)
+
+# varnish 0.3.1
+
+* Lesson titles no longer escape ampersands (reported and fixed: @Robadob, #95)
+
+# varnish 0.3.0
+
+* Lesson overview pages are now supported (reported: @zkamvar,
+  https://github.com/carpentries/workbench/issues/65; implemented: @zkamvar,
+  #87). These overview pages do not have a sidebar and have extra navigation
+  back to home and the setup page in the menu bar.
+- new 'overview' template is implemented to always contain links back to the
+  home page.
+* The `spoiler` dropdown item has been implemented to allow authors to create
+  stand-alone accordions that will hide optinal content from users without using
+  a `solution` class (implemented: @tobyhodges, #92)
+
+## MISC
+
+* The build process for css/js bundles is now self-contained in the node
+  dev dependencies. Running `npm install` will install everything needed to
+  re-compile the js and css.
+* The README has been updated with instructions to build locally
+* An `.editorconfig` file has been added to ensure the JS content is indented
+  properly
+
+# varnish 0.2.18
+
+* Non-math elements on the same line will no longer be treated as math
+  (reported: @marklcrowe, #88; fixed: @zkamvar, #90)
+* Bold italic text will now render correctly
+  (reported: @marklcrowe, #89; fixed: @zkamvar, #91)
+
 # varnish 0.2.17
 
 * The margin below the schedule table in instructor view is now 25px instead of

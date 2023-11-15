@@ -145,6 +145,10 @@
   .mobile-row {
     display: none;
   }
+
+  .sidebar-overview {
+    display: none;
+  }
 }
 
 @include media-breakpoint-up(xl) {
@@ -178,6 +182,10 @@
   }
   .collapse-toggle {
     margin-bottom:25px;
+  }
+
+  .sidebar-overview {
+    display: none;
   }
 
 }

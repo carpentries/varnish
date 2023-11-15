@@ -1,11 +1,10 @@
 <!-- START: inst/pkgdown/templates/navbar.html -->
-{{#schedule}}
-{{/schedule}}
-{{^schedule}}
-  <div id="sidebar-col" class="col-lg-4">
-    <div id="sidebar" class="sidebar">
+<div id="sidebar-col" class="col-lg-4{{#overview}} overview-sidebar{{/overview}}">
+  <div id="sidebar" class="sidebar">
       <nav aria-labelledby="flush-headingEleven">
-        <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" ><i class="search-icon" data-feather="x" role="img"></i></button>
+        <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" >
+          <i class="search-icon" data-feather="x" role="img"></i>
+        </button>
         <div class="sidebar-inner">
           <div class="row mobile-row">
             <div class="col">
@@ -63,6 +62,7 @@
           </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
+            {{^overview}}
             <div class="accordion-item">
 
               <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
@@ -77,6 +77,10 @@
                 </div>
               </div>
             </div>
+            {{/overview}}
+            {{#overview}}
+            <a href="index.html">Home</a>
+            {{/overview}}
 
             <hr class="half-width"/>
 
@@ -84,28 +88,41 @@
             <div class="accordion accordion-flush resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <button class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapseTwelve" class="accordion-collapse {{#overview}}show {{/overview}}collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
                   <div class="accordion-body">
                     <ul>
+                      {{#overview}}
+                      {{! We want to include a setup link prominently in the resources for overview pages }}
+                      <li>
+                        {{! NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview }}
+                        <a href="index.html#setup">Setup</a>
+                      </li>
+                      {{/overview}}
                       {{#instructor}}
+                      {{^overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
                       </li>
+                      {{/overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
                       </li>
+                      {{^overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
                       </li>
+                      {{/overview}}
                       {{/instructor}}
                       {{^instructor}}
+                      {{^overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
                       </li>
+                      {{/overview}}
                       <li>
                         <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
                       </li>
@@ -122,7 +139,9 @@
             <hr class="half-width resources"/>
             {{/resources}}
 
-            {{#aio}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>{{/aio}}
+            {{^overview}}{{#aio}}
+            <a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>
+            {{/aio}}{{/overview}}
 
             <hr class="d-none d-sm-block d-md-none"/>
 
@@ -140,5 +159,4 @@
       </nav>
     </div><!-- /div.sidebar -->
   </div><!-- /div.sidebar-col -->
-{{/schedule}}
 <!-- END:   inst/pkgdown/templates/navbar.html-->

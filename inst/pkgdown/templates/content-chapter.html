@@ -8,15 +8,21 @@
         {{/page_back}}
         {{#page_forward}}
         <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
-      </div>
         {{/page_forward}}
+      </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         {{#page_back}}
-        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous{{#back_title}}: {{back_title}}{{/back_title}}</a>
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev">
+          <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
+          {{#back_title}}Previous: {{{back_title}}}{{/back_title}}{{^back_title}}Home{{/back_title}}
+        </a>
         {{/page_back}}
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">
+          {{#forward_title}}Next: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}Home{{/forward_title}}
+          <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
+        </a>
         {{/page_forward}}
       </div>
       <hr/>
@@ -60,10 +66,16 @@
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         {{#page_back}}
-        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous{{#back_title}}: {{back_title}}{{/back_title}}</a>
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev">
+          <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
+          {{#back_title}}Previous: {{{back_title}}}{{/back_title}}{{^back_title}}Home{{/back_title}}
+        </a>
         {{/page_back}}
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{forward_title}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">
+          {{#forward_title}}Next: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}Home{{/forward_title}}
+          <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
+        </a>
         {{/page_forward}}
       </div>
     </nav>

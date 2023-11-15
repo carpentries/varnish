@@ -1,5 +1,5 @@
     <meta charset="utf-8">
-    <title>{{#site}}{{title}}{{/site}}{{#pagetitle}}: {{&pagetitle}}{{/pagetitle}}</title>
+    <title>{{#site}}{{&title}}{{/site}}{{#pagetitle}}: {{&pagetitle}}{{/pagetitle}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="{{&pagetitle}}">
     <link rel="stylesheet" type="text/css" href="{{#site}}{{root}}{{/site}}assets/styles.css">
@@ -14,7 +14,7 @@
         extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
       },
       tex2jax: {
-        inlineMath: [ ['$','$'], ['\\(', '\\)']],
+        inlineMath: [['\\(', '\\)']],
         displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
         processEscapes: true
       }

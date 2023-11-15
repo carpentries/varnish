@@ -25,14 +25,36 @@ copy the styling and templates to your lesson website.
 
 ## CSS and JavaScript
 
-The CSS and JavaScript used for the lessons are minified. Their sources live in
-the [`source/`](source/) folder with directives to include their dependencies
-(bootstrap, jquery, feather).
+The CSS and JavaScript used for the lessons are minified using SASS and
+uglifyjs. Their sources live in the [`source/`](source/) folder with directives
+to include their dependencies (bootstrap, jquery, feather).
 
 The minified versions are built via GitHub actions any time one of the source
 files is changed. 
 
-Instructions to build locally forthcoming.
+To build this locally, you need to make sure to have a working version of
+`node` and `npm`, which can be installed [via the node version manager, nvm](https://github.com/nvm-sh/nvm#intro).
+
+### Install dependencies
+
+Once you have `nvm` installed, you can install the node packages locally (they
+will install in the _`node_modules/`_ directory and will be ignored by git)
+with the following command:
+
+```sh
+nvm install 16 # make sure we are using node version 16
+npm install    # install the packages defined in package.json
+```
+
+### Minify CSS and JS
+
+Once you have the dependencies installed, you can run the following scripts to
+minify the CSS and JS:
+
+```sh
+bash squash-sass.sh     # use the sass node module to compile CSS
+bash squash-a-script.sh # use the uglifyjs node module to compile JS
+```
 
 ## HTML Templates
 
@@ -42,6 +64,8 @@ We have customized the following templates:
  - [content-syllabus] is the landing page for the lessons
  - [content-extra] is used for pages that are not chapters and do not need
    positional navigation
+ - [content-overview] is like content-extra, but is meant for the home page of
+   an overview lesson
  - [head] contains the metadata and script loading
  - [navbar] is a bit of misnomer, but it contains the sidebar navigation
  - [header] contains metadata and favicons

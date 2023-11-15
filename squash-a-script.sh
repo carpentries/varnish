@@ -4,7 +4,7 @@ mkdir -p inst/pkgdown/assets/assets/
 vend=source/javascripts/vendor
 cust=source/javascripts/custom
 
-uglifyjs ${vend}/jquery/jquery.js \
+node_modules/.bin/uglifyjs ${vend}/jquery/jquery.js \
   ${vend}/bootstrap/bootstrap.js \
   ${vend}/jquery-visible/jquery.visible.js \
   ${vend}/feather-icons/feather.js \

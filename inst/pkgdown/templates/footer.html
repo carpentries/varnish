@@ -1,24 +1,24 @@
 		<footer class="row footer mx-md-3">
 			<hr/>
 			<div class="col-md-6">
-				<p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
+        <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">{{ translate.CoC }}</a></p>
         {{#yaml}}
         <p>
         {{^old-url}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
         {{/old-url}}
 	{{#old-url}}
         {{#pre-beta-date}}
-        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
         {{/pre-beta-date}}
         {{^pre-beta-date}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit on GitHub</a>
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
         {{/pre-beta-date}}
 	{{/old-url}}
         {{/yaml}}
-        | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">Contributing</a> 
-        | <a href="{{#yaml}}{{source}}/{{/yaml}}">Source</a></p>
-				<p><a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CITATION">Cite</a> | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">Contact</a> | <a href="https://carpentries.org/about/">About</a></p>
+        | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">{{ translate.Contributing }}</a>
+        | <a href="{{#yaml}}{{source}}/{{/yaml}}">{{ translate.Source }}</a></p>
+				<p><a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CITATION">{{ translate.Cite }}</a> | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">{{ translate.Contact }}</a> | <a href="https://carpentries.org/about/">{{ translate.About }}</a></p>
 			</div>
 			<div class="col-md-6">
         {{#yaml}}{{#license}}

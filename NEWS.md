@@ -1,4 +1,4 @@
-# varnish 0.3.3.9000
+# varnish 0.4.0 (2023-11-29)
 
 * life cycle icons are now displayed as badges for better visibility
 * lessons that are stable with peer-reviewed doi releases will now have a doi

@@ -22,7 +22,7 @@
 			</div>
 			<div class="col-md-6">
         {{#yaml}}{{#license}}
-        <p>Materials licensed under <a href="{{#site}}{{root}}{{/site}}LICENSE.html">{{license}}</a> by the authors</p>
+        <p>{{& translate.MaterialsLicensedUnder }}</p>
         {{/license}}{{/yaml}}
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/{{sandpaper_cfg}}{{^sandpaper_cfg}}carpentries/sandpaper{{/sandpaper_cfg}}">sandpaper{{sandpaper_version}}</a>,

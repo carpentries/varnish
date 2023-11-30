@@ -6,7 +6,7 @@
   border: none;
   height: 53px;
   padding-top: 7px;
-  font-size: 18px;
+  font-size: calc(1rem + 0.5vw);
   letter-spacing: 0.1em;
   font-weight: 400;
 }
@@ -39,7 +39,7 @@
   text-decoration-thickness: 1px;
   text-underline-offset: 25px;
   margin-bottom: 50px;
-  font-size: 24px;
+  font-size: calc(1rem + 0.7vw);
 }
 
 .overview .bordered {

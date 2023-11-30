@@ -1,7 +1,7 @@
 		<footer class="row footer mx-md-3">
 			<hr/>
 			<div class="col-md-6">
-        <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">{{ translate.CoC }}</a></p>
+        {{# translate.ThisLessonCoC }}<p>{{& translate.ThisLessonCoC }}</p>{{/ translate.ThisLessonCoC }}
         {{#yaml}}
         <p>
         {{^old-url}}
@@ -33,7 +33,7 @@
 	</div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
-			<i class="search-icon" data-feather="arrow-up" role="img" aria-label="Back to top"></i><br/>
+      <i class="search-icon" data-feather="arrow-up" role="img" aria-label="{{ translate.BackToTop }}"></i><br/>
 			<span class="d-none d-sm-none d-md-none d-lg-none d-xl-block">Back</span> To Top
 		</a>
 	</div>

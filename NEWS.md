@@ -8,7 +8,8 @@
   @drmownickles, https://github.com/carpentries/workbench/issues/57,
   @rbavery, https://github.com/carpentries/workbench/issues/64; fixed:
   @froggleston, https://github.com/carpentries/varnish/pull/109).
-
+* Spacing and alignment of text improved in Software Carpentry logo.
+  (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
 
 # varnish 0.4.0 (2023-11-29)
 

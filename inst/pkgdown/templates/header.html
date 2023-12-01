@@ -114,13 +114,13 @@
   <div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      <span class="menu-title">Menu</span>
+      <span class="menu-title">{{ translate.Menu }}</span>
     </button>
     <div class="nav-logo">
       <img class="small-logo" alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo-sm.svg{{/yaml}}">
     </div>
     <div class="lesson-title-md">
-      {{#site}}{{&title}}{{/site}}
+      {{# site }}{{& title }}{{/ site }}
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -175,7 +175,7 @@
             {{ translate.More }} <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {{{more}}}
+            {{& more }}
           </ul>
         </li>
         {{/more}}
@@ -193,7 +193,7 @@
 </nav>
 
 <div class="col-md-12 mobile-title">
-  {{#site}}{{&title}}{{/site}}
+  {{# site }}{{& title }}{{/ site }}
 </div>
 
 {{^overview}}

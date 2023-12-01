@@ -24,10 +24,8 @@
         {{#yaml}}{{#license}}
         <p>{{& translate.MaterialsLicensedUnder }}</p>
         {{/license}}{{/yaml}}
-        <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/{{sandpaper_cfg}}{{^sandpaper_cfg}}carpentries/sandpaper{{/sandpaper_cfg}}">sandpaper{{sandpaper_version}}</a>,
-        <a href="https://github.com/{{pegboard_cfg}}{{^pegboard_cfg}}carpentries/pegboard{{/pegboard_cfg}}">pegboard{{pegboard_version}}</a>,
-      and <a href="https://github.com/{{varnish_cfg}}{{^varnish_cfg}}carpentries/varnish{{/varnish_cfg}}">varnish{{varnish_version}}</a>.</p>
+        <p>{{& translate.TemplateLicense }}</p>
+        <p>{{& translate.BuiltWith }}</p>
 			</div>
 		</footer>
 	</div> <!-- / div.container -->

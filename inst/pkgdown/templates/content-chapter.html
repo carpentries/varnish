@@ -47,7 +47,7 @@
         {{#slides}}<p><button class="btn btn-primary-outline">{{ translate.ExportSlides }}</button></p>{{/slides}}
         {{/instructor}}
         <div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> {{ translate.ExpandAllSolutions }} <i aria-hidden="true" data-feather="plus"></i></button>
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="{{ translate.ExpandAllSolutions }} " data-collapse="{{ translate.CollapseAllSolutions }} "> {{ translate.ExpandAllSolutions }} <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
 
         {{{body}}}

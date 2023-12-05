@@ -23,14 +23,14 @@ $( document ).ready(function() {
     }
     //change collapse icons depending on context
     if (window.innerWidth > 1024) {
-        ct = $(".collapse-toggle");
+        collapseToggle = $(".collapse-toggle");
         if ( sidebarVisible ) {
-            ct.html(ct.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
+            collapseToggle.html(collapseToggle.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
         } else {
-            ct.html(ct.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
+            collapseToggle.html(collapseToggle.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
         }
     } else {
-        ct.html(feather.icons['x'].toSvg());
+        $(".collapse-toggle").html(feather.icons['x'].toSvg());
     }
     //show mobile sidebar
     $(".navbar-toggler").click(function(){

@@ -1,4 +1,17 @@
-# varnish 0.3.3.9000
+# varnish 0.4.0.9000 (unreleased)
+
+## BUG FIX
+
+* Overview box heading font sizes now scaled based on viewport size. This fixes
+  issues where the heading would wrap in an ugly fashion.
+  (reported: @jd-foster, https://github.com/carpentries/varnish/issues/83, 
+  @drmownickles, https://github.com/carpentries/workbench/issues/57,
+  @rbavery, https://github.com/carpentries/workbench/issues/64; fixed:
+  @froggleston, https://github.com/carpentries/varnish/pull/109).
+* Spacing and alignment of text improved in Software Carpentry logo.
+  (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
+
+# varnish 0.4.0 (2023-11-29)
 
 * life cycle icons are now displayed as badges for better visibility
 * lessons that are stable with peer-reviewed doi releases will now have a doi

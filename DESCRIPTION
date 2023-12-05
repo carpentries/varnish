@@ -1,6 +1,6 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Template
-Version: 0.3.3.9000
+Version: 0.4.0.9000
 Authors@R: c(
     person(given = "Zhian N.",
            family = "Kamvar",
@@ -14,7 +14,8 @@ Authors@R: c(
     person(given = "Toby",
            family = "Hodges",
            role = c("ctb"),
-           email = "tobyhodges@carpentries.org"),
+           email = "tobyhodges@carpentries.org",
+           comment = c(ORCID = "0000-0003-1766-456X")),
     person(given = "François",
            family = "Michonneau",
            role = c("ctb"),

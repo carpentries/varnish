@@ -1,5 +1,17 @@
 # varnish 0.4.0.9000 (unreleased)
 
+## NEW FEATURES
+
+* Translation of lesson elements is now incorporated. Translation strings within
+  the HTML templates can be found be searching for the word `translate`. All
+  variables are assumed to exist and are defined in The Workbench as PascalCase
+  variables. In order for this version of {varnish} to work, it _requires_
+  {sandpaper} version 0.16.0 or greater. **This is a breaking change**
+  (reported: @zkamvar, #104; implemented: @zkamvar and @joelnitta, #105)
+* Buttons to show/hide the sidebar and solutions now have extra data attributes
+  that are used for the language used by the button when they are toggled. This
+  is an improvement over hard-coding the phrases inside of the JavaScript.
+
 ## BUG FIX
 
 * Overview box heading font sizes now scaled based on viewport size. This fixes

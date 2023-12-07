@@ -1,22 +1,22 @@
 <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Next Chapter">
+    <nav class="lesson-content mx-md-4" aria-label="{{ translate.NextChapter }}">
       <!-- content for small screens -->
       <div class="d-block d-sm-block d-md-none">
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">{{ translate.Next }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
         {{/page_forward}}
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{{forward_title}}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">{{ translate.Next }}{{#forward_title}}: {{{forward_title}}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
         {{/page_forward}}
       </div>
       <hr/>
     </nav>
     <main id="main-content" class="main-content">
-      <h1 class="schedule-heading">{{{pagetitle}}}</h1>
+      <h1 class="schedule-heading">{{& pagetitle }}</h1>
       {{{readme}}}
       {{#syllabus}}
       <section id="schedule">
@@ -24,13 +24,13 @@
         <tbody>
           {{#setup}}
           <tr>
-            <td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
+            <td></td><td><a href="#setup">{{ translate.SetupInstructions }}</a></td><td> {{ translate.DownloadFiles }}</td>
           </tr>
           {{/setup}}
           {{{syllabus}}}
       </table>
       <p>
-      The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+      {{ translate.ActualScheduleNote }}
       </p>
       </section>
       {{/syllabus}}
@@ -40,17 +40,17 @@
       </section>
       {{/setup}}
     </main>
-    <nav class="bottom-pagination mx-md-4" aria-label="Next Chapter">
+    <nav class="bottom-pagination mx-md-4" aria-label="{{ translate.NextChapter }}">
       <!-- content for small screens -->
       <div class="d-block d-sm-block d-md-none">
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">{{ translate.Next }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
         {{/page_forward}}
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">Next{{#forward_title}}: {{{forward_title}}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">{{ translate.Next }}{{#forward_title}}: {{{forward_title}}}{{/forward_title}}... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
         {{/page_forward}}
       </div>
     </nav>

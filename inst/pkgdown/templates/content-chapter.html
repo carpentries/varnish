@@ -1,13 +1,13 @@
 <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter">
+    <nav class="lesson-content mx-md-4" aria-label="{{ translate.PreviousAndNext }}">
       <!-- content for small screens -->
       <div class="d-block d-sm-block d-md-none">
         {{#page_back}}
-        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>{{ translate.Previous }}</a>
         {{/page_back}}
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">{{ translate.Next }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
         {{/page_forward}}
       </div>
       <!-- content for large screens -->
@@ -15,12 +15,12 @@
         {{#page_back}}
         <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          {{#back_title}}Previous: {{{back_title}}}{{/back_title}}{{^back_title}}Home{{/back_title}}
+          {{#back_title}}{{ translate.Previous }}: {{{back_title}}}{{/back_title}}{{^back_title}}{{ translate.Home }}{{/back_title}}
         </a>
         {{/page_back}}
         {{#page_forward}}
         <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">
-          {{#forward_title}}Next: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}Home{{/forward_title}}
+          {{#forward_title}}{{ translate.Next }}: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}{{ translate.Home }}{{/forward_title}}
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
         {{/page_forward}}
@@ -30,37 +30,37 @@
     <main id="main-content" class="main-content">
       <div class="container lesson-content">
         <h1>{{& pagetitle}}</h1>
-        <p>{{#updated}} Last updated on {{updated}} | {{/updated}}
+        <p>{{# translate.LastUpdate }}{{& translate.LastUpdate }} |{{/ translate.LastUpdate }}
         {{#yaml}}
         {{^beta-date}}{{^pre-beta-date}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditThisPage }} <i aria-hidden="true" data-feather="edit"></i></a></p>
         {{/pre-beta-date}}{{/beta-date}}
         {{#pre-beta-date}}
-        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditThisPage }} <i aria-hidden="true" data-feather="edit"></i></a></p>
         {{/pre-beta-date}}
         {{#beta-date}}{{^pre-beta-date}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditThisPage }} <i aria-hidden="true" data-feather="edit"></i></a></p>
         {{/pre-beta-date}}{{/beta-date}}
         {{/yaml}}
         {{#instructor}}
-        {{#minutes}}<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> {{minutes}} minutes </p>{{/minutes}}
-        {{#slides}}<p><button class="btn btn-primary-outline">Export Chapter Slides</button></p>{{/slides}}
+        {{# translate.EstimatedTime }}<p>{{& translate.EstimatedTime }}</p>{{/ translate.EstimatedTime }}
+        {{#slides}}<p><button class="btn btn-primary-outline">{{ translate.ExportSlides }}</button></p>{{/slides}}
         {{/instructor}}
         <div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="{{ translate.ExpandAllSolutions }} " data-collapse="{{ translate.CollapseAllSolutions }} "> {{ translate.ExpandAllSolutions }} <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
 
         {{{body}}}
 
       </div> <!-- / div.lesson-content -->
     </main> <!-- / main#main-content.main-content -->
-    <nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter">
+    <nav class="bottom-pagination mx-md-4" aria-label="{{ translate.PreviousAndNext }}">
       <div class="d-block d-sm-block d-md-none">
         {{#page_back}}
-        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>{{ translate.Previous }}</a>
         {{/page_back}}
         {{#page_forward}}
-        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}">{{ translate.Next }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
         {{/page_forward}}
       <!-- content for large screens -->
@@ -68,12 +68,12 @@
         {{#page_back}}
         <a class="chapter-link" href="{{#site}}{{root}}{{/site}}{{page_back}}" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          {{#back_title}}Previous: {{{back_title}}}{{/back_title}}{{^back_title}}Home{{/back_title}}
+          {{#back_title}}{{ translate.Previous }}: {{{back_title}}}{{/back_title}}{{^back_title}}{{ translate.Home }}{{/back_title}}
         </a>
         {{/page_back}}
         {{#page_forward}}
         <a class="chapter-link float-end" href="{{#site}}{{root}}{{/site}}{{page_forward}}" rel="next">
-          {{#forward_title}}Next: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}Home{{/forward_title}}
+          {{#forward_title}}{{ translate.Next }}: {{{forward_title}}}... {{/forward_title}}{{^forward_title}}{{ translate.Home }}{{/forward_title}}
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
         {{/page_forward}}

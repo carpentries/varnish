@@ -16,10 +16,12 @@
 
 * Overview box heading font sizes now scaled based on viewport size. This fixes
   issues where the heading would wrap in an ugly fashion.
-  (reported: @jd-foster, https://github.com/carpentries/varnish/issues/83, 
+  (reported: @jd-foster, #83, 
   @drmownickles, https://github.com/carpentries/workbench/issues/57,
-  @rbavery, https://github.com/carpentries/workbench/issues/64; fixed:
-  @froggleston, https://github.com/carpentries/varnish/pull/109).
+  @rbavery, https://github.com/carpentries/workbench/issues/64, 
+  @robadob, #111; fixed:
+  @froggleston, #109, 
+  @robadob, #112).
 * Spacing and alignment of text improved in Software Carpentry logo.
   (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
 

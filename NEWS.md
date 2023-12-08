@@ -22,6 +22,8 @@
   @froggleston, https://github.com/carpentries/varnish/pull/109).
 * Spacing and alignment of text improved in Software Carpentry logo.
   (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
+* Lesson title collision with search box resolved.
+  (reported: @ocasia, #84; fixed @robadob, #113).
 
 # varnish 0.4.0 (2023-11-29)
 

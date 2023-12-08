@@ -249,6 +249,11 @@
   height:14px;
 }
 
+.search-form {
+  position: relative;
+  min-width: 200px;
+}
+
 @include media-breakpoint-up(md) {
   .progress {
     height: 12px;
@@ -283,7 +288,7 @@
   .tablet-search-button {
     position: absolute;
     top: 0px;
-    right: 21px;
+    right: 38px;
     border: none;
     color: $black;
     display: block;
@@ -295,8 +300,6 @@
 
   .search-form {
     margin-right: 20px;
-    position: relative;
-    min-width: 200px;
   }
 
   .tablet-search {

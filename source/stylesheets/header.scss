@@ -282,8 +282,8 @@
 
   .tablet-search-button {
     position: absolute;
-    top: 8px;
-    right: 60px;
+    top: 0px;
+    right: 21px;
     border: none;
     color: $black;
     display: block;
@@ -295,13 +295,15 @@
 
   .search-form {
     margin-right: 20px;
+    position: relative;
+    min-width: 200px;
   }
 
   .tablet-search {
     display: block;
   }
   .tablet-search-button {
-    margin-right: -25px;
+    margin-right: -45px;
   }
 
   .tablet-search-button:hover {
@@ -420,8 +422,8 @@
 
   .tablet-search-button {
     position: absolute;
-    top: 8px;
-    right: 35px;
+    top: 0px;
+    right: -24px;
   }
 
   .desktop-search {

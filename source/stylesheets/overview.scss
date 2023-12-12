@@ -39,7 +39,7 @@
   text-decoration-thickness: 1px;
   text-underline-offset: 25px;
   margin-bottom: 50px;
-  font-size: calc(22px + 0.2vw);
+  font-size: min(25px, calc(22px + 0.2vw));
   font-weight: 600;
   line-height: 1.5rem;
 }

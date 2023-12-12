@@ -249,6 +249,11 @@
   height:14px;
 }
 
+.search-form {
+  position: relative;
+  min-width: 200px;
+}
+
 @include media-breakpoint-up(md) {
   .progress {
     height: 12px;
@@ -282,8 +287,8 @@
 
   .tablet-search-button {
     position: absolute;
-    top: 8px;
-    right: 60px;
+    top: 0px;
+    right: 38px;
     border: none;
     color: $black;
     display: block;
@@ -301,7 +306,7 @@
     display: block;
   }
   .tablet-search-button {
-    margin-right: -25px;
+    margin-right: -45px;
   }
 
   .tablet-search-button:hover {
@@ -358,6 +363,7 @@
     left: 10%;
     margin-bottom: 30px;
     margin-top: 25px;
+    margin-right: 232px;
   }
 
   .top-nav {
@@ -420,8 +426,8 @@
 
   .tablet-search-button {
     position: absolute;
-    top: 8px;
-    right: 35px;
+    top: 0px;
+    right: -24px;
   }
 
   .desktop-search {

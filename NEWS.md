@@ -1,4 +1,20 @@
-# varnish 0.4.0.9000 (unreleased)
+# varnish 1.0.0 (2023-12-13)
+
+## MAJOR VERSION NOTE
+
+We are bumping the major version number with this release because this version
+of {varnish} now requires a new set of `translate` variables to be passed (which
+are provided by sandpaper >= 0.16.0). If these variables do not exist, the
+template will contain no navigation text. 
+
+This breaking change is a concious decision. The alternative for this was to
+conditinally include translations and fall back to their hard-coded English text
+when they did not exist. This may seem like a more reasonable choice, but it can
+lead to upstream bugs that are difficult to detect (if translations are not
+working, it's not clear what is the cause if the text is in English: is it
+coming from {varnish} or is it coming from {sandpaper}?) and it makes
+maintenance of these navigational elements more difficult because we would have
+to update them in two places. 
 
 ## NEW FEATURES
 
@@ -26,6 +42,11 @@
   (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
 * Lesson title collision with search box resolved.
   (reported: @ocasia, #84; fixed @robadob, #113).
+
+## MISC
+
+Added @joelnitta as a contributor.
+Added @robadob as a contributor.
 
 # varnish 0.4.0 (2023-11-29)
 

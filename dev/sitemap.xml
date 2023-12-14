@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/varnish/dev/reference/varnish-package.html</loc>
+  </url>
+</urlset>

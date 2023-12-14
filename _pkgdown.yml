@@ -4,8 +4,6 @@ home:
   description: |
     This project does not contain any useful R code. It contains
     HTML templates with mustache syntax, CSS, and JavaScript.
-template:
-  bootstrap: 5
 
 development:
   mode: auto

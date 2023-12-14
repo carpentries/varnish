@@ -1,6 +1,6 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Template
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person(given = "Zhian N.",
            family = "Kamvar",

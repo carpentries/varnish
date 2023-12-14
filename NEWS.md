@@ -1,3 +1,12 @@
+# varnish 1.0.1 (2023-12-14)
+
+## BUG FIX
+
+* Font sizes for headings of overview box, callouts, and accordions now use
+  relative units instead of pixels. This will cause a slight change in the
+  appearance of these headings, but they will be more consistent as the size of
+  the window changes.
+
 # varnish 1.0.0 (2023-12-13)
 
 ## MAJOR VERSION NOTE

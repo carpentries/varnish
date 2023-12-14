@@ -1,3 +1,5 @@
+# varnish 1.0.1.9000 (unreleased)
+
 # varnish 1.0.1 (2023-12-14)
 
 ## BUG FIX

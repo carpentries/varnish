@@ -9,6 +9,7 @@ node_modules/.bin/uglifyjs ${vend}/jquery/jquery.js \
   ${vend}/jquery-visible/jquery.visible.js \
   ${vend}/feather-icons/feather.js \
   ${cust}/menu.js \
+  ${cust}/tabs.js \
   --compress \
   --output inst/pkgdown/assets/assets/scripts.js
 

@@ -467,13 +467,13 @@ $color-mode-type: data;
   @include media-breakpoint-down(md) {
     .bottom-nav {
       border-bottom: 1px solid var(--bs-border-color);
-      border-top: 22px solid shade-color($light-purple, 40%);
+      border-top: 22px solid shade-color($blue, 20%);
     }
     .bottom-nav.data {
       border-top: 22px solid shade-color($light-green, 20%);
     }
-    .bottom-nav.carpentries {
-      border-top: 22px solid shade-color($blue, 20%);
+    .bottom-nav.software {
+      border-top: 22px solid shade-color($light-purple, 40%);
     }
     .bottom-nav.library {
       border-top: 22px solid shade-color($light-red, 20%);
@@ -481,9 +481,6 @@ $color-mode-type: data;
   }
   
   @include media-breakpoint-up(xl) {
-    .top-nav {
-      border-top: 22px solid shade-color($light-purple, 40%);
-    }
     .top-nav hr {
       color: var(--bs-body-color);
     }

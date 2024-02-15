@@ -1,15 +1,15 @@
+// Div styling for theme toggle
 #theme-selector {
-  position: absolute;
-  top: 58px;
-  right: 225px;
-  z-index: 1001;
+  // Float next to Leaner/Instructor
+  // View selector
+  display: block;
+  float: left;
+  width: 65px;
   button {
-    svg {
-      width: 1.5em;
-      height: 1.5em;
-      margin-right: 4px;
+    .feather {
+      margin-right: 0px;
     }
-    .bi {
+    .bi { // svg icons
       width: 1.5em;
       height: 1.5em;
       margin-right: 4px;
@@ -20,35 +20,29 @@
     outline-style: solid;
   }
   }
-}
-
-@include media-breakpoint-down(xl) {
-  #theme-selector {
-    top: 55px;
-    right: 210px;
+  #bd-theme {
+    margin-right: 15px;
+    padding-right: 2px !important;
   }
 }
 
-@include media-breakpoint-down(md) {
-  #theme-selector {
-    top: 55px;
-    right: 30px;
-  }
-}
-
+// Theme dropdown list styling
 #theme-button-list {
-  display: inline-block;
+  display: block;
+  margin-top: 0px;
   margin-right: 0px;
-  svg {
-    opacity: 90%;
-    color: $black;
-  }
   .bi {
     opacity: 90%;
     fill: $black;
   }
   ul {
     padding: 4px;
+    li {
+      margin-top: 0px;
+      button {
+        margin-top: 0px;
+      }
+    }
   }
   .dropdown-menu .active .bi {
     display: block !important;
@@ -56,18 +50,47 @@
   .dropdown-menu .dropdown-item {
     border-radius: .25em;
   }
-  .dropdown-menu button.active {
-    color: $white;
-    background-color: $bright-blue;
+  .dropdown-menu .dropdown-item.active {
+    color: #fff;
+    background-color: shade-color($bright-blue, 20%);
     text-decoration: none; 
-    svg {
-      color: $white;
-    }
     .bi {
-      fill: $white;
+      opacity: 100%;
+      fill: #fff;
     }
   }
-  .dropdown-menu button:hover {
-    text-decoration: none;
+  .dropdown-menu .dropdown-item:hover {
+    text-decoration: underline;
+  }
+}
+
+// Styling for when the toggle is
+// a part of the phone sreen sidebar
+@include media-breakpoint-down(md) {
+  #theme-selector {
+    width: 80px;
+    // Icon the same size as
+    // the eye below it & line up text
+    button#bd-theme .bi {
+      width: 1.25em;
+      height: 1.25em;
+      margin-right: 4px;
+    }
+    // Same color on hover as the
+    // Learner View text
+    button#bd-theme:hover {
+      color: #0044d7;
+      text-decoration: underline;
+      .bi {
+        fill: #0044d7;
+      }
+    }
+  }
+  #theme-row-mobile {
+    margin-bottom: 0px;
+    max-height: 2em;
+  }
+  #bd-theme {
+    margin-top: 0px;
   }
 }

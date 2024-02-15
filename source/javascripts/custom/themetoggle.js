@@ -49,24 +49,28 @@
       return
     }
 
-    const activeThemeIcon = document.querySelector('.theme-icon-active use')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
-
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
       element.classList.remove('active')
       element.setAttribute('aria-pressed', 'false')
     })
 
-    btnToActive.classList.add('active')
-    btnToActive.setAttribute('aria-pressed', 'true')
-    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-    const themeSwitcherLabel = `Toggle theme (${btnToActive.dataset.bsThemeValue})`
-    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+    var svgOfActiveBtn;
+    
+    document.querySelectorAll(`[data-bs-theme-value="${theme}"]`).forEach(btnToActive => {
+      svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+      btnToActive.classList.add('active')
+      btnToActive.setAttribute('aria-pressed', 'true')
+      const themeSwitcherLabel = `Toggle theme (${btnToActive.dataset.bsThemeValue})`
+      themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
 
-    if (focus) {
-      themeSwitcher.focus()
-    }
+      if (focus) {
+        themeSwitcher.focus()
+      }
+    })
+
+    document.querySelectorAll('.theme-icon-active use').forEach(activeThemeIcon => {
+      activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    })
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {

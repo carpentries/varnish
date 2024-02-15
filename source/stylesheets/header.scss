@@ -418,11 +418,17 @@
   }
 
   .selector-container {
+    display: flex;
+    align-items: center;
     text-align:right;
   }
 }
 
 @include media-breakpoint-up(xl) {
+
+  #instructor-dropdown {
+    float: right;
+  }
 
   .resources-side {
     display: none;

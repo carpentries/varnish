@@ -185,6 +185,24 @@ dt > * {
   font-weight: inherit;
 }
 
+#top {
+  padding-top: 0px;
+}
+
+.peer-reviewed {
+  background-color: #f4f4f4;
+  border-color: $dark-blue;
+  border-style: solid;
+  border-radius: 5px;
+  a.alert-link {
+    color: #000;
+  }
+}
+
+.nav-link {
+  transition: none;
+}
+
 .btn-primary-outline {
   border: 1px solid $blue;
   color: $blue;

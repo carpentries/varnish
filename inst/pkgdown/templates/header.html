@@ -44,7 +44,7 @@
         {{/alpha}}
         {{#beta}}
         <span class ="badge text-bg-info">
-          <abbr title="{{ translate.BetaNote }}" style="background-color: #001483; border-radius: 5px">
+          <abbr title="{{ translate.BetaNote }}">
             <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#polishing-beta-stage" class="alert-link">
               <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
               {{ translate.iBeta }}
@@ -55,8 +55,8 @@
         {{/beta}}
         {{#stable}}
         {{#doi}}
-        <abbr class="badge" title="{{ translate.PeerReview }}" style="background-color: #FFE7A8; border-color: #0044d7; border-style: solid; border-radius: 5px">
-          <a href="https://doi.org/{{doi}}" class="external-link alert-link" style="color: #383838;">
+        <abbr class="badge peer-reviewed" title="{{ translate.PeerReview }}">
+          <a href="https://doi.org/{{doi}}" class="external-link alert-link">
             <i aria-hidden="true" class="icon" data-feather="user-check" style="border-radius: 5px"></i>
             DOI: {{doi}}
           </a>
@@ -67,36 +67,6 @@
       </div>
     </div>
     <div class="selector-container">
-      {{! NOTE: we will need to remove this at some point because we are finished with the beta phase }}
-      {{#yaml}}{{#workbench-beta}}
-      <div class="beta-alert alert alert-light alert-dismissable fade show" role="alert">
-        {{#pre-beta-date}}
-        <abbr class="icon" title="This lesson is in the Workbench Beta Phase (pre-beta stage) and is a snapshot of {{&title}} from {{pre-beta-date}}. Editing this page will have no effect on the lesson. Click here to go back to the styles version." style="text-decoration: unset">
-          <span class="visually-hidden">This lesson is in the Workbench Beta Phase (pre-beta stage) and is a snapshot of {{&title}} from {{pre-beta-date}}. Editing this page will have no effect on the lesson.</span>
-          <a href="{{old-url}}" class="alert-link" style="color: #383838">
-            <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="background: #FFC700; border-radius: 5px"></i>
-            <span class="visually-hidden">Visit the styles version of the lesson</span>
-          </a>
-        </abbr>
-        {{/pre-beta-date}}
-        {{#beta-date}}
-        <abbr class="icon" title="This lesson is in the Workbench Beta Phase (beta stage). Click here to visit a snapshot of the styles version from {{beta-date}}." style="text-decoration: unset">
-            <span class="visually-hidden">This lesson is in the Workbench Beta Phase (beta stage).</span>
-          <a href="{{old-url}}" class="alert-link" style="color: #383838">
-            <i aria-hidden="true" class="icon" data-feather="alert-circle" style="background: #719eff; border-radius: 5px"></i>
-            <span class="visually-hidden">Visit a snapshot of the styles version from {{beta-date}}</span>
-          </a>
-        </abbr>
-        {{/beta-date}}
-        {{^beta-date}}{{^pre-beta-date}}
-        <i aria-hidden="true" class="icon" data-feather="alert-circle" style="color: #5bbad5"></i>
-        {{/pre-beta-date}}{{/beta-date}}
-        Workbench Beta |
-        <a href="https://carpentries.typeform.com/to/KRBl4IZM" class="alert-link" style="text-decoration: wavy overline">Give Feedback</a> |
-        <a href="https://carpentries.github.io/workbench/beta-phase.html" class="alert-link">Learn More</a>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      {{/workbench-beta}}{{/yaml}}
       <div id="theme-selector">
         <li class="nav-item dropdown" id="theme-button-list">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center"

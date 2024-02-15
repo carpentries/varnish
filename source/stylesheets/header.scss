@@ -51,14 +51,14 @@
 }
 
 .progress {
-  background: $light-purple;
+  background: $very-light-blue;
   border-radius: 20px;
   margin: 10px;
   height: 5px;
 }
 
 .progress-bar {
-  background: $dark-purple;
+  background: $dark-blue;
   border-radius: 20px;
   height:5px;
 }
@@ -79,12 +79,12 @@
   background: $dark-green;
 }
 
-.progress.carpentries {
-  background: $very-light-blue;
+.progress.software {
+  background: $light-purple;
 }
 
-.progress-bar.carpentries {
-  background: $dark-blue;
+.progress-bar.software {
+  background: $dark-purple;
 }
 
 .lesson-progress {
@@ -338,7 +338,8 @@
 
   .large-logo {
     margin-left: -10px;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .top-nav hr{
@@ -370,21 +371,32 @@
     margin-right: 200px;
   }
 
+  // Top border and match the
+  // border for the DOI button if present
   .top-nav {
     display: block;
-    border-top: 22px solid $dark-purple;
-  }
-
-   .top-nav.data {
-    border-top: 22px solid $dark-green;
-  }
-
-  .top-nav.carpentries {
     border-top: 22px solid $dark-blue;
+    .peer-reviewed {
+      border-color: $dark-blue;
+    }
   }
-
+  .top-nav.data {
+    border-top: 22px solid $dark-green;
+    .peer-reviewed {
+      border-color: $dark-green;
+    }
+  }
+  .top-nav.software {
+    border-top: 22px solid $dark-purple;
+    .peer-reviewed {
+      border-color: $dark-purple;
+    }
+  }
   .top-nav.library {
     border-top: 22px solid $red;
+    .peer-reviewed {
+      border-color: $red;
+    }
   }
 
   .bottom-nav {

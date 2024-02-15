@@ -39,12 +39,9 @@ $color-mode-type: data;
       }
     }
   }
-}
 
 // Convert any logo to off white
 // Make accordion buttons off white
-@include color-mode(dark) {
-
   .large-logo > img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
   }
@@ -55,13 +52,31 @@ $color-mode-type: data;
 
   .text-bg-danger {
     background-color: var(--bs-danger-border-subtle) !important;
-    .alert-link {
+    a.alert-link {
       color: #fff;
     }
   }
 
   .text-bg-warning {
     background-color: var(--bs-warning-border-subtle) !important;
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  .text-bg-info {
+    background-color: var(--bs-info-border-subtle) !important;
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  .peer-reviewed {
+    background-color: var(--bs-tertiary-bg);
+    border-color: shade-color($light-purple, 40%);
+    a.alert-link {
+      color: #fff;
+    }
   }
 
   svg .icon {
@@ -105,10 +120,8 @@ $color-mode-type: data;
     }
   
   }
-}
 
 // From styles.css.scss
-@include color-mode(dark) {
   h1 {
     color: var(--bs-body-color);
   }
@@ -155,12 +168,9 @@ $color-mode-type: data;
   .bottom-pagination {
     border-top: 1px solid var(--bs-border-color);
   }
-}
 
 // From callouts.scss
-@include color-mode(dark) {
   /* Basic (gray callout) */
-
   .callout {
     border-left: 10px solid var(--bs-light-border-subtle);
   }
@@ -292,10 +302,8 @@ $color-mode-type: data;
       background: var(--bs-info-border-subtle);
     }
   }
-}
 
 // From codeblocks.scss
-@include color-mode(dark) {
   .codewrapper > pre:focus {
     outline-color: var(--bs-info-border-subtle);
     outline-width: 4px;
@@ -338,10 +346,8 @@ $color-mode-type: data;
   .code-label {
     border-bottom: 1px solid var(--bs-border-color);
   }
-}
 
 // From header.scss
-@include color-mode(dark) {
   .nav-link {
     color: var(--bs-body-color);
   }
@@ -366,10 +372,10 @@ $color-mode-type: data;
   }
   
   .progress {
-    background: tint-color($dark-purple, 20%);
+    background: tint-color($dark-blue, 10%);
   }
   .progress-bar {
-    background: shade-color($light-purple, 40%);
+    background: shade-color($blue, 20%);
   }
   .progress.library {
     background: tint-color($red, 20%);
@@ -383,11 +389,11 @@ $color-mode-type: data;
   .progress-bar.data {
     background: shade-color($light-green, 20%);
   }
-  .progress.carpentries {
-    background: tint-color($dark-blue, 20%);
+  .progress.software {
+    background: tint-color($dark-purple, 20%);
   }
-  .progress-bar.carpentries {
-    background: shade-color($very-light-blue, 20%);
+  .progress-bar.software {
+    background: shade-color($light-purple, 40%);
   }
   .lesson-progress {
     background: var(--bs-secondary-bg);
@@ -433,16 +439,28 @@ $color-mode-type: data;
       color: var(--bs-body-color);
     }  
     .top-nav {
-      border-top: 22px solid shade-color($light-purple, 40%);
+      border-top: 22px solid shade-color($blue, 20%);
+      .peer-reviewed {
+        border-color: shade-color($blue, 20%);
+      }
     }
     .top-nav.data {
       border-top: 22px solid shade-color($light-green, 20%);
+      .peer-reviewed {
+        border-color: shade-color($light-green, 20%);
+      }
     }
-    .top-nav.carpentries {
-      border-top: 22px solid shade-color($very-light-blue, 20%);
+    .top-nav.software {
+      border-top: 22px solid shade-color($light-purple, 40%);
+      .peer-reviewed {
+        border-color: shade-color($light-purple, 40%);
+      }
     }
     .top-nav.library {
       border-top: 22px solid shade-color($light-red, 20%);
+      .peer-reviewed {
+        border-color: shade-color($light-red, 20%);
+      }
     }
   }
 
@@ -455,7 +473,7 @@ $color-mode-type: data;
       border-top: 22px solid shade-color($light-green, 20%);
     }
     .bottom-nav.carpentries {
-      border-top: 22px solid shade-color($very-light-blue, 20%);
+      border-top: 22px solid shade-color($blue, 20%);
     }
     .bottom-nav.library {
       border-top: 22px solid shade-color($light-red, 20%);
@@ -470,10 +488,8 @@ $color-mode-type: data;
       color: var(--bs-body-color);
     }
   }
-}
 
 // From instructornotes.scss
-@include color-mode(dark) {
   .instructor-note {
     .note-square {
       color: var(--bs-body-color);
@@ -497,10 +513,8 @@ $color-mode-type: data;
       }
     }
   }
-}
 
 // From overview.scss
-@include color-mode(dark) {
   .overview .card-header {
     color: var(--bs-body-color);
     background: tint-color($dark-purple, 20%);
@@ -514,8 +528,7 @@ $color-mode-type: data;
     .overview .bordered {
       border-left: 1px solid var(--bs-body-color);
     }
-  }  
-}
+  }
 
 // From skiplink.scss
 // Currently not used
@@ -528,7 +541,6 @@ $color-mode-type: data;
 }
 
 // From sidenav.scss
-@include color-mode(dark) {
   .sidebar {
     background: var(--bs-secondary-bg);
     color: var(--bs-body-color);
@@ -567,12 +579,9 @@ $color-mode-type: data;
   .sidebar-collapsed {
     background: var(--bs-secondary-bg);
   }
-}
 
 // Dark mode syntax highlighting
 // Adapted from pkgdown version 2.0.7 (c) RStudio 2024
-@include color-mode(dark) {
-
   pre .img img, pre .r-plt img {
     background-color: var(--bs-tertiary-bg);
   }
@@ -586,7 +595,7 @@ $color-mode-type: data;
     background-color: var(--bs-tertiary-bg);
   }
 
-  // arrow-dark theme
+  // CODE Style - arrow-dark theme
   pre code         /* Normal         */ {color:#f8f8f2}
   pre code span.al /* Alert          */ {color:#f07178; background-color:#2a0f15; font-weight: bold}
   pre code span.an /* Annotation     */ {color:#d4d0ab}

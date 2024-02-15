@@ -149,7 +149,12 @@
   display: none;
 }
 
+// min-height set so whatever logo is used
+// data, software carp etc the nav is the
+// same height and the dark-theme toggle
+// stays in the same place
 .top-nav-container {
+  min-height: 80px;
   padding-right: 25px;
 }
 
@@ -207,6 +212,10 @@
   position: relative;
   top: -2px;
   margin-right: 5px;
+}
+
+.top-nav .text-bg-danger .alert-link {
+  color: #000;
 }
 
 .searchbox {

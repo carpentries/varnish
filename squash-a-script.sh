@@ -12,3 +12,6 @@ node_modules/.bin/uglifyjs ${vend}/jquery/jquery.js \
   --compress \
   --output inst/pkgdown/assets/assets/scripts.js
 
+node_modules/.bin/uglifyjs ${cust}/themetoggle.js \
+  --compress \
+  --output inst/pkgdown/assets/assets/themetoggle.js

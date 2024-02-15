@@ -1,0 +1,73 @@
+#theme-selector {
+  position: absolute;
+  top: 58px;
+  right: 225px;
+  z-index: 1001;
+  button {
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 4px;
+    }
+    .bi {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 4px;
+    }
+  &:focus-visible {
+    outline-color: $black;
+    outline-width: 4px;
+    outline-style: solid;
+  }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  #theme-selector {
+    top: 55px;
+    right: 210px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #theme-selector {
+    top: 55px;
+    right: 30px;
+  }
+}
+
+#theme-button-list {
+  display: inline-block;
+  margin-right: 0px;
+  svg {
+    opacity: 90%;
+    color: $black;
+  }
+  .bi {
+    opacity: 90%;
+    fill: $black;
+  }
+  ul {
+    padding: 4px;
+  }
+  .dropdown-menu .active .bi {
+    display: block !important;
+  }
+  .dropdown-menu .dropdown-item {
+    border-radius: .25em;
+  }
+  .dropdown-menu button.active {
+    color: $white;
+    background-color: $bright-blue;
+    text-decoration: none; 
+    svg {
+      color: $white;
+    }
+    .bi {
+      fill: $white;
+    }
+  }
+  .dropdown-menu button:hover {
+    text-decoration: none;
+  }
+}

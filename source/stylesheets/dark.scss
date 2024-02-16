@@ -40,8 +40,15 @@ $color-mode-type: data;
     }
   }
 
-// Convert any logo to off white
-// Make accordion buttons off white
+// This section does not correspond to an
+// existing light themed sass file - these
+// are soley for a dark mode
+
+  // Darken any images and desaturate
+  .img {
+    filter: brightness(80%) saturate(80%);
+  }
+  // Convert any logo to off white
   .large-logo > img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
   }
@@ -50,6 +57,7 @@ $color-mode-type: data;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
   }
 
+  // Darken alpha, beta etc. buttons
   .text-bg-danger {
     background-color: var(--bs-danger-border-subtle) !important;
     a.alert-link {
@@ -83,6 +91,7 @@ $color-mode-type: data;
     stroke: var(--bs-body-color);
   }
 
+  // Make accordion buttons off white
   // Sidebar chevron for button
   .sidebar .collapsed::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
@@ -144,10 +153,10 @@ $color-mode-type: data;
     color: var(--bs-link-hover-color);
   }
   .table-striped > tbody > tr:nth-of-type(even) > * {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   tbody > tr:nth-of-type(even) > * {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   .btn-primary-outline {
     border: 1px solid $bright-blue;
@@ -163,7 +172,7 @@ $color-mode-type: data;
   }
   figcaption {
     border-top: 1px solid var(--bs-body-color);
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   .bottom-pagination {
     border-top: 1px solid var(--bs-border-color);
@@ -179,7 +188,7 @@ $color-mode-type: data;
     background: var(--bs-light-border-subtle);
   }
   .callout-inner {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
 
   /* Overrides for different callout types */
@@ -270,7 +279,7 @@ $color-mode-type: data;
       border-color: var(--bs-body-bg);
     }
     .accordion-body {
-      background: var(--bs-secondary-bg);
+      background: var(--bs-tertiary-bg);
     }
     h2 {
       border-left: 10px shade-color($yellow, 50%) solid;
@@ -285,7 +294,7 @@ $color-mode-type: data;
   .spoiler-accordion {
     @extend .learner-accordion;
     .spoiler-button {
-      background: var(--bs-light-border-subtle);
+      background: var(--bs-tertiary-bg);
       border-color: var(--bs-body-color);
       color: var(--bs-body-color);
       &:focus-visible {
@@ -331,16 +340,16 @@ $color-mode-type: data;
       border-top: 10px solid shade-color($orange, 10%);
     }
     &.output {
-      border-top: 10px solid var(--bs-secondary-color);
+      border-top: 10px solid var(--bs-tertiary-color);
     }
   }
   
   .callout pre {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   
   .accordion pre {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   
   .code-label {
@@ -396,7 +405,7 @@ $color-mode-type: data;
     background: shade-color($light-purple, 40%);
   }
   .lesson-progress {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   
   .nav-container {
@@ -518,7 +527,7 @@ $color-mode-type: data;
   }
   
   .overview {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
   
   @include media-breakpoint-up(md) {
@@ -539,7 +548,7 @@ $color-mode-type: data;
 
 // From sidenav.scss
   .sidebar {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
     color: var(--bs-body-color);
     a {
       color: var(--bs-body-color);
@@ -551,13 +560,13 @@ $color-mode-type: data;
       }
     }
     .accordion-body {
-      background: var(--bs-secondary-bg);
+      background: var(--bs-tertiary-bg);
     }
     .accordion-item {
-      background: var(--bs-secondary-bg);
+      background: var(--bs-tertiary-bg);
     }
     .accordion-button {
-      background: var(--bs-secondary-bg);
+      background: var(--bs-tertiary-bg);
       &:hover {
         color: var(--bs-link-hover-color);
         text-decoration: underline;
@@ -574,7 +583,7 @@ $color-mode-type: data;
   }
   
   .sidebar-collapsed {
-    background: var(--bs-secondary-bg);
+    background: var(--bs-tertiary-bg);
   }
 
 // Dark mode syntax highlighting

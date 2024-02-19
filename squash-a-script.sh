@@ -12,3 +12,7 @@ node_modules/.bin/uglifyjs ${vend}/jquery/jquery.js \
   --compress \
   --output inst/pkgdown/assets/assets/scripts.js
 
+  node_modules/.bin/uglifyjs ${cust}/mermaid.js \
+  --compress \
+  --output inst/pkgdown/assets/assets/mermaid.js
+

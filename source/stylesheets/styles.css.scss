@@ -215,6 +215,33 @@ figcaption {
   padding: 25px;
 }
 
+.mermaid-img-wrapper {
+  padding-bottom: 1em;
+  // No gap between the figcaption
+  // and the details dropdown
+  figure {
+    margin-bottom: 0px;
+  }
+  figcaption {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+  details {
+    background: $light-gray;
+    padding: 0px 25px 25px 25px;
+  }
+}
+
+// Center mermaid svgs
+.mermaid {
+  text-align: center;
+  padding-bottom: 1em;
+  overflow: scroll;
+  svg {
+    max-height: 80vh;
+  }
+}
+
 .section-heading {
   margin-top: 100px;
 }

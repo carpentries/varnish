@@ -11,6 +11,7 @@ node_modules/.bin/uglifyjs ${vend}/jquery/jquery.js \
   ${vend}/mermaid/mermaid.min.js \
   ${cust}/menu.js \
   ${cust}/mermaid.js \
+  ${cust}/tabs.js \
   --compress \
   --output inst/pkgdown/assets/assets/scripts.js
 

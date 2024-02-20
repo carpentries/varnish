@@ -1,3 +1,23 @@
+
+.algolia-autocomplete .aa-dropdown-menu {
+    width: auto !important;
+    background-color: #fff;
+    border: 1px solid #383838;
+    margin-top: 2px;
+    max-height: 50vh;
+    overflow-y: auto;
+    right: 0px !important;
+    left: -20rem !important;
+}
+
+div[data-lastpass-icon-root] {
+    display: none;
+}
+
+div[data-lastpass-root] {
+    display: none;
+}
+
 .bottom-nav {
   border-top: 45px solid $dark-purple;
   padding-bottom: 5px;

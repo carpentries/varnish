@@ -635,4 +635,22 @@ $color-mode-type: data;
   pre code span.wa /* Warning        */ {color:#dcc6e0}
   span.error   {font-weight: bolder;}
   span.warning {font-weight: bolder;}
+
+// Tab styling from tabs.scss
+  .nav-tabs .nav-link.active {
+    border-top-color: shade-color($bright-blue, 20%);
+    border-right-color: var(--bs-tertiary-bg);
+    border-left-color: var(--bs-tertiary-bg);
+  }
+
+  .nav-link[role="tab"][aria-selected="false"]:hover {
+    outline: 2px solid shade-color($bright-blue, 20%);
+  }
+
+  div.tab-content {
+    border-right-color: var(--bs-tertiary-bg);
+    border-left-color: var(--bs-tertiary-bg);
+    border-bottom-color: var(--bs-tertiary-bg);
+  }
+
 }

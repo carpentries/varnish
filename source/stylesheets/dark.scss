@@ -174,6 +174,11 @@ $color-mode-type: data;
     border-top: 1px solid var(--bs-body-color);
     background: var(--bs-tertiary-bg);
   }
+  .mermaid-img-wrapper {
+    details {
+      background: var(--bs-tertiary-bg);
+    }
+  }
   .bottom-pagination {
     border-top: 1px solid var(--bs-border-color);
   }
@@ -639,8 +644,8 @@ $color-mode-type: data;
 // Tab styling from tabs.scss
   .nav-tabs .nav-link.active {
     border-top-color: shade-color($bright-blue, 20%);
-    border-right-color: var(--bs-tertiary-bg);
-    border-left-color: var(--bs-tertiary-bg);
+    border-right-color: var(--bs-border-color);
+    border-left-color: var(--bs-border-color);
   }
 
   .nav-link[role="tab"][aria-selected="false"]:hover {
@@ -648,9 +653,10 @@ $color-mode-type: data;
   }
 
   div.tab-content {
-    border-right-color: var(--bs-tertiary-bg);
-    border-left-color: var(--bs-tertiary-bg);
-    border-bottom-color: var(--bs-tertiary-bg);
+    border-width: var(--bs-border-width);
+    border-right-color: var(--bs-border-color);
+    border-left-color: var(--bs-border-color);
+    border-bottom-color: var(--bs-border-color);
   }
 
 }

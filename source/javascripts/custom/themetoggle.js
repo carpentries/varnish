@@ -22,7 +22,6 @@
     if (storedTheme) {
       return storedTheme
     }
-    console.log(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
@@ -42,7 +41,6 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
-    console.log(theme)
     const themeSwitcher = document.querySelector('#bd-theme')
 
     if (!themeSwitcher) {

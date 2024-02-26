@@ -1,7 +1,7 @@
 try {
-  var session = window.sessionStorage || {};
+  var store = window.localStorage || {};
 } catch (e) {
-  var session = {};
+  var store = {};
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -15,8 +15,8 @@ window.addEventListener("DOMContentLoaded", () => {
     tabList.addEventListener("keydown", keyTabs);
   });
 
-  // Restore group tab selection from session
-  const lastSelected = session.getItem('group-tabs-last-selected');
+  // Restore group tab selection from store
+  const lastSelected = store.getItem('group-tabs-last-selected');
   if (lastSelected != null) selectNamedTabs(lastSelected);
 });
 
@@ -52,7 +52,7 @@ function keyTabs(e) {
       if (nextTab.hasAttribute("name")) {
         var group_name = nextTab.getAttribute("name");
         selectNamedTabs(group_name, nextTab.id);
-        session.setItem('group-tabs-last-selected', group_name);
+        store.setItem('group-tabs-last-selected', group_name);
       }
   }
 }
@@ -76,7 +76,7 @@ function changeTabs(e) {
   if (target.hasAttribute("name")) {
     var group_name = target.getAttribute("name");
     selectNamedTabs(group_name, target.id);
-    session.setItem('group-tabs-last-selected', group_name);
+    store.setItem('group-tabs-last-selected', group_name);
   }
 }
 

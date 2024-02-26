@@ -8,21 +8,20 @@
 (() => {
   'use strict'
 
-  // Retreive the current session
+  // Retreive the current store
   try {
-    var session = window.sessionStorage || {};
+    var store = window.localStorage || {};
   } catch (e) {
-    var session = {};
+    var store = {};
   }
 
   // Get the stored theme
   // Fallback to user preference if no stored theme
   const getPreferredTheme = () => {
-    const storedTheme = session.getItem('theme')
+    const storedTheme = store.getItem('theme')
     if (storedTheme) {
       return storedTheme
     }
-    console.log(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
@@ -42,7 +41,6 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
-    console.log(theme)
     const themeSwitcher = document.querySelector('#bd-theme')
 
     if (!themeSwitcher) {
@@ -74,7 +72,7 @@
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = session.getItem('theme')
+    const storedTheme = store.getItem('theme')
     if (storedTheme == 'auto') {
       setTheme(getPreferredTheme())
     }
@@ -87,7 +85,7 @@
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
-          session.setItem('theme', theme)
+          store.setItem('theme', theme)
           setTheme(theme)
           showActiveTheme(theme, true)
         })

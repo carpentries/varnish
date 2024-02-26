@@ -36,19 +36,19 @@
   // The next section allows the diagrams to change theme
   // with the theme-toggle
 
-  // Retreive the current session
+  // Retreive the current store
   // needed as this JS is sep from the themetoggle.js
   // which gets loaded first to avoid a white flash on load
   try {
-    var session = window.sessionStorage || {};
+    var store = window.localStorage || {};
   } catch (e) {
-    var session = {};
+    var store = {};
   }
 
   // Get the stored theme
   // Fallback to user preference if no stored theme
   const getPreferredTheme = () => {
-    const storedTheme = session.getItem('theme')
+    const storedTheme = store.getItem('theme')
     if (storedTheme) {
       return storedTheme
     }

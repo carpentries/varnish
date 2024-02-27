@@ -199,7 +199,12 @@ dt > * {
   }
 }
 
+// Remove transitions from nav buttons
+// so the background colour doesn't flash
 .nav-link {
+  transition: none;
+}
+.top-nav .dropdown .bordered-button {
   transition: none;
 }
 

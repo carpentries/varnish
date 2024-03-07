@@ -1,3 +1,92 @@
+# varnish 1.0.1.9000 (unreleased)
+
+# varnish 1.0.1 (2023-12-14)
+
+## BUG FIX
+
+* Font sizes for headings of overview box, callouts, and accordions now use
+  relative units instead of pixels. This will cause a slight change in the
+  appearance of these headings, but they will be more consistent as the size of
+  the window changes.
+
+# varnish 1.0.0 (2023-12-13)
+
+## MAJOR VERSION NOTE
+
+We are bumping the major version number with this release because this version
+of {varnish} now requires a new set of `translate` variables to be passed (which
+are provided by sandpaper >= 0.16.0). If these variables do not exist, the
+template will contain no navigation text. 
+
+This breaking change is a concious decision. The alternative for this was to
+conditinally include translations and fall back to their hard-coded English text
+when they did not exist. This may seem like a more reasonable choice, but it can
+lead to upstream bugs that are difficult to detect (if translations are not
+working, it's not clear what is the cause if the text is in English: is it
+coming from {varnish} or is it coming from {sandpaper}?) and it makes
+maintenance of these navigational elements more difficult because we would have
+to update them in two places. 
+
+## NEW FEATURES
+
+* Translation of lesson elements is now incorporated. Translation strings within
+  the HTML templates can be found be searching for the word `translate`. All
+  variables are assumed to exist and are defined in The Workbench as PascalCase
+  variables. In order for this version of {varnish} to work, it _requires_
+  {sandpaper} version 0.16.0 or greater. **This is a breaking change**
+  (reported: @zkamvar, #104; implemented: @zkamvar and @joelnitta, #105)
+* Buttons to show/hide the sidebar and solutions now have extra data attributes
+  that are used for the language used by the button when they are toggled. This
+  is an improvement over hard-coding the phrases inside of the JavaScript.
+
+## BUG FIX
+
+* Overview box heading font sizes now scaled based on viewport size. This fixes
+  issues where the heading would wrap in an ugly fashion.
+  (reported: @jd-foster, #83, 
+  @drmownickles, https://github.com/carpentries/workbench/issues/57,
+  @rbavery, https://github.com/carpentries/workbench/issues/64, 
+  @robadob, #111; fixed:
+  @froggleston, #109, 
+  @robadob, #112).
+* Spacing and alignment of text improved in Software Carpentry logo.
+  (reported: @tobyhodges, #107; fixed @tobyhodges, #110).
+* Lesson title collision with search box resolved.
+  (reported: @ocasia, #84; fixed @robadob, #113).
+
+## MISC
+
+Added @joelnitta as a contributor.
+Added @robadob as a contributor.
+
+# varnish 0.4.0 (2023-11-29)
+
+* life cycle icons are now displayed as badges for better visibility
+* lessons that are stable with peer-reviewed doi releases will now have a doi
+  badge displayed with a link to the publication.
+
+# varnish 0.3.3
+
+* Code blocks in narrative no longer have a white background on top of the grey
+  background of the code block (fixed: @zkamvar, #103). 
+- The colour of the inline code has been changed from the bootstrap default to
+  black (fixed: @zkamvar, #103). 
+
+# varnish 0.3.2
+
+* Provide an improved contrast to inline code within callout blocks by
+  setting the background-color to #FFFFFF (reported: @sarahmbrown, 
+  https://github.com/carpentries/workbench/issues/76 (#99); fixed 
+  @froggleston, #100)
+* Back and forward navigation titles have been fixed to keep raw content and
+  not escape characters (reported: @tobyhodges, 
+  https://github.com/carpentries/workbench/issues/71 (#98); fixed
+  @froggleston, #101)
+
+# varnish 0.3.1
+
+* Lesson titles no longer escape ampersands (reported and fixed: @Robadob, #95)
+
 # varnish 0.3.0
 
 * Lesson overview pages are now supported (reported: @zkamvar,

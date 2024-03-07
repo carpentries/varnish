@@ -1,24 +1,24 @@
 <!-- START: inst/pkgdown/templates/content-extra.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     {{#overview}}
-    <nav class="lesson-content mx-md-4" aria-label="Home Page Navigation">
+    <nav class="lesson-content mx-md-4" aria-label="{{ translate.HomePageNav }}">
       <!-- content for small screens -->
       <div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Home</a>
-        <a class="chapter-link float-end" href="index.html">Home<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>{{ translate.Home }}</a>
+        <a class="chapter-link float-end" href="index.html">{{ translate.Home }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Home</a>
-        <a class="chapter-link float-end" href="index.html">Home<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>{{ translate.Home }}</a>
+        <a class="chapter-link float-end" href="index.html">{{ translate.Home }}<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr/>
     </nav>
     {{/overview}}
     <main id="main-content" class="main-content">
       <div class="container lesson-content">
-        <h1>{{{pagetitle}}}</h1>
-        {{{body}}}
+        <h1>{{& pagetitle }}</h1>
+        {{& body }}
       </div>
     </main>
   </div>

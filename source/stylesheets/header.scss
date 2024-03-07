@@ -104,7 +104,8 @@
 }
 
 .large-logo img {
-  max-height: 64px
+  max-height: 64px;
+  margin-right: 1em
 }
 
 .navbar-toggler {
@@ -195,7 +196,7 @@
   padding: inherit;
 }
 
-// the button x centered with the text, 
+// the button x centered with the text,
 // not justified
 .top-nav .beta-alert button.btn-close {
   padding: 0.25rem 0.25rem 0.75rem 0.25rem;
@@ -357,6 +358,7 @@
     left: 10%;
     margin-bottom: 30px;
     margin-top: 25px;
+    margin-right: 200px;
   }
 
   .top-nav {

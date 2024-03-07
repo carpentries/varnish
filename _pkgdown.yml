@@ -1,4 +1,17 @@
 url: https://carpentries.github.io/varnish/
+home:
+  title: The Carpentries Lesson HTML Templates
+  description: |
+    This project does not contain any useful R code. It contains
+    HTML templates with mustache syntax, CSS, and JavaScript.
+
+development:
+  mode: auto
+
 template:
   bootstrap: 5
-
+  opengraph:
+    twitter:
+      creator: "@zkamvar"
+      site: "@thecarpentries"
+      card: summary

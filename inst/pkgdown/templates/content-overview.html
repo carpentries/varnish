@@ -1,16 +1,16 @@
 <!-- START: inst/pkgdown/templates/content-syllabus.html -->
 <div class="col-xl-12 col-lg-12">
     <main id="main-content" class="main-content">
-      <h1>{{{pagetitle}}}</h1>
+      <h1>{{& pagetitle }}</h1>
       <div class="container lesson-content">
         <p>
-          {{#updated}} Last updated on {{updated}} | {{/updated}}
+          {{# translate.LastUpdate }} {{& translate.LastUpdate }} |{{/ translate.LastUpdate }}
           <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}index.md{{/file_source}}">
-            Edit this page <i aria-hidden="true" data-feather="edit"></i>
+            {{ translate.EditThisPage }} <i aria-hidden="true" data-feather="edit"></i>
           </a>
         </p>
 
-      {{{readme}}}
+      {{& readme }}
 
       {{#syllabus}}
       <section id="schedule">
@@ -18,13 +18,13 @@
         <tbody>
           {{#setup}}
           <tr>
-            <td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
+            <td></td><td><a href="#setup">{{ translate.SetupInstructions }}</a></td><td> {{ translate.DownloadFiles }}</td>
           </tr>
           {{/setup}}
-          {{{syllabus}}}
+          {{& syllabus }}
       </table>
       <p>
-      The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+      {{ translate.ActualScheduleNote }}
       </p>
       </section>
       {{/syllabus}}

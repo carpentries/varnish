@@ -25,8 +25,8 @@
 
 .callout-title {
   position: relative;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0px 0px 25px 0px;
@@ -41,8 +41,8 @@
 
 .callout li {
   margin-left: 0px;
-  margin-top:10px;
-  margin-bottom:20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .callout-inner {
@@ -141,7 +141,7 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1.2rem;
     &:first-of-type .accordion-button {
       border-radius: 0;
     }
@@ -154,7 +154,7 @@
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1.2rem;
   }
   .accordion-body {
     padding-left: 35px;
@@ -198,7 +198,7 @@
     }
     &, h3 {
       font-family: Mulish;
-      font-size: 16px;
+      font-size: 1.2rem;
       font-style: normal;
       font-weight: normal;
       text-transform: uppercase;

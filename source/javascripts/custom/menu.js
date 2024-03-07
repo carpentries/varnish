@@ -23,10 +23,11 @@ $( document ).ready(function() {
     }
     //change collapse icons depending on context
     if (window.innerWidth > 1024) {
+        collapseToggle = $(".collapse-toggle");
         if ( sidebarVisible ) {
-            $(".collapse-toggle").html("Collapse " + feather.icons['chevron-left'].toSvg());
+            collapseToggle.html(collapseToggle.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
         } else {
-            $(".collapse-toggle").html("Episodes " + feather.icons['chevron-right'].toSvg());
+            collapseToggle.html(collapseToggle.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
         }
     } else {
         $(".collapse-toggle").html(feather.icons['x'].toSvg());
@@ -107,16 +108,17 @@ $( document ).ready(function() {
 
     //expand all code button
     $("#expand-code").click(function(){
+      btn = $("#expand-code");
         if (codeExpanded == true) {
             $(".solution-button").not(".collapsed").click();
             $(".spoiler-button").not(".collapsed").click();
             codeExpanded = false;
-            $("#expand-code").html("Expand All Solutions " + feather.icons['plus'].toSvg());
+            btn.html(btn.attr("data-expand") + feather.icons['plus'].toSvg());
         } else {
             $(".solution-button.collapsed").click();
             $(".spoiler-button.collapsed").click();
             codeExpanded = true;
-            $("#expand-code").html("Collapse All Solutions " + feather.icons['minus'].toSvg());
+            btn.html(btn.attr("data-collapse") + feather.icons['minus'].toSvg());
         }
     });
 });
@@ -252,7 +254,7 @@ function showSidebarDesktop(){
     });
     $primaryContent.attr('class', "col-xl-8 primary-content");
     $sidebarInner.css('visibility', 'visible');
-    $collapseToggle.html("Collapse " + feather.icons['chevron-left'].toSvg());
+    $collapseToggle.html($collapseToggle.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
     $sidebar.attr('aria-hidden', 'false');
     $collapseToggle.attr('aria-expanded', 'true');
     $sidebar.show();
@@ -273,7 +275,7 @@ function hideSidebarDesktop(){
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $sidebarInner.css('visibility', 'hidden');
-    $collapseToggle.html("Episodes " + feather.icons['chevron-right'].toSvg());
+    $collapseToggle.html($collapseToggle.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
     // resize primary content before sidebar col
     // when the primary content adjusts its size, the vertical content shrinks
     // and we need to account fo that.

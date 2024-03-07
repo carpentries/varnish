@@ -9,7 +9,13 @@ pre .img img, pre .r-plt img {
 
 code {
   font-family: 'Source Code Pro', monospace;
+  color: #000;
+}
+
+p > code {
+  background-color: #fff;
   border-radius: 4px;
+  font-size: 1em;
 }
 
 /* Links ---------------------------------------------------- */

@@ -1,164 +1,280 @@
 <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4{{#overview}} overview-sidebar{{/overview}}">
-  <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven">
-        <button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" >
-          <i class="search-icon" data-feather="x" role="img"></i>
-        </button>
-        <div class="sidebar-inner">
-          <div class="row mobile-row">
-            <div class="col">
-              <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
-                  <div class="accordion-item">
-        {{#instructor}}
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
-                      </button>
-                    </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
-                      <div class="accordion-body">
-                        <a href="../{{this_page}}">Learner View</a>
-                      </div>
+    <div id="sidebar" class="sidebar">
+        <nav aria-labelledby="flush-headingEleven">
+            <button
+                role="button"
+                aria-label="{{ translate.CloseMenu }}"
+                alt="{{ translate.CloseMenu }}"
+                aria-expanded="true"
+                aria-controls="sidebar"
+                class="collapse-toggle"
+                data-collapse="{{ translate.Collapse }} "
+                data-episodes="{{ translate.Episodes }} "
+            >
+                <i class="search-icon" data-feather="x" role="img"></i>
+            </button>
+            <div class="sidebar-inner">
+                <div class="row mobile-row">
+                    <div class="col">
+                        <div class="sidenav-view-selector">
+                            <div class="accordion accordion-flush" id="accordionFlush9">
+                                <div class="accordion-item">
+                                    {{#instructor}}
+                                    <h2 class="accordion-header" id="flush-headingNine">
+                                        <button
+                                            class="accordion-button collapsed"
+                                            id="instructor"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseNine"
+                                            aria-expanded="false"
+                                            aria-controls="flush-collapseNine"
+                                        >
+                                            <i
+                                                id="eye"
+                                                aria-hidden="true"
+                                                class="icon"
+                                                data-feather="eye"
+                                            ></i>
+                                            {{ translate.InstructorView }}
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="flush-collapseNine"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingNine"
+                                        data-bs-parent="#accordionFlush2"
+                                    >
+                                        <div class="accordion-body">
+                                            <a href="../{{this_page}}"
+                                                >{{ translate.LearnerView }}</a
+                                            >
+                                        </div>
+                                    </div>
+                                    {{/instructor}} {{^instructor}}
+                                    <h2 class="accordion-header" id="flush-headingNine">
+                                        <button
+                                            class="accordion-button collapsed"
+                                            id="instructor"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseNine"
+                                            aria-expanded="false"
+                                            aria-controls="flush-collapseNine"
+                                        >
+                                            <i
+                                                id="eye"
+                                                aria-hidden="true"
+                                                class="icon"
+                                                data-feather="eye"
+                                            ></i>
+                                            {{ translate.LearnerView }}
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="flush-collapseNine"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingNine"
+                                        data-bs-parent="#accordionFlush2"
+                                    >
+                                        <div class="accordion-body">
+                                            <a href="instructor/{{this_page}}"
+                                                >{{ translate.InstructorView }}</a
+                                            >
+                                        </div>
+                                    </div>
+                                    {{/instructor}}
+                                </div>
+                                <!--/div.accordion-item-->
+                            </div>
+                            <!--/div.accordion-flush-->
+                        </div>
+                        <!--div.sidenav-view-selector -->
                     </div>
-        {{/instructor}}
-        {{^instructor}}
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                        <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
-                      </button>
-                    </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
-                      <div class="accordion-body">
-                        <a href="instructor/{{this_page}}">Instructor View</a>
-                      </div>
+                    <!--/div.col -->
+                    {{#yaml}}{{#language}}
+                    <div class="col">
+                        <div class="sidenav-language-selector">
+                            <div class="accordion accordion-flush" id="accordionFlush10">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTen">
+                                        <button
+                                            class="accordion-button side-language collapsed"
+                                            id="language"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#flush-collapseTen"
+                                            aria-expanded="false"
+                                            aria-controls="flush-collapseTen"
+                                        >
+                                            English (US)
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="flush-collapseTen"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingNine"
+                                        data-bs-parent="#accordionFlush2"
+                                    >
+                                        <div class="accordion-body">
+                                            <a href="#">French</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/div.accordion-item-->
+                            </div>
+                            <!--/div.accordion-flush-->
+                        </div>
+                        <!--/div.sidenav-language-selector -->
                     </div>
-        {{/instructor}}
-                  </div><!--/div.accordion-item-->
-                </div><!--/div.accordion-flush-->
-              </div><!--div.sidenav-view-selector -->
-            </div><!--/div.col -->
-      {{#yaml}}{{#language}}
-            <div class="col">
-              <div class="sidenav-language-selector">
-                <div class="accordion accordion-flush" id="accordionFlush10">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTen">
-                      <button class="accordion-button side-language collapsed" id="language" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">English (US)
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
-                      <div class="accordion-body">
-                        <a href="#">French</a>
-                      </div>
-                    </div>
-                  </div><!--/div.accordion-item-->
-                </div><!--/div.accordion-flush-->
-              </div><!--/div.sidenav-language-selector -->
-            </div><!--/div.col -->
-      {{/language}}{{/yaml}}
-            <hr/>
-          </div><!--/div.mobile-row -->
-
-          <div class="accordion accordion-flush" id="accordionFlush11">
-            {{^overview}}
-            <div class="accordion-item">
-
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
-                  EPISODES
-                </h2>
-              </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
-
-                <div class="accordion-body">
-                  {{{ sidebar }}}
+                    <!--/div.col -->
+                    {{/language}}{{/yaml}}
+                    <hr />
                 </div>
-              </div>
-            </div>
-            {{/overview}}
-            {{#overview}}
-            <a href="index.html">Home</a>
-            {{/overview}}
+                <!--/div.mobile-row -->
 
-            <hr class="half-width"/>
+                <div class="accordion accordion-flush" id="accordionFlush11">
+                    {{^overview}}
+                    <div class="accordion-item">
+                        <button
+                            id="chapters"
+                            class="accordion-button show"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEleven"
+                            aria-expanded="false"
+                            aria-controls="flush-collapseEleven"
+                        >
+                            <h2 class="accordion-header chapters" id="flush-headingEleven">
+                                {{ translate.EPISODES }}
+                            </h2>
+                        </button>
+                        <div
+                            id="flush-collapseEleven"
+                            class="accordion-collapse show collapse"
+                            aria-labelledby="flush-headingEleven"
+                            data-bs-parent="#accordionFlush11"
+                        >
+                            <div class="accordion-body">{{{ sidebar }}}</div>
+                        </div>
+                    </div>
+                    {{/overview}} {{#overview}}
+                    <a href="index.html">{{ translate.Home }}</a>
+                    {{/overview}}
 
-            {{#resources}}
-            <div class="accordion accordion-flush resources" id="accordionFlush12">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
-                    RESOURCES
-                  </button>
-                </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse {{#overview}}show {{/overview}}collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
-                  <div class="accordion-body">
-                    <ul>
-                      {{#overview}}
-                      {{! We want to include a setup link prominently in the resources for overview pages }}
-                      <li>
-                        {{! NOTE: the reason why we do not use the site root here is because we would need to set the site context _before_ overview }}
-                        <a href="index.html#setup">Setup</a>
-                      </li>
-                      {{/overview}}
-                      {{#instructor}}
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/key-points.html">Key Points</a>
-                      </li>
-                      {{/overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">Instructor Notes</a>
-                      </li>
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/images.html">Extract All Images</a>
-                      </li>
-                      {{/overview}}
-                      {{/instructor}}
-                      {{^instructor}}
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}key-points.html">Key Points</a>
-                      </li>
-                      {{/overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">Glossary</a>
-                      </li>
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}profiles.html">Learner Profiles</a>
-                      </li>
-                      {{/instructor}}
-                      {{{resources}}}
-                    </ul>
-                  </div>
+                    <hr class="half-width" />
+
+                    {{#resources}}
+                    <div class="accordion accordion-flush resources" id="accordionFlush12">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwelve">
+                                <button
+                                    class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}"
+                                    id="resources"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwelve"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseTwelve"
+                                >
+                                    {{ translate.RESOURCES }}
+                                </button>
+                            </h2>
+                            <div
+                                id="flush-collapseTwelve"
+                                class="accordion-collapse {{#overview}}show {{/overview}}collapse"
+                                aria-labelledby="flush-headingTwelve"
+                                data-bs-parent="#accordionFlush12"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#overview}} {{! We want to include a setup link
+                                        prominently in the resources for overview pages }}
+                                        <li>
+                                            {{! NOTE: the reason why we do not use the site root
+                                            here is because we would need to set the site context
+                                            _before_ overview }}
+                                            <a href="index.html#setup">{{ translate.Setup }}</a>
+                                        </li>
+                                        {{/overview}} {{#instructor}} {{^overview}}
+                                        <li>
+                                            <a
+                                                href="{{#site}}{{root}}{{/site}}instructor/key-points.html"
+                                                >{{ translate.KeyPoints }}</a
+                                            >
+                                        </li>
+                                        {{/overview}}
+                                        <li>
+                                            <a
+                                                href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html"
+                                                >{{ translate.InstructorNotes }}</a
+                                            >
+                                        </li>
+                                        {{^overview}}
+                                        <li>
+                                            <a
+                                                href="{{#site}}{{root}}{{/site}}instructor/images.html"
+                                                >{{ translate.ExtractAllImages }}</a
+                                            >
+                                        </li>
+                                        {{/overview}} {{/instructor}} {{^instructor}} {{^overview}}
+                                        <li>
+                                            <a href="{{#site}}{{root}}{{/site}}key-points.html"
+                                                >{{ translate.KeyPoints }}</a
+                                            >
+                                        </li>
+                                        {{/overview}}
+                                        <li>
+                                            <a
+                                                href="{{#site}}{{root}}{{/site}}reference.html#glossary"
+                                                >{{ translate.Glossary }}</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="{{#site}}{{root}}{{/site}}profiles.html"
+                                                >{{ translate.LearnerProfiles }}</a
+                                            >
+                                        </li>
+                                        {{/instructor}} {{{resources}}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="half-width resources" />
+                    {{/resources}} {{^overview}} {{#aio}}
+                    <a
+                        href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html"
+                        >{{ translate.AIO }}</a
+                    >
+                    {{/aio}}{{/overview}}
+                    <br />
+                    {{#aio_pdf}}<a
+                        href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.pdf"
+                        >See all in one page [PDF]</a
+                    >{{/aio_pdf}} {{/overview}}
+
+                    <hr class="d-none d-sm-block d-md-none" />
+
+                    <div class="d-grid gap-1">
+                        {{#yaml}}{{#handout}}
+                        <form method="get" action="{{#site}}{{root}}{{/site}}{{handout}}">
+                            <button action="submit" class="btn btn-primary-outline">
+                                {{ translate.DownloadHandout }}
+                            </button>
+                        </form>
+                        <!-- TODO: Generate Slides -->
+                        <!-- <button class="btn btn-primary-outline">{{ translate.ExportSlides }}</button> -->
+                        {{/handout}}{{/yaml}}
+                    </div>
                 </div>
-              </div>
+                <!-- /div.accordion -->
             </div>
-            <hr class="half-width resources"/>
-            {{/resources}}
-
-            {{^overview}}
-            {{#aio}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.html">See all in one page</a>{{/aio}}
-            <br>
-            {{#aio_pdf}}<a href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.pdf">See all in one page [PDF]</a>{{/aio_pdf}}
-            {{/overview}}
-
-            <hr class="d-none d-sm-block d-md-none"/>
-
-            <div class="d-grid gap-1">
-            {{#yaml}}{{#handout}}
-              <form method="get" action="{{#site}}{{root}}{{/site}}{{handout}}">
-                <button action="submit" class="btn btn-primary-outline">Download Lesson Handout</button>
-              </form>
-              <!-- TODO: Generate Slides -->
-              <!-- <button class="btn btn-primary-outline">Export All Slides</button> -->
-            {{/handout}}{{/yaml}}
-            </div>
-          </div><!-- /div.accordion -->
-        </div><!-- /div.sidebar-inner -->
-      </nav>
-    </div><!-- /div.sidebar -->
-  </div><!-- /div.sidebar-col -->
+            <!-- /div.sidebar-inner -->
+        </nav>
+    </div>
+    <!-- /div.sidebar -->
+</div>
+<!-- /div.sidebar-col -->
 <!-- END:   inst/pkgdown/templates/navbar.html-->

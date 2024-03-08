@@ -10,6 +10,7 @@ mkdir -p source/javascripts/vendor/jquery/
 mkdir -p source/javascripts/vendor/jquery-visible/
 mkdir -p source/javascripts/vendor/bootstrap/
 mkdir -p source/javascripts/vendor/feather-icons/
+mkdir -p source/javascripts/vendor/mermaid
 # mkdir -p source/javascripts/vendor/mathjax/
 
 cp -rf node_modules/jquery/dist/* source/javascripts/vendor/jquery/
@@ -17,6 +18,7 @@ cp -rf node_modules/jquery/dist/* source/javascripts/vendor/jquery/
 cp -rf node_modules/jquery-visible/* source/javascripts/vendor/jquery-visible/
 cp -rf node_modules/bootstrap/dist/js/* source/javascripts/vendor/bootstrap/
 cp -rf node_modules/feather-icons/dist/* source/javascripts/vendor/feather-icons/
+cp -rf node_modules/mermaid/dist/* source/javascripts/vendor/mermaid
 
 
 #cp -rf node_modules/popper.js/dist/* source/javascripts/vendor/popper/

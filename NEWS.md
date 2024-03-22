@@ -1,4 +1,10 @@
-# varnish 1.0.1.9000 (unreleased)
+# varnish 1.0.2.9000 (2023-03-21)
+
+## NEW FEATURES
+
+* The lesson page footer now supports either a CITATION or CITATION.cff file
+  (reported: @tobyhodges, implemented: @tobyhodges, #122;
+  @froggleston, https://github.com/carpentries/sandpaper/pull/572)
 
 # varnish 1.0.1 (2023-12-14)
 

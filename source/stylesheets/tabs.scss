@@ -24,6 +24,10 @@ div.tabs {
   text-underline-offset: 6px;
 }
 
+h3.tab-header {
+  font-size: calc(1rem + .25vw);
+}
+
 .nav-tabs .nav-link.active {
   // alter padding to account for border
   padding: 4px 9px 10px 9px;

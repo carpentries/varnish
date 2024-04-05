@@ -1,10 +1,18 @@
-# varnish 1.0.2.9000 (2023-03-21)
+# varnish 1.0.2.9000 (2023-04-05)
 
 ## NEW FEATURES
 
 * The lesson page footer now supports either a CITATION or CITATION.cff file
   (reported: @tobyhodges, implemented: @tobyhodges, #122;
   @froggleston, https://github.com/carpentries/sandpaper/pull/572)
+* Add support for tabbed content in lessons 
+  (reported: @astroDimitrios,
+   implemented: @astroDimitrios, @froggleston,
+   https://github.com/carpentries/varnish/pull/121,
+   https://github.com/carpentries/sandpaper/pull/571,
+   https://github.com/carpentries/pegboard/pull/148
+  ).
+
 
 # varnish 1.0.1 (2023-12-14)
 

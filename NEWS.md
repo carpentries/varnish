@@ -1,4 +1,4 @@
-# varnish 1.0.2.9000 (2023-04-05)
+# varnish 1.0.2 (2023-04-10)
 
 ## NEW FEATURES
 

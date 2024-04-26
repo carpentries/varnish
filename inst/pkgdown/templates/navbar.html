@@ -250,7 +250,8 @@
                     >
                     {{/aio}}{{/overview}}
                     <br />
-                    {{#aio_pdf}}<a
+                    {{^overview}} {{#aio_pdf}}
+                    <a
                         href="{{#site}}{{root}}{{/site}}{{#instructor}}instructor/{{/instructor}}aio.pdf"
                         >See all in one page [PDF]</a
                     >{{/aio_pdf}} {{/overview}}

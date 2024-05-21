@@ -192,11 +192,11 @@
     </form>
     -->
     {{^overview}}
-    {{#learner}}
-    <a class="btn btn-primary" href="{{#site}}{{root}}{{/site}}learner/aio.html" role="button" aria-label="{{ translate.SearchButton }}">{{ translate.SearchButton }}</a>
-    {{/learner}}
     {{#instructor}}
     <a class="btn btn-primary" href="{{#site}}{{root}}{{/site}}instructor/aio.html" role="button" aria-label="{{ translate.SearchButton }}">{{ translate.SearchButton }}</a>
+    {{/instructor}}
+    {{^instructor}}
+    <a class="btn btn-primary" href="{{#site}}{{root}}{{/site}}learner/aio.html" role="button" aria-label="{{ translate.SearchButton }}">{{ translate.SearchButton }}</a>
     {{/instructor}}
     {{/overview}}
   </div><!--/div.container-fluid -->

@@ -163,22 +163,9 @@
         </li>
         {{/overview}}
         <li class="nav-item">
-          <a class="nav-link" href="{{#site}}{{root}}{{/site}}reference.html#glossary">{{ translate.Glossary }}</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="{{#site}}{{root}}{{/site}}profiles.html">{{ translate.LearnerProfiles }}</a>
         </li>
         {{/instructor}}
-        {{#more}}
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ translate.More }} <i data-feather="chevron-down"></i>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {{& more }}
-          </ul>
-        </li>
-        {{/more}}
       </ul>
     </div>
     <!--

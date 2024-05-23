@@ -1,6 +1,6 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Infrastructure
-Version: 1.0.2
+Version: 1.0.2-1
 Authors@R: c(
     person(given = "Zhian N.",
            family = "Kamvar",

@@ -44,26 +44,7 @@
 	<script>
 		feather.replace();
 	</script>
-  <!-- Matomo
-    2022-11-07: we have gotten a notification that we have an overage for our
-    tracking and I'm pretty sure this has to do with Workbench usage.
-    Considering that I am not _currently_ using this tracking because I do not
-    yet know how to access the data, I am turning this off for now.
-  <script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-    _paq.push(["setDomains", ["*.preview.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io", "*.carpentries.github.io"]]);
-    _paq.push(["setDoNotTrack", true]);
-    _paq.push(["disableCookies"]);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-          var u="https://carpentries.matomo.cloud/";
-          _paq.push(['setTrackerUrl', u+'matomo.php']);
-          _paq.push(['setSiteId', '1']);
-          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-          g.async=true; g.src='https://cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-  </script>
-  End Matomo Code -->
+
+  {{#analytics}}
+  {{& analytics}}
+  {{/analytics}}

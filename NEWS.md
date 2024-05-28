@@ -1,3 +1,14 @@
+# varnish 1.0.3.9000 (2023-05-28)
+
+## NEW FEATURES
+
+* Add config.yaml configuration option `analytics` to support
+  inclusion of the Carpentries Matomo web analytics tracking script,
+  a user-supplied tracking script a la Google, or no option to turn
+  off tracking (reported: @fiveop https://github.com/carpentries/varnish/issues/37,
+  implemented @froggleston)
+
+
 # varnish 1.0.2 (2023-04-10)
 
 ## NEW FEATURES

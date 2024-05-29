@@ -199,7 +199,7 @@ function showSidebarMobile(){
     setSidebarVisible(true);
     if (window.innerWidth < 768) {
         $sidebar.css({
-            display: '',
+            display: 'flex',
             position: 'absolute',
             top: '150px',
             left: '0px',
@@ -207,7 +207,7 @@ function showSidebarMobile(){
         });
     } else {
         $sidebar.css({
-            display: '',
+            display: 'flex',
             position: 'absolute',
             top: '200px',
             left: '0px',
@@ -242,6 +242,7 @@ function showSidebarDesktop(){
     var $sidebarInner   = $('.sidebar-inner');
     var $collapseToggle = $('.collapse-toggle');
     $sidebar.css({
+        display: 'flex',
         position: 'relative',
         top: '0px'
     });

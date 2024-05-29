@@ -1,4 +1,5 @@
-# {varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# Template for Carpentries Lessons (with L2D themes)
+
 
 [![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
 
@@ -30,7 +31,7 @@ uglifyjs. Their sources live in the [`source/`](source/) folder with directives
 to include their dependencies (bootstrap, jquery, feather).
 
 The minified versions are built via GitHub actions any time one of the source
-files is changed. 
+files is changed.
 
 To build this locally, you need to make sure to have a working version of
 `node` and `npm`, which can be installed [via the node version manager, nvm](https://github.com/nvm-sh/nvm#intro).
@@ -121,7 +122,7 @@ template:
 
 Each of these parameters can be accessed via the `{{ yaml }}` mustache context.
 For example, this adds a paragraph describing the license provided that the
-`{{ license }}` parameter is present in the yaml: 
+`{{ license }}` parameter is present in the yaml:
 
 ```html
 {{#yaml}}{{#license}}
@@ -138,8 +139,9 @@ For example, this adds a paragraph describing the license provided that the
 
  - `{{ instructor }}`: a boolean indicating instructor view
  - `{{ aio }}`: a boolean indicating that the aio page should be included
+ - `{{ aio_pdf }}`: a boolean indicating that the aio PDF page should be included
  - `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
- - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes. 
+ - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes.
  - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements avaialable in mobile view.
 
 [{pkgdown}]: https://r-lib.github.io/pkgdown

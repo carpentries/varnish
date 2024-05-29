@@ -1,29 +1,6 @@
 		<footer class="row footer mx-md-3">
 			<hr/>
 			<div class="col-md-6">
-        {{# translate.ThisLessonCoC }}<p>{{& translate.ThisLessonCoC }}</p>{{/ translate.ThisLessonCoC }}
-        {{#yaml}}
-        <p>
-        {{^old-url}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
-        {{/old-url}}
-	{{#old-url}}
-        {{#pre-beta-date}}
-        <a href="{{#yaml}}https://carpentries.github.io/workbench/contributor/pre-beta.html?id={{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
-        {{/pre-beta-date}}
-        {{^pre-beta-date}}
-        <a href="{{#yaml}}{{source}}/edit/{{branch}}/{{/yaml}}{{file_source}}{{^file_source}}README.md{{/file_source}}">{{ translate.EditOnGH }}</a>
-        {{/pre-beta-date}}
-	{{/old-url}}
-        {{/yaml}}
-        | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">{{ translate.Contributing }}</a>
-        | <a href="{{#yaml}}{{source}}/{{/yaml}}">{{ translate.Source }}</a></p>
-				<p><a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}{{citation}}">{{ translate.Cite }}</a> | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">{{ translate.Contact }}</a> | <a href="https://carpentries.org/about/">{{ translate.About }}</a></p>
-			</div>
-			<div class="col-md-6">
-        {{#yaml}}{{#license}}
-        <p>{{& translate.MaterialsLicensedUnder }}</p>
-        {{/license}}{{/yaml}}
         <p>{{& translate.TemplateLicense }}</p>
         <p>{{& translate.BuiltWith }}</p>
 			</div>

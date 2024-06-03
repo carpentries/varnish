@@ -636,3 +636,23 @@ $color-mode-type: data;
   span.error   {font-weight: bolder;}
   span.warning {font-weight: bolder;}
 }
+
+// Tab styling from tabs.scss
+.nav-tabs .nav-link.active {
+  border-top-color: shade-color($bright-blue, 20%);
+  border-right-color: var(--bs-border-color);
+  border-left-color: var(--bs-border-color);
+}
+
+.nav-link[role="tab"][aria-selected="false"]:hover {
+  outline: 2px solid shade-color($bright-blue, 20%);
+}
+
+div.tab-content {
+  border-width: var(--bs-border-width);
+  border-right-color: var(--bs-border-color);
+  border-left-color: var(--bs-border-color);
+  border-bottom-color: var(--bs-border-color);
+}
+
+}

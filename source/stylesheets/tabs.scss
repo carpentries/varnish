@@ -1,0 +1,61 @@
+// add space between tabs and other elements
+div.tabs {
+  margin: 15px 0px;
+}
+
+// no borders
+// margin to offset the top border when active
+.nav-tabs .nav-link {
+  margin-top: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.tab-header {
+  // border-bottom-style: solid;
+  // border-bottom-width: 2px;
+  // border-bottom-color: $gray-200;
+  text-decoration: underline;
+  text-decoration-color: $gray-400;
+  text-underline-offset: 6px;
+}
+
+h3.tab-header {
+  font-size: calc(1rem + .25vw);
+}
+
+.nav-tabs .nav-link.active {
+  // alter padding to account for border
+  padding: 4px 9px 10px 9px;
+  border-top-width: 6px;
+  border-top-color: $bright-blue;
+  border-right-width: 1px;
+  border-right-color: $gray-400;
+  border-left-width: 1px;
+  border-left-color: $gray-400;
+  .tab-header {
+    text-decoration: none;
+  }
+}
+
+.nav-link[role="tab"][aria-selected="false"]:hover {
+  outline: 2px solid $bright-blue;
+  z-index: 100;
+}
+
+div.tab-content {
+  border-style: solid;
+  padding: 20px 20px;
+  border-top: 0;
+  border-right-width: 1px;
+  border-right-color: $gray-400;
+  border-left-width: 1px;
+  border-left-color: $gray-400;
+  border-bottom-width: 1px;
+  border-bottom-color: $gray-400;
+  border-radius: 0px 0px 3px 3px;
+}

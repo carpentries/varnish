@@ -59,7 +59,8 @@ $color-mode-type: data;
 
   // Darken alpha, beta etc. buttons
   .text-bg-danger {
-    background-color: var(--bs-danger-border-subtle) !important;
+    // var(--bs-danger-border-subtle) tinted
+    background-color: tint-color(rgb(132, 32, 41), 5%) !important;
     a.alert-link {
       color: #fff;
     }
@@ -151,6 +152,9 @@ $color-mode-type: data;
   }
   a {
     color: var(--bs-link-hover-color);
+  }
+  #search-button {
+    color: #fff;
   }
   .table-striped > tbody > tr:nth-of-type(even) > * {
     background: var(--bs-tertiary-bg);
@@ -635,7 +639,6 @@ $color-mode-type: data;
   pre code span.wa /* Warning        */ {color:#dcc6e0}
   span.error   {font-weight: bolder;}
   span.warning {font-weight: bolder;}
-}
 
 // Tab styling from tabs.scss
 .nav-tabs .nav-link.active {

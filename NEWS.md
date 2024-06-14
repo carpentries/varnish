@@ -1,4 +1,4 @@
-# varnish 1.0.3.9000 (2023-05-28)
+# varnish 1.0.3.9000 (2023-06-14)
 
 ## NEW FEATURES
 
@@ -7,7 +7,8 @@
   a user-supplied tracking script a la Google, or no option to turn
   off tracking (reported: @fiveop https://github.com/carpentries/varnish/issues/37,
   implemented @froggleston)
-
+* Add a dark mode so users can switch between text and background colours
+  (implemented: @astroDimitrios https://github.com/carpentries/varnish/pull/124)
 
 # varnish 1.0.2 (2023-04-10)
 

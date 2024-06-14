@@ -39,6 +39,7 @@ Authors@R: c(
            family = "Theodorakis",
            role = c("ctb"),
            email = "astrodimitrios@gmail.com"),
+    person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.
 License: MIT + file LICENSE

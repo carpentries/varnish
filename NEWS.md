@@ -1,4 +1,4 @@
-# varnish 1.0.3.9000 (2023-06-14)
+# varnish 1.0.3 (2023-06-18)
 
 ## NEW FEATURES
 
@@ -9,6 +9,7 @@
   implemented @froggleston)
 * Add a dark mode so users can switch between text and background colours
   (implemented: @astroDimitrios https://github.com/carpentries/varnish/pull/124)
+
 
 # varnish 1.0.2 (2023-04-10)
 

@@ -16,7 +16,7 @@ name: Render CSS and Javascript
 jobs:
   compress-everything:
     name: Render css/javascript
-    runs-on: macOS-11
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Clean

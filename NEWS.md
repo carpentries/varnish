@@ -1,3 +1,14 @@
+# varnish 1.0.4 (2024-08-23)
+
+## BUG FIXES
+
+* Fix dark mode figure caption bug (@astroDimitrios #145)
+* Fix CSS styling issues with the Resources section and 
+  squashed overview headings(@froggleston #147)
+* Replace old macOS runs-on action property with 
+  ubuntu-latest (@froggleston #147)
+
+
 # varnish 1.0.3 (2023-06-18)
 
 ## NEW FEATURES

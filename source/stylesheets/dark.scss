@@ -266,6 +266,20 @@ $color-mode-type: data;
     color: #fff;
   }
 
+  /* Caution */
+
+  .caution {
+    border-left: 10px solid shade-color($red, 50%);
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .caution .callout-square {
+    background: shade-color($red, 50%);
+    color: #fff;
+  }
+
   /* Parent Class for Accordions in Learner View */
 
   .learner-accordion {

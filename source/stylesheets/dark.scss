@@ -45,9 +45,10 @@ $color-mode-type: data;
 // are soley for a dark mode
 
   // Darken any images and desaturate
-  .img {
-    filter: brightness(80%) saturate(80%);
+  img.dark-filter {
+    filter: invert(1) hue-rotate(180deg) brightness(90%) saturate(90%);
   }
+
   // Convert any logo to off white
   .large-logo > img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);

@@ -25,16 +25,42 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
+  const setImages = theme => {
+    document.querySelectorAll('img').forEach(img => {
+      var imgSrc = img.src
+      if (!imgSrc.startsWith("http")) {
+        if (theme === 'light') {
+          img.src = imgSrc.replace(/-dark./gi, ".")
+        }
+        else {
+          if (!imgSrc.includes("-dark.")) {
+            var imgName = imgSrc.replace(/\.[^/.]+$/, "");
+            var imgExt = imgSrc.slice((Math.max(0, imgSrc.lastIndexOf(".")) || Infinity) + 1);
+            var newImgSrc = imgName + "-dark." + imgExt
+            img.src = newImgSrc;
+            img.onerror = function() {
+              this.onerror = null;
+              this.src = imgSrc;
+            }
+          }
+        }
+      }
+    })
+  }
+
   // Set the preferred 
   const setTheme = theme => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
+      setImages('dark')
     } 
     else if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: light)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'light')
+      setImages('light')
     }
     else {
       document.documentElement.setAttribute('data-bs-theme', theme)
+      setImages(theme)
     }
   }
 
@@ -79,6 +105,7 @@
   })
 
   window.addEventListener('DOMContentLoaded', () => {
+    setImages(getPreferredTheme())
     showActiveTheme(getPreferredTheme())
 
     document.querySelectorAll('[data-bs-theme-value]')

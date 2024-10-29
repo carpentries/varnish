@@ -28,20 +28,19 @@
   const setImages = theme => {
     document.querySelectorAll('img').forEach(img => {
       var imgSrc = img.src
-      if (!imgSrc.startsWith("http")) {
-        if (theme === 'light') {
-          img.src = imgSrc.replace(/-dark./gi, ".")
-        }
-        else {
-          if (!imgSrc.includes("-dark.")) {
-            var imgName = imgSrc.replace(/\.[^/.]+$/, "");
-            var imgExt = imgSrc.slice((Math.max(0, imgSrc.lastIndexOf(".")) || Infinity) + 1);
-            var newImgSrc = imgName + "-dark." + imgExt
-            img.src = newImgSrc;
-            img.onerror = function() {
-              this.onerror = null;
-              this.src = imgSrc;
-            }
+      if (theme === 'light') {
+        img.src = imgSrc.replace(/-dark./gi, ".")
+      }
+      else {
+        if (!imgSrc.includes("-dark.")) {
+          var imgName = imgSrc.replace(/\.[^/.]+$/, "");
+          var imgExt = imgSrc.slice((Math.max(0, imgSrc.lastIndexOf(".")) || Infinity) + 1);
+          var newImgSrc = imgName + "-dark." + imgExt
+          img.src = newImgSrc;
+          img.onerror = function() {
+            this.onerror = null;
+            this.src = imgSrc;
+            this.classList.add('dark-filter')
           }
         }
       }

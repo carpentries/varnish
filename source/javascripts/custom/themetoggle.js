@@ -40,6 +40,7 @@
           img.onerror = function() {
             this.onerror = null;
             this.src = imgSrc;
+            this.classList.add('dark-filter')
           }
         }
       }

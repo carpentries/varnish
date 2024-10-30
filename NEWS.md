@@ -1,5 +1,12 @@
 # varnish 1.0.4 (2024-08-23)
 
+## NEW FEATURES
+
+* Two new Sass variables (`default_font` and `mono_font`) have been created to
+  simplify the process of changing the default font and monospace font. 
+  In particular, this can be helpful for forks defining their own theme
+  (@Bisaloo #151)
+
 ## BUG FIXES
 
 * Fix dark mode figure caption bug (@astroDimitrios #145)

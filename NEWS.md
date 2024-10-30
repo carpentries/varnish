@@ -1,5 +1,11 @@
 # varnish 1.0.4 (2024-08-23)
 
+## NEW FEATURES
+
+* Carpentry-specific favicons are now used automatically based on the value of
+  the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
+  report from @zkamvar in #33).
+
 ## BUG FIXES
 
 * Fix dark mode figure caption bug (@astroDimitrios #145)

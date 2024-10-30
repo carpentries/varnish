@@ -28,7 +28,7 @@
 }
 
 .mobile-title {
-  font-family: Mulish;
+  font-family: $default_font;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -167,7 +167,7 @@
 }
 
 .lesson-title {
-  font-family: Mulish;
+  font-family: $default_font;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -359,7 +359,7 @@
 
   .lesson-title-md {
     display: block;
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -462,7 +462,7 @@
 
   .lesson-title-md {
     display: inline-block;
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;

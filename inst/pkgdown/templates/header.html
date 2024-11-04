@@ -75,7 +75,7 @@
                   aria-expanded="false"
                   data-bs-toggle="dropdown"
                   data-bs-display="static"
-                  aria-label="Toggle theme (auto)">
+                  aria-label="{{ translate.ToggleDarkMode }}">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
             <i data-feather="chevron-down"></i>
           </button>
@@ -208,6 +208,7 @@
         {{/more}}
       </ul>
     </div>
+    <!--
     <form class="d-flex col-md-2 search-form">
       <fieldset disabled>
       <input class="form-control me-2 searchbox" type="search" placeholder="{{ translate.Search }}" aria-label="{{ translate.Search }}">
@@ -216,6 +217,15 @@
         </button>
       </fieldset>
     </form>
+    -->
+    {{^overview}}
+    {{#instructor}}
+    <a id="search-button" class="btn btn-primary" href="{{#site}}{{root}}{{/site}}instructor/aio.html" role="button" aria-label="{{ translate.SearchButton }}">{{ translate.SearchButton }}</a>
+    {{/instructor}}
+    {{^instructor}}
+    <a id="search-button" class="btn btn-primary" href="{{#site}}{{root}}{{/site}}aio.html" role="button" aria-label="{{ translate.SearchButton }}">{{ translate.SearchButton }}</a>
+    {{/instructor}}
+    {{/overview}}
   </div><!--/div.container-fluid -->
 </nav>
 

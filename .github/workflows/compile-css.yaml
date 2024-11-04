@@ -16,12 +16,12 @@ name: Render CSS and Javascript
 jobs:
   compress-everything:
     name: Render css/javascript
-    runs-on: macOS-11
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Clean
         run: rm -rf inst/pkgdown/assets/assets/
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
       - run: npm install
       - name: Comple js
         run: bash squash-a-script.sh

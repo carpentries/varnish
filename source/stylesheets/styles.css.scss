@@ -234,7 +234,7 @@ dt > * {
   max-width: 100%;
 }
 
-figcaption {
+.figcaption {
   border-top: 1px solid $black;
   background: $light-gray;
   margin-bottom: 25px;
@@ -298,12 +298,12 @@ figcaption {
 
 @include media-breakpoint-down(xl) {
 
-  .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#resources)::after {
+  .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#lesson-resources)::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
     transform:none !important;
   }
 
-  .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#resources)::after {
+  .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#lesson-resources)::after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minus'><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
     transform:none !important;
   }
@@ -351,7 +351,7 @@ figcaption {
     display: none !important;
   }
   // source: <https://css-tricks.com/almanac/properties/p/page-break/#aa-example>
-  h2 { 
+  h2 {
     page-break-before: auto;
   }
   h3, h4 {

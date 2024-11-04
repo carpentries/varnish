@@ -1,4 +1,47 @@
-# varnish 1.0.1.9000 (unreleased)
+# varnish 1.0.4 (2024-08-23)
+
+## BUG FIXES
+
+* Fix dark mode figure caption bug (@astroDimitrios #145)
+* Fix CSS styling issues with the Resources section and 
+  squashed overview headings(@froggleston #147)
+* Replace old macOS runs-on action property with 
+  ubuntu-latest (@froggleston #147)
+
+
+# varnish 1.0.3 (2023-06-18)
+
+## NEW FEATURES
+
+* Add config.yaml configuration option `analytics` to support
+  inclusion of the Carpentries Matomo web analytics tracking script,
+  a user-supplied tracking script a la Google, or no option to turn
+  off tracking (reported: @fiveop https://github.com/carpentries/varnish/issues/37,
+  implemented @froggleston)
+* Add a dark mode so users can switch between text and background colours
+  (implemented: @astroDimitrios https://github.com/carpentries/varnish/pull/124)
+
+
+# varnish 1.0.2 (2023-04-10)
+
+## NEW FEATURES
+
+* The lesson page footer now supports either a CITATION or CITATION.cff file
+  (reported: @tobyhodges, implemented: @tobyhodges, #122;
+  @froggleston, https://github.com/carpentries/sandpaper/pull/572)
+* Add support for tabbed content in lessons 
+  (reported: @astroDimitrios,
+   implemented: @astroDimitrios, @froggleston,
+   https://github.com/carpentries/varnish/pull/121,
+   https://github.com/carpentries/sandpaper/pull/571,
+   https://github.com/carpentries/pegboard/pull/148
+  ).
+* Replace the problematic search box with a much simpler and functional solution
+  of taking the user to the All in One page where they can search using the 
+  browser's native search (Ctrl-F) 
+  (reported: @anenadic https://github.com/carpentries/workbench/issues/8,
+   implemented: @erinbecker #131
+  ).
 
 # varnish 1.0.1 (2023-12-14)
 

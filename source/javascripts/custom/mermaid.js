@@ -36,7 +36,7 @@
   // The next section allows the diagrams to change theme
   // with the theme-toggle
 
-  // Retreive the current session
+  // Retrieve the current session
   // needed as this JS is sep from the themetoggle.js
   // which gets loaded first to avoid a white flash on load
   try {

@@ -234,7 +234,7 @@ dt > * {
   max-width: 100%;
 }
 
-.figcaption {
+figcaption {
   border-top: 1px solid $black;
   background: $light-gray;
   margin-bottom: 25px;
@@ -249,6 +249,7 @@ dt > * {
     margin-bottom: 0px;
   }
   figcaption {
+    background: $light-gray;
     margin-bottom: 0px;
     padding-top: 25px;
     padding-bottom: 10px;
@@ -269,7 +270,9 @@ dt > * {
   padding-bottom: 1em;
   overflow: scroll;
   svg {
+    min-height: 15vh;
     max-height: 80vh;
+    max-width: 95% !important;
   }
 }
 

@@ -14,7 +14,7 @@
     "jquery": "3.6.0",
     "jquery-visible": "^1.2.0",
     "svgo": "^2.8.0",
-    "mermaid": "^10.8.0"
+    "mermaid": "^11.4.0"
   },
   "devDependencies": {
     "sass": "^1.65.1",

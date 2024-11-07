@@ -42,12 +42,13 @@ $color-mode-type: data;
 
 // This section does not correspond to an
 // existing light themed sass file - these
-// are soley for a dark mode
+// are solely for a dark mode
 
   // Darken any images and desaturate
-  .img {
-    filter: brightness(80%) saturate(80%);
+  img.dark-filter {
+    filter: invert(1) hue-rotate(180deg) brightness(90%) saturate(90%);
   }
+
   // Convert any logo to off white
   .large-logo > img {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
@@ -174,7 +175,7 @@ $color-mode-type: data;
     color: var(--bs-highlight-color);
     background: $bright-blue;
   }
-  .figcaption {
+  figcaption {
     border-top: 1px solid var(--bs-body-color);
     background: var(--bs-tertiary-bg);
   }
@@ -272,6 +273,20 @@ $color-mode-type: data;
 
   .challenge .callout-square {
     background: shade-color($yellow, 50%);
+    color: #fff;
+  }
+
+  /* Caution */
+
+  .caution {
+    border-left: 10px solid shade-color($red, 50%);
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .caution .callout-square {
+    background: shade-color($red, 50%);
     color: #fff;
   }
 

@@ -12,11 +12,17 @@
       }
       catch (err) {
         figcaption = "Please enter an accessible description."
-      }    
+      }
+      var overflow_style
+      if ($el.textContent.includes('overflow')) {
+        overflow_style = ' style="overflow: scroll;"'
+      } else {
+        overflow_style = ''
+      }
       $el.outerHTML = `
         <div class="mermaid-img-wrapper">
           <figure>
-            <div class="mermaid">
+            <div class="mermaid"${overflow_style}>
             ${$el.textContent}
             </div>
             <figcaption>${figcaption}</figcaption>

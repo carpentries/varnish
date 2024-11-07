@@ -175,11 +175,14 @@ $color-mode-type: data;
     color: var(--bs-highlight-color);
     background: $bright-blue;
   }
-  .figcaption {
+  figcaption {
     border-top: 1px solid var(--bs-body-color);
     background: var(--bs-tertiary-bg);
   }
   .mermaid-img-wrapper {
+    figcaption {
+      background: var(--bs-tertiary-bg);
+    }
     details {
       background: var(--bs-tertiary-bg);
     }

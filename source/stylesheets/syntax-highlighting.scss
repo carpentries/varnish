@@ -8,7 +8,7 @@ pre .img img, pre .r-plt img {
 }
 
 code {
-  font-family: 'Source Code Pro', monospace;
+  font-family: $mono_font, monospace;
   color: #000;
 }
 
@@ -21,7 +21,7 @@ p > code {
 /* Links ---------------------------------------------------- */
 
 code a:any-link {
-  font-family: 'Source Code Pro', monospace;
+  font-family: $mono_font, monospace;
   border-radius: 4px;
   text-decoration: underline;
   text-decoration-color: $gray-400;

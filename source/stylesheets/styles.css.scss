@@ -1,6 +1,6 @@
 @import "bootstrap/scss/bootstrap.scss";
-@import "syntax-highlighting";
 @import "variables";
+@import "syntax-highlighting";
 @import "header";
 @import "callouts";
 @import "codeblocks";
@@ -46,18 +46,18 @@
 @function font($file) {
   @return asset('fonts', $file);
 }
-/* mulish-regular - latin */
+/* mulish-regular */
 @font-face {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
-  src: font('mulish-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: font('Mulish-Regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       font('mulish-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       font('mulish-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       font('mulish-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       font('mulish-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       font('mulish-v5-latin-regular.svg#Mulish') format('svg'); /* Legacy iOS */
+       font('Mulish-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font('Mulish-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       font('Mulish-Regular.woff') format('woff'), /* Modern Browsers */
+       font('Mulish-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       font('Mulish-Regular.svg#Mulish') format('svg'); /* Legacy iOS */
 
 }
 
@@ -70,7 +70,7 @@
 }
 
 body {
-  font-family: 'Mulish', sans serif;
+  font-family: $default_font, sans serif;
   font-weight: $font_weight_normal;
 }
 
@@ -290,6 +290,14 @@ dt > * {
 #eye{
   display: inline;
   margin-right:10px;
+}
+
+.task-list {
+  list-style-type: none !important;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 10px !important;
 }
 
 @include media-breakpoint-up(xl) {

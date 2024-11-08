@@ -1,4 +1,4 @@
-# varnish 1.0.5.9000 ()
+# varnish 1.0.5 (2024-11-11)
 
 ## NEW FEATURES
 
@@ -12,6 +12,9 @@
 * Addition of the `caution` callout (@MttArmstrong #149)
 * Improve CSS rendering of checklists by removing the bullet point and increasing
   spacing between checkbox and label (reported @jq-11 #156, fixed @froggleston)
+* Improve support for Ukrainian alphabet by moving from specific Mulish latin to 
+  Mulish regular font (reported @olexandr-konovalov #120, implemented 
+  @olexandr-konovalov, @froggleston #133)
 
 
 # varnish 1.0.4 (2024-08-23)

@@ -9,6 +9,9 @@
 * Carpentry-specific favicons are now used automatically based on the value of
   the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
   report from @zkamvar in #33).
+* Addition of the `caution` callout (@MttArmstrong #149)
+* Improve CSS rendering of checklists by removing the bullet point and increasing
+  spacing between checkbox and label (reported @jq-11 #156, fixed @froggleston)
 
 
 # varnish 1.0.4 (2024-08-23)

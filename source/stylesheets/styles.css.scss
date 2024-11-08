@@ -292,6 +292,14 @@ dt > * {
   margin-right:10px;
 }
 
+.task-list {
+  list-style-type: none !important;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 10px !important;
+}
+
 @include media-breakpoint-up(xl) {
 
   .sidebar .accordion-button.collapsed::after {

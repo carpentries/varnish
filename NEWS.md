@@ -16,6 +16,10 @@
   Mulish regular font (reported @olexandr-konovalov #120, implemented 
   @olexandr-konovalov, @froggleston #133)
 
+## MISC
+
+* Add @MttArmstrong as a new contributor - welcome!
+
 
 # varnish 1.0.4 (2024-08-23)
 

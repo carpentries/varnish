@@ -1,11 +1,16 @@
-# {varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {mb-varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
 [![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
 
-This project is part of [The Carpentries
+This project is a Melbourne Bioinformatics fork of [The Carpentries
 Workbench](https://carpentries.github.io/workbench). It serves as a template
-for Carpentries lessons adapted from [{pkgdown}]. There is no need to call this
-package directly, it is installed via the [{sandpaper}] package.
+for internally developed Carpentries style lessons adapted from [{pkgdown}]. As this is a bespoke theme,
+it must be installed directly, rather than using the default that is installed via the [{sandpaper}] package.
+
+The changes to the theme replace The Carpentries branding with the University of
+Melbourne [brand toolkit](https://brandhub.unimelb.edu.au/).
+Additionally, relevant additional links to training resources have been included
+in the footer.
 
 The html templates use [mustache templating
 language](https://mustache.github.io/mustache.5.html) while the CSS and
@@ -13,15 +18,66 @@ JavaScript are compiled and minified on GitHub Actions.
 
 ## Installation
 
-To install this package, you can use our [R-universe repository](https://carpentries.r-universe.dev),
-which is updated hourly.
+This fork of varnish should **not** be used in official carpentries repositories,
+it is intended for internally developed courses at the University of Melbourne.
 
-```r
-install.packages("varnish", repos = "https://carpentries.r-universe.dev")
+In order to use this fork of varnish you must update `config.yaml` to include the
+below lines under the `# Customisation` section (update `[user]` with your
+user/organisation  and `[repo]` with the repository name replacing the line with
+a custom domain if required).
+
+```yaml
+varnish: melbournebioinformatics/mb-varnish@main
+url: '[user].github.io/[repo]'
+```
+There is no need to call this package directly, once `config.yaml` has been updated
+[{sandpaper}] will detect it and copy the styling and templates to your lesson
+website when building in GitHub pages.
+
+Once `config.yaml` has been customised, [typical
+guides](https://carpentries.github.io/sandpaper) from The Carpentries can be
+followed to deploy locally or to GitHub pages.
+
+### Applying Varnish locally
+
+When rendering the site locally the varnish will not, by default, be applied since
+it is not available. A few extra steps to setup up and install the necessary
+packages are required. You can install the varnish system wide using [{devtools}]
+
+``` r
+> install.packages("devtools")
+> devtools::install_github("melbournebioinformatics/mb-varnish")
 ```
 
-There is no need to call this package directly, [{sandpaper}] will detect it and
-copy the styling and templates to your lesson website.
+Alternatively you can install the varnish under a [{renv}].
+If you don't already have `renv` installed then install it with
+`install.packages("renv")`. Then initialise an `renv` in the workbench repository
+you have cloned.
+
+``` bash
+cd ~/path/to/workbench/repo/
+Rscript -e "renv::init()"
+```
+
+Start R and install this varnish and the [{sandpaper}] package (which will pull in
+all dependencies) in the `renv` and snapshot it.
+
+``` r
+> renv::install("melbournebioinformatics/mb-varnish")
+> options(repos = c(
+    carpentries = "https://carpentries.r-universe.dev/",
+    CRAN = "https://cran.rstudio.com/"))
+> renv::install("sandpaper", dep = TRUE)
+> renv::snapshot()
+```
+
+You can now build and serve the pages with University of Melbourne varnish.
+```r
+> sandpaper::serve()
+```
+
+**NB** If you find the varnish _isn't_ applied then you may need to first load
+the library with `library(mbvarnish)`.
 
 ## CSS and JavaScript
 

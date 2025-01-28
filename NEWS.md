@@ -1,4 +1,37 @@
+# varnish 1.0.5 (2024-11-11)
+
+## NEW FEATURES
+
+* Two new Sass variables (`default_font` and `mono_font`) have been created to
+  simplify the process of changing the default font and monospace font. 
+  In particular, this can be helpful for forks defining their own theme
+  (@Bisaloo #151)
+* Carpentry-specific favicons are now used automatically based on the value of
+  the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
+  report from @zkamvar in #33).
+* Addition of the `caution` callout (@MttArmstrong #149)
+* Improve CSS rendering of checklists by removing the bullet point and increasing
+  spacing between checkbox and label (reported @jq-11 #156, fixed @froggleston)
+* Improve support for Ukrainian alphabet by moving from specific Mulish latin to 
+  Mulish regular font (reported @olexandr-konovalov #120, implemented 
+  @olexandr-konovalov, @froggleston #133)
+
+## MISC
+
+* Add @MttArmstrong as a new contributor - welcome!
+
+
 # varnish 1.0.4 (2024-08-23)
+
+## NEW FEATURES
+
+* Two new Sass variables (`default_font` and `mono_font`) have been created to
+  simplify the process of changing the default font and monospace font. 
+  In particular, this can be helpful for forks defining their own theme
+  (@Bisaloo #151)
+* Carpentry-specific favicons are now used automatically based on the value of
+  the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
+  report from @zkamvar in #33).
 
 ## BUG FIXES
 

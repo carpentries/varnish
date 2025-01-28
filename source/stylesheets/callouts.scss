@@ -117,6 +117,17 @@
   color: $black;
 }
 
+/* Caution */
+
+.caution {
+  border-left: 10px solid $red;
+}
+
+.caution .callout-square {
+  background: $red;
+  color: #ffffff;
+}
+
 /* Parent Class for Accordions in Learner View */
 
 .learner-accordion {
@@ -138,7 +149,7 @@
   }
   .accordion-item {
     border-color: $black;
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
@@ -151,7 +162,7 @@
     }
   }
   .accordion-header {
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
@@ -197,7 +208,7 @@
       box-shadow: #0d6efd 0px 0px 0px 4px;
     }
     &, h3 {
-      font-family: Mulish;
+      font-family: $default_font;
       font-size: 1.2rem;
       font-style: normal;
       font-weight: normal;

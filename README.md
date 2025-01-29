@@ -1,4 +1,4 @@
-# {mb-varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {uom-varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
 [![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
 
@@ -27,7 +27,7 @@ user/organisation  and `[repo]` with the repository name replacing the line with
 a custom domain if required).
 
 ```yaml
-varnish: melbournebioinformatics/mb-varnish@main
+varnish: melbournebioinformatics/uom-varnish@main
 url: '[user].github.io/[repo]'
 ```
 There is no need to call this package directly, once `config.yaml` has been updated
@@ -46,7 +46,7 @@ packages are required. You can install the varnish system wide using [{devtools}
 
 ``` r
 > install.packages("devtools")
-> devtools::install_github("melbournebioinformatics/mb-varnish")
+> devtools::install_github("melbournebioinformatics/uom-varnish")
 ```
 
 Alternatively you can install the varnish under a [{renv}].
@@ -63,7 +63,7 @@ Start R and install this varnish and the [{sandpaper}] package (which will pull 
 all dependencies) in the `renv` and snapshot it.
 
 ``` r
-> renv::install("melbournebioinformatics/mb-varnish")
+> renv::install("melbournebioinformatics/uom-varnish")
 > options(repos = c(
     carpentries = "https://carpentries.r-universe.dev/",
     CRAN = "https://cran.rstudio.com/"))
@@ -77,7 +77,7 @@ You can now build and serve the pages with University of Melbourne varnish.
 ```
 
 **NB** If you find the varnish _isn't_ applied then you may need to first load
-the library with `library(mbvarnish)`.
+the library with `library(uomvarnish)`.
 
 ## CSS and JavaScript
 

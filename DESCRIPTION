@@ -67,5 +67,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-URL: https://melbournebioinformatics.github.io/mb-varnish/
-BugReports: https://github.com/melbournebioinformatics/mb-varnish/issues/
+URL: https://melbournebioinformatics.github.io/uom-varnish/
+BugReports: https://github.com/melbournebioinformatics/uom-varnish/issues/

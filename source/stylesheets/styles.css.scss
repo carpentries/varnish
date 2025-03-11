@@ -1,6 +1,6 @@
 @import "bootstrap/scss/bootstrap.scss";
-@import "syntax-highlighting";
 @import "variables";
+@import "syntax-highlighting";
 @import "header";
 @import "callouts";
 @import "codeblocks";
@@ -12,6 +12,8 @@
 @import "skiplinks";
 @import "tabs";
 
+@import "themetoggle";
+@import "dark";
 
 /// Base path for assets (fonts, images...),
 /// should not include trailing slash
@@ -44,18 +46,18 @@
 @function font($file) {
   @return asset('fonts', $file);
 }
-/* mulish-regular - latin */
+/* mulish-regular */
 @font-face {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
-  src: font('mulish-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: font('Mulish-Regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       font('mulish-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       font('mulish-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       font('mulish-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       font('mulish-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       font('mulish-v5-latin-regular.svg#Mulish') format('svg'); /* Legacy iOS */
+       font('Mulish-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font('Mulish-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       font('Mulish-Regular.woff') format('woff'), /* Modern Browsers */
+       font('Mulish-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       font('Mulish-Regular.svg#Mulish') format('svg'); /* Legacy iOS */
 
 }
 
@@ -68,7 +70,7 @@
 }
 
 body {
-  font-family: 'Mulish', sans serif;
+  font-family: $default_font, sans serif;
   font-weight: $font_weight_normal;
 }
 
@@ -184,6 +186,29 @@ dt > * {
   font-weight: inherit;
 }
 
+#top {
+  padding-top: 0px;
+}
+
+.peer-reviewed {
+  background-color: #f4f4f4;
+  border-color: $dark-blue;
+  border-style: solid;
+  border-radius: 5px;
+  a.alert-link {
+    color: #000;
+  }
+}
+
+// Remove transitions from nav buttons
+// so the background colour doesn't flash
+.nav-link {
+  transition: none;
+}
+.top-nav .dropdown .bordered-button {
+  transition: none;
+}
+
 .btn-primary-outline {
   border: 1px solid $blue;
   color: $blue;
@@ -246,13 +271,13 @@ dt > * {
 
 @include media-breakpoint-down(xl) {
 
-  .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#resources)::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>") !important;
+  .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#lesson-resources)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
     transform:none !important;
   }
 
-  .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#resources)::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minus'><line x1='5' y1='12' x2='19' y2='12'></line></svg>") !important;
+  .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#lesson-resources)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minus'><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
     transform:none !important;
   }
 
@@ -267,17 +292,25 @@ dt > * {
   margin-right:10px;
 }
 
+.task-list {
+  list-style-type: none !important;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 10px !important;
+}
+
 @include media-breakpoint-up(xl) {
 
-.sidebar .accordion-button.collapsed::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
-  transform: scale(.7) !important;
-}
+  .sidebar .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: scale(.7) !important;
+  }
 
-.sidebar .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-  transform: rotate(180deg) scale(.7) !important;
-}
+  .sidebar .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230044D7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+    transform: rotate(180deg) scale(.7) !important;
+  }
 
   h1 {
     font-size: 44px;
@@ -299,7 +332,7 @@ dt > * {
     display: none !important;
   }
   // source: <https://css-tricks.com/almanac/properties/p/page-break/#aa-example>
-  h2 { 
+  h2 {
     page-break-before: auto;
   }
   h3, h4 {

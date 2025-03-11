@@ -1,4 +1,48 @@
-# varnish 1.0.3.9000 (2023-05-28)
+# varnish 1.0.5 (2024-11-11)
+
+## NEW FEATURES
+
+* Two new Sass variables (`default_font` and `mono_font`) have been created to
+  simplify the process of changing the default font and monospace font. 
+  In particular, this can be helpful for forks defining their own theme
+  (@Bisaloo #151)
+* Carpentry-specific favicons are now used automatically based on the value of
+  the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
+  report from @zkamvar in #33).
+* Addition of the `caution` callout (@MttArmstrong #149)
+* Improve CSS rendering of checklists by removing the bullet point and increasing
+  spacing between checkbox and label (reported @jq-11 #156, fixed @froggleston)
+* Improve support for Ukrainian alphabet by moving from specific Mulish latin to 
+  Mulish regular font (reported @olexandr-konovalov #120, implemented 
+  @olexandr-konovalov, @froggleston #133)
+
+## MISC
+
+* Add @MttArmstrong as a new contributor - welcome!
+
+
+# varnish 1.0.4 (2024-08-23)
+
+## NEW FEATURES
+
+* Two new Sass variables (`default_font` and `mono_font`) have been created to
+  simplify the process of changing the default font and monospace font. 
+  In particular, this can be helpful for forks defining their own theme
+  (@Bisaloo #151)
+* Carpentry-specific favicons are now used automatically based on the value of
+  the `carpentry:` value in the `config.yaml` file (@Bisaloo, #152, based on a
+  report from @zkamvar in #33).
+
+## BUG FIXES
+
+* Fix dark mode figure caption bug (@astroDimitrios #145)
+* Fix CSS styling issues with the Resources section and 
+  squashed overview headings(@froggleston #147)
+* Replace old macOS runs-on action property with 
+  ubuntu-latest (@froggleston #147)
+
+
+# varnish 1.0.3 (2023-06-18)
 
 ## NEW FEATURES
 
@@ -7,6 +51,8 @@
   a user-supplied tracking script a la Google, or no option to turn
   off tracking (reported: @fiveop https://github.com/carpentries/varnish/issues/37,
   implemented @froggleston)
+* Add a dark mode so users can switch between text and background colours
+  (implemented: @astroDimitrios https://github.com/carpentries/varnish/pull/124)
 
 
 # varnish 1.0.2 (2023-04-10)

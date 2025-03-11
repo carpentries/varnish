@@ -1,0 +1,675 @@
+$color-mode-type: data;
+
+// Theme toggle from themetoggle.scss
+@include color-mode(dark) {
+  // Div styling for theme toggle
+  #theme-selector {
+    button:focus-visible {
+      outline-color: var(--bs-secondary-text-emphasis);
+    }
+  }
+
+  // Theme dropdown list styling
+  #theme-button-list {
+    .bi {
+      opacity: 90%;
+      fill: var(--bs-body-color);
+    }
+    .dropdown-menu .dropdown-item.active {
+      color: #000;
+      background-color: shade-color($bright-blue, 10%);
+      .bi {
+        fill: #000;
+      }
+    }
+  }
+
+  // Styling for when the toggle is
+  // a part of the phone sreen sidebar
+  @include media-breakpoint-down(md) {
+    #theme-selector {
+      // Same color on hover as the
+      // Learner View text
+      button#bd-theme:hover {
+        color: var(--bs-link-hover-color);
+        text-decoration: underline;
+        .bi {
+          fill: var(--bs-link-hover-color);
+        }
+      }
+    }
+  }
+
+// This section does not correspond to an
+// existing light themed sass file - these
+// are soley for a dark mode
+
+  // Darken any images and desaturate
+  .img {
+    filter: brightness(80%) saturate(80%);
+  }
+  // Convert any logo to off white
+  .large-logo > img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
+  }
+
+  .small-logo {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
+  }
+
+  // Darken alpha, beta etc. buttons
+  .text-bg-danger {
+    // var(--bs-danger-border-subtle) tinted
+    background-color: tint-color(rgb(132, 32, 41), 5%) !important;
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  .text-bg-warning {
+    background-color: var(--bs-warning-border-subtle) !important;
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  .text-bg-info {
+    background-color: var(--bs-info-border-subtle) !important;
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  .peer-reviewed {
+    background-color: var(--bs-tertiary-bg);
+    border-color: shade-color($light-purple, 40%);
+    a.alert-link {
+      color: #fff;
+    }
+  }
+
+  svg .icon {
+    stroke: var(--bs-body-color);
+  }
+
+  // Make accordion buttons off white
+  // Sidebar chevron for button
+  .sidebar .collapsed::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .sidebar .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .sidebar .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .sidebar .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dee2e6'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  }
+
+  // Sidebar + and - for smaller screens
+  @include media-breakpoint-down(xl) {
+
+    .sidebar .accordion-button.collapsed:not(#instructor):not(#language):not(#chapters):not(#lesson-resources)::after {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23dee2e6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'><line x1='12' y1='5' x2='12' y2='19'></line><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
+    }
+
+    .sidebar .accordion-button:not(.collapsed):not(#instructor):not(#language):not(#flush-collapseNine):not(#chapters):not(#lesson-resources)::after {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23dee2e6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minus'><line x1='5' y1='12' x2='19' y2='12'></line></svg>");
+    }
+
+  }
+
+// From styles.css.scss
+  h1 {
+    color: var(--bs-body-color);
+  }
+  h2 {
+    color: var(--bs-body-color);
+  }
+  h3 {
+    color: var(--bs-body-color);
+  }
+  h4 {
+    color: var(--bs-body-color);
+  }
+  blockquote {
+    border-left-color: var(--bs-light-border-subtle);
+  }
+  p {
+    color: var(--bs-body-color);
+  }
+  a {
+    color: var(--bs-link-hover-color);
+  }
+  #search-button {
+    color: #fff;
+  }
+  .table-striped > tbody > tr:nth-of-type(even) > * {
+    background: var(--bs-tertiary-bg);
+  }
+  tbody > tr:nth-of-type(even) > * {
+    background: var(--bs-tertiary-bg);
+  }
+  .btn-primary-outline {
+    border: 1px solid $bright-blue;
+    color: $bright-blue;
+  }
+  .btn-primary-outline:hover {
+    color: $bright-blue;
+    background: $very-light-blue;
+  }
+  .btn-primary-outline:active {
+    color: var(--bs-highlight-color);
+    background: $bright-blue;
+  }
+  .figcaption {
+    border-top: 1px solid var(--bs-body-color);
+    background: var(--bs-tertiary-bg);
+  }
+  .bottom-pagination {
+    border-top: 1px solid var(--bs-border-color);
+  }
+
+// From callouts.scss
+  /* Basic (gray callout) */
+  .callout {
+    border-left: 10px solid var(--bs-light-border-subtle);
+  }
+  .callout-square {
+    color: var(--bs-body-color);
+    background: var(--bs-light-border-subtle);
+  }
+  .callout-inner {
+    background: var(--bs-tertiary-bg);
+  }
+
+  /* Overrides for different callout types */
+
+  /* Prereq */
+
+  .prereq {
+    border-left: 10px solid shade-color($purple, 10%);
+  }
+
+  .prereq .callout-square {
+    background: shade-color($purple, 10%);
+    color: var(--bs-body-color);
+  }
+
+  /* Keypoints */
+
+  .keypoints {
+    border-left: 10px solid shade-color($teal, 30%);
+  }
+
+  .keypoints .callout-square {
+    background: shade-color($teal, 30%);
+    color: var(--bs-body-color);
+  }
+
+  /* Checklist */
+
+  .checklist {
+    border-left: 10px solid shade-color($bright-blue, 20%);
+  }
+
+  .checklist .callout-square {
+    background: shade-color($bright-blue, 20%);
+    color: var(--bs-body-color);
+  }
+
+  /* Testimonial */
+
+  .testimonial {
+    border-left: 10px solid $deep-purple;
+  }
+
+  .testimonial .callout-square {
+    background: $deep-purple;
+    color: var(--bs-body-color);
+  }
+
+  /* Discussion */
+
+  .discussion {
+    border-left: 10px solid shade-color($yellow, 50%);
+  }
+
+  .discussion .callout-square {
+    background: shade-color($yellow, 50%);
+    color: #fff;
+  }
+
+  /* Challenge */
+
+  .challenge {
+    border-left: 10px solid shade-color($yellow, 50%);
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .challenge .callout-square {
+    background: shade-color($yellow, 50%);
+    color: #fff;
+  }
+
+  /* Caution */
+
+  .caution {
+    border-left: 10px solid shade-color($red, 50%);
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .caution .callout-square {
+    background: shade-color($red, 50%);
+    color: #fff;
+  }
+
+  /* Parent Class for Accordions in Learner View */
+
+  .learner-accordion {
+    .accordion-button {
+      background: shade-color($yellow, 50%);
+      color: #fff;
+      box-shadow: none;
+      &:focus-visible {
+        outline-color: var(--bs-info-border-subtle);
+        outline-width: 4px;
+        outline-style: solid;
+      }
+    }
+    .accordion-item {
+      border-color: var(--bs-body-bg);
+    }
+    .accordion-body {
+      background: var(--bs-tertiary-bg);
+    }
+    h2 {
+      border-left: 10px shade-color($yellow, 50%) solid;
+    }
+    h4 {
+      color: #fff;
+    }
+  }
+
+  /* Child classes for solution and spoiler accordions */
+
+  .spoiler-accordion {
+    @extend .learner-accordion;
+    .spoiler-button {
+      background: var(--bs-tertiary-bg);
+      border-color: var(--bs-body-color);
+      color: var(--bs-body-color);
+      &:focus-visible {
+        outline-color: var(--bs-info-border-subtle);
+        outline-width: 4px;
+        outline-style: solid;
+      }
+      h3.collapsed {
+        color: var(--bs-body-color);
+      }
+    }
+    .note-square {
+      color: var(--bs-body-color);
+      background: var(--bs-info-border-subtle);
+    }
+  }
+
+// From codeblocks.scss
+  .codewrapper > pre:focus {
+    outline-color: var(--bs-info-border-subtle);
+    outline-width: 4px;
+    outline-style: solid;
+  }
+
+  .codewrapper > pre:focus-visible {
+    outline-color: var(--bs-info-border-subtle);
+    outline-width: 4px;
+    outline-style: solid;
+  }
+
+  pre {
+    background: var(--bs-tertiary-bg);
+    &.input {
+      border-top: 10px solid var(--bs-info-border-subtle);
+    }
+    &.sourceCode {
+      border-top: 10px solid var(--bs-info-border-subtle);
+    }
+    &.error {
+      border-top: 10px solid shade-color($red, 10%);
+    }
+    &.warning {
+      border-top: 10px solid shade-color($orange, 10%);
+    }
+    &.output {
+      border-top: 10px solid var(--bs-tertiary-color);
+    }
+  }
+
+  .callout pre {
+    background: var(--bs-tertiary-bg);
+  }
+
+  .accordion pre {
+    background: var(--bs-tertiary-bg);
+  }
+
+  .code-label {
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+// From header.scss
+  .nav-link {
+    color: var(--bs-body-color);
+  }
+  .dropdown-item {
+    color: var(--bs-body-color);
+  }
+
+  .bottom-nav {
+    background-color: var(--bs-body-bg);
+  }
+
+  .searchbox {
+    border: 1px solid var(--bs-light-border-subtle);
+  }
+
+  .mobile-title {
+    box-shadow: 0px 2px 2px var(--bs-border-color-translucent);
+  }
+
+  .percentage {
+    color: var(--bs-body-color);
+  }
+
+  .progress {
+    background: tint-color($dark-blue, 10%);
+  }
+  .progress-bar {
+    background: shade-color($blue, 20%);
+  }
+  .progress.library {
+    background: tint-color($red, 20%);
+  }
+  .progress-bar.library {
+    background: shade-color($light-red, 20%);
+  }
+  .progress.data {
+    background: tint-color($dark-green, 20%);
+  }
+  .progress-bar.data {
+    background: shade-color($light-green, 20%);
+  }
+  .progress.software {
+    background: tint-color($dark-purple, 20%);
+  }
+  .progress-bar.software {
+    background: shade-color($light-purple, 40%);
+  }
+  .lesson-progress {
+    background: var(--bs-tertiary-bg);
+  }
+
+  .nav-container {
+    border-bottom: none;
+  }
+
+  .navbar-toggler {
+    color: var(--bs-body-color);
+  }
+
+  .top-nav .dropdown button {
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+
+  .top-nav .dropdown .bordered-button {
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    border-left: 1px solid var(--bs-body-color);
+  }
+
+  #expand-code {
+    color: var(--bs-link-color);
+  }
+
+  @include media-breakpoint-up(md) {
+    #to-top {
+      filter: drop-shadow(0px 0px 5px var(--bs-body-bg)) drop-shadow(0px 0px 5px var(--bs-body-bg)) drop-shadow(0px 0px 5px var(--bs-body-bg)) drop-shadow(0px 0px 5px var(--bs-body-bg)) drop-shadow(0px 0px 5px var(--bs-body-bg));
+    }
+    #to-top i {
+      box-shadow: 0px 0px 10px 10px var(--bs-body-bg);
+    }
+    .tablet-search-button {
+      color: var(--bs-body-color);
+    }
+    .tablet-search-button:hover {
+      color: var(--bs-body-color);
+    }
+    .top-nav hr{
+      color: var(--bs-body-color);
+    }
+    .top-nav {
+      border-top: 22px solid shade-color($blue, 20%);
+      .peer-reviewed {
+        border-color: shade-color($blue, 20%);
+      }
+    }
+    .top-nav.data {
+      border-top: 22px solid shade-color($light-green, 20%);
+      .peer-reviewed {
+        border-color: shade-color($light-green, 20%);
+      }
+    }
+    .top-nav.software {
+      border-top: 22px solid shade-color($light-purple, 40%);
+      .peer-reviewed {
+        border-color: shade-color($light-purple, 40%);
+      }
+    }
+    .top-nav.library {
+      border-top: 22px solid shade-color($light-red, 20%);
+      .peer-reviewed {
+        border-color: shade-color($light-red, 20%);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .bottom-nav {
+      border-bottom: 1px solid var(--bs-border-color);
+      border-top: 22px solid shade-color($blue, 20%);
+    }
+    .bottom-nav.data {
+      border-top: 22px solid shade-color($light-green, 20%);
+    }
+    .bottom-nav.software {
+      border-top: 22px solid shade-color($light-purple, 40%);
+    }
+    .bottom-nav.library {
+      border-top: 22px solid shade-color($light-red, 20%);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .top-nav hr {
+      color: var(--bs-body-color);
+    }
+  }
+
+// From instructornotes.scss
+  .instructor-note {
+    .note-square {
+      color: var(--bs-body-color);
+      background: shade-color($magenta, 30%);
+    }
+    .accordion-body {
+      background: var(--bs-light-border-subtle);
+    }
+    .accordion-button {
+      background: var(--bs-light-border-subtle);
+      border-color: var(--bs-body-color);
+      color: var(--bs-body-color);
+      box-shadow: none;
+      &:focus-visible {
+        outline-color: var(--bs-info-border-subtle);
+        outline-width: 4px;
+        outline-style: solid;
+      }
+      &.collapsed {
+        color: var(--bs-body-color);
+      }
+    }
+  }
+
+// From overview.scss
+  .overview .card-header {
+    color: var(--bs-body-color);
+    background: tint-color($dark-purple, 20%);
+  }
+
+  .overview {
+    background: var(--bs-tertiary-bg);
+  }
+
+  @include media-breakpoint-up(md) {
+    .overview .bordered {
+      border-left: 1px solid var(--bs-body-color);
+    }
+  }
+
+// From skiplink.scss
+// Currently not used
+.skip-link {
+  border: 2px solid var(--bs-primary-border-subtle);
+  background: var(--bs-body-bg);
+  &:focus {
+    outline: 2px solid var(--bs-info-border-subtle);
+  }
+}
+
+// From sidenav.scss
+  .sidebar {
+    background: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    a {
+      color: var(--bs-body-color);
+      &:hover {
+        color: $bright-blue;
+      }
+      &:focus {
+        outline: 4px solid var(--bs-link-hover-color);
+      }
+    }
+    .accordion-body {
+      background: var(--bs-tertiary-bg);
+    }
+    .accordion-item {
+      background: var(--bs-tertiary-bg);
+    }
+    .accordion-button {
+      background: var(--bs-tertiary-bg);
+      &:hover {
+        color: var(--bs-link-hover-color);
+        text-decoration: underline;
+      }
+      &:focus-visible {
+        outline-color: var(--bs-info-border-subtle);
+        outline-width: 4px;
+        outline-style: solid;
+      }
+      &:not(.collapsed) {
+        color: var(--bs-body-color);
+      }
+    }
+  }
+
+  .sidebar-collapsed {
+    background: var(--bs-tertiary-bg);
+  }
+
+// Dark mode syntax highlighting
+// Adapted from pkgdown version 2.0.7 (c) RStudio 2024
+  pre .img img, pre .r-plt img {
+    background-color: var(--bs-tertiary-bg);
+  }
+
+  code {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--bs-body-color);
+  }
+
+  p > code {
+    background-color: var(--bs-tertiary-bg);
+  }
+
+  // CODE Style - arrow-dark theme
+  pre code         /* Normal         */ {color:#f8f8f2}
+  pre code span.al /* Alert          */ {color:#f07178; background-color:#2a0f15; font-weight: bold}
+  pre code span.an /* Annotation     */ {color:#d4d0ab}
+  pre code span.at /* Attribute      */ {color:#00e0e0}
+  pre code span.bn /* BaseN          */ {color:#d4d0ab}
+  pre code span.bu /* BuiltIn        */ {color:#abe338}
+  pre code span.cf /* ControlFlow    */ {color:#ffa07a; font-weight: bold}
+  pre code span.ch /* Char           */ {color:#abe338}
+  pre code span.cn /* Constant       */ {color:#ffd700}
+  pre code span.co /* Comment        */ {color:#f8f8f2; font-style: italic}
+  pre code span.cv /* CommentVar     */ {color:#ffd700}
+  pre code span.do /* Documentation  */ {color:#f8f8f2}
+  pre code span.dt /* DataType       */ {color:#ffa07a}
+  pre code span.dv /* DecVal         */ {color:#d4d0ab}
+  pre code span.er /* Error          */ {color:#f07178; text-decoration: underline}
+  pre code span.ex /* Extension      */ {color:#00e0e0; font-weight: bold}
+  pre code span.fl /* Float          */ {color:#d4d0ab}
+  pre code span.fu /* Function       */ {color:#ffa07a}
+  pre code span.im /* Import         */ {color:#abe338}
+  pre code span.in /* Information    */ {color:#d4d0ab}
+  pre code span.kw /* Keyword        */ {color:#ffa07a; font-weight: bold}
+  pre code span.op /* Operator       */ {color:#ffa07a}
+  pre code span.ot /* Other          */ {color:#00e0e0}
+  pre code span.pp /* Preprocessor   */ {color:#dcc6e0}
+  pre code span.re /* RegionMarker   */ {color:#00e0e0; background-color:#f8f8f2}
+  pre code span.sc /* SpecialChar    */ {color:#abe338}
+  pre code span.ss /* SpecialString  */ {color:#abe338}
+  pre code span.st /* String         */ {color:#abe338}
+  pre code span.va /* Variable       */ {color:#00e0e0}
+  pre code span.vs /* VerbatimString */ {color:#abe338}
+  pre code span.wa /* Warning        */ {color:#dcc6e0}
+  span.error   {font-weight: bolder;}
+  span.warning {font-weight: bolder;}
+
+// Tab styling from tabs.scss
+.nav-tabs .nav-link.active {
+  border-top-color: shade-color($bright-blue, 20%);
+  border-right-color: var(--bs-border-color);
+  border-left-color: var(--bs-border-color);
+}
+
+.nav-link[role="tab"][aria-selected="false"]:hover {
+  outline: 2px solid shade-color($bright-blue, 20%);
+}
+
+div.tab-content {
+  border-width: var(--bs-border-width);
+  border-right-color: var(--bs-border-color);
+  border-left-color: var(--bs-border-color);
+  border-bottom-color: var(--bs-border-color);
+}
+
+}

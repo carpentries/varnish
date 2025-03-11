@@ -6,6 +6,45 @@
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner sticky-top">
+          <div class="row mobile-row" id="theme-row-mobile">
+            <div class="col" id="theme-selector">
+              <li class="nav-item dropdown" id="theme-button-list">
+                <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                        id="bd-theme"
+                        type="button"
+                        aria-expanded="false"
+                        data-bs-toggle="dropdown"
+                        data-bs-display="static"
+                        aria-label="Toggle theme (auto)">
+                  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+                  <span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                      <svg class="bi me-2 theme-icon"><use href="#sun-fill"></use></svg>
+                      Light
+                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                      <svg class="bi me-2 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                      Dark
+                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                      <svg class="bi me-2 theme-icon"><use href="#circle-half"></use></svg>
+                      Auto
+                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
@@ -85,10 +124,10 @@
             <hr class="half-width"/>
 
             {{#resources}}
-            <div class="accordion accordion-flush resources" id="accordionFlush12">
+            <div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <button class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                     {{ translate.RESOURCES }}
                   </button>
                 </h2>
@@ -136,7 +175,7 @@
                 </div>
               </div>
             </div>
-            <hr class="half-width resources"/>
+            <hr class="half-width lesson-resources"/>
             {{/resources}}
 
             {{^overview}}{{#aio}}

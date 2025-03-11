@@ -1,5 +1,5 @@
 .bottom-nav {
-  border-top: 45px solid $dark-purple;
+  border-top: 45px solid $dark-blue;
   padding-bottom: 5px;
 }
 
@@ -15,8 +15,8 @@
   border-top: 45px solid $red;
 }
 
-.bottom-nav.carpentries {
-  border-top: 45px solid $dark-blue;
+.bottom-nav.software {
+  border-top: 45px solid $dark-purple;
 }
 
 .searchbox {
@@ -28,7 +28,7 @@
 }
 
 .mobile-title {
-  font-family: Mulish;
+  font-family: $default_font;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -51,14 +51,14 @@
 }
 
 .progress {
-  background: $light-purple;
+  background: $very-light-blue;
   border-radius: 20px;
   margin: 10px;
   height: 5px;
 }
 
 .progress-bar {
-  background: $dark-purple;
+  background: $dark-blue;
   border-radius: 20px;
   height:5px;
 }
@@ -79,12 +79,12 @@
   background: $dark-green;
 }
 
-.progress.carpentries {
-  background: $very-light-blue;
+.progress.software {
+  background: $light-purple;
 }
 
-.progress-bar.carpentries {
-  background: $dark-blue;
+.progress-bar.software {
+  background: $dark-purple;
 }
 
 .lesson-progress {
@@ -149,7 +149,12 @@
   display: none;
 }
 
+// min-height set so whatever logo is used
+// data, software carp etc the nav is the
+// same height and the dark-theme toggle
+// stays in the same place
 .top-nav-container {
+  min-height: 80px;
   padding-right: 25px;
 }
 
@@ -162,7 +167,7 @@
 }
 
 .lesson-title {
-  font-family: Mulish;
+  font-family: $default_font;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -207,6 +212,10 @@
   position: relative;
   top: -2px;
   margin-right: 5px;
+}
+
+.top-nav .text-bg-danger .alert-link {
+  color: #000;
 }
 
 .searchbox {
@@ -329,7 +338,8 @@
 
   .large-logo {
     margin-left: -10px;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .top-nav hr{
@@ -349,7 +359,7 @@
 
   .lesson-title-md {
     display: block;
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -361,21 +371,32 @@
     margin-right: 200px;
   }
 
+  // Top border and match the
+  // border for the DOI button if present
   .top-nav {
     display: block;
-    border-top: 22px solid $dark-purple;
-  }
-
-   .top-nav.data {
-    border-top: 22px solid $dark-green;
-  }
-
-  .top-nav.carpentries {
     border-top: 22px solid $dark-blue;
+    .peer-reviewed {
+      border-color: $dark-blue;
+    }
   }
-
+  .top-nav.data {
+    border-top: 22px solid $dark-green;
+    .peer-reviewed {
+      border-color: $dark-green;
+    }
+  }
+  .top-nav.software {
+    border-top: 22px solid $dark-purple;
+    .peer-reviewed {
+      border-color: $dark-purple;
+    }
+  }
   .top-nav.library {
     border-top: 22px solid $red;
+    .peer-reviewed {
+      border-color: $red;
+    }
   }
 
   .bottom-nav {
@@ -409,13 +430,19 @@
   }
 
   .selector-container {
+    display: flex;
+    align-items: center;
     text-align:right;
   }
 }
 
 @include media-breakpoint-up(xl) {
 
-  .resources-side {
+  #instructor-dropdown {
+    float: right;
+  }
+
+  .lesson-resources-side {
     display: none;
   }
 
@@ -435,7 +462,7 @@
 
   .lesson-title-md {
     display: inline-block;
-    font-family: Mulish;
+    font-family: $default_font;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;

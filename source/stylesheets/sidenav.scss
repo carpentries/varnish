@@ -40,6 +40,7 @@
     padding: 0px;
     font-size: 18px;
     box-shadow: none;
+    transition: none;
     &:hover {
       color: $blue;
       text-decoration: underline;
@@ -93,7 +94,7 @@
   }
 }
 
-#chapters, #resources, .accordion-header.chapters {
+#chapters, #lesson-resources, .accordion-header.chapters {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -179,9 +180,10 @@
     padding-bottom: 100px;
   }
 
-  .resources {
+  .lesson-resources {
     display: none;
   }
+
   .collapse-toggle {
     margin-bottom:25px;
   }

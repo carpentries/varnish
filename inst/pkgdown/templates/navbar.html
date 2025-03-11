@@ -1,11 +1,11 @@
 <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4{{#overview}} overview-sidebar{{/overview}}">
-  <div id="sidebar" class="sidebar">
+  <div id="sidebar" class="sidebar" style="display: flex">
       <nav aria-labelledby="flush-headingEleven">
-        <button role="button" aria-label="{{ translate.CloseMenu }}" alt="{{ translate.CloseMenu }}" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="{{ translate.Collapse }} " data-episodes="{{ translate.Episodes }} ">
+        <button role="button" aria-label="{{ translate.CloseMenu }}" alt="{{ translate.CloseMenu }}" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle sticky-top" data-collapse="{{ translate.Collapse }} " data-episodes="{{ translate.Episodes }} ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
-        <div class="sidebar-inner">
+        <div class="sidebar-inner sticky-top">
           <div class="row mobile-row" id="theme-row-mobile">
             <div class="col" id="theme-selector">
               <li class="nav-item dropdown" id="theme-button-list">

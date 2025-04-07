@@ -105,6 +105,7 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     setImages(getPreferredTheme())
+    setTheme(getPreferredTheme())
     showActiveTheme(getPreferredTheme())
 
     document.querySelectorAll('[data-bs-theme-value]')

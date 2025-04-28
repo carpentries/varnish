@@ -1,3 +1,11 @@
+# varnish 1.0.6.9000
+
+## MISC
+
+* Update links to new Carpentries handbook (@robadob #164)
+* Improve h3 and h4 font sizes on large resolutions (@Sheargrub #165)
+
+
 # varnish 1.0.5 (2024-11-11)
 
 ## NEW FEATURES

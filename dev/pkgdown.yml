@@ -1,8 +1,8 @@
 pandoc: 3.1.11
-pkgdown: 2.1.1
+pkgdown: 2.1.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-04-28T15:41Z
+last_built: 2025-04-29T21:24Z
 urls:
   reference: https://carpentries.github.io/varnish/reference
   article: https://carpentries.github.io/varnish/articles

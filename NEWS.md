@@ -1,5 +1,9 @@
 # varnish 1.0.6.9000
 
+## NEW FEATURES
+
+* Add support for dark mode image adjustment (@astroDimitrios, #153)
+
 ## MISC
 
 * Update links to new Carpentries handbook (@robadob #164)

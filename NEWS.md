@@ -1,4 +1,4 @@
-# varnish 1.0.6.9000
+# varnish 1.0.6 [2025-05-06]
 
 ## NEW FEATURES
 
@@ -10,7 +10,7 @@
 * Improve h3 and h4 font sizes on large resolutions (@Sheargrub #165)
 
 
-# varnish 1.0.5 (2024-11-11)
+# varnish 1.0.5 [2024-11-11]
 
 ## NEW FEATURES
 
@@ -33,7 +33,7 @@
 * Add @MttArmstrong as a new contributor - welcome!
 
 
-# varnish 1.0.4 (2024-08-23)
+# varnish 1.0.4 [2024-08-23]
 
 ## NEW FEATURES
 

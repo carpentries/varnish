@@ -13,15 +13,30 @@ and HTML styling for Carpentries lessons.
 Useful links:
 \itemize{
   \item \url{https://carpentries.github.io/varnish/}
+  \item Report bugs at \url{https://github.com/carpentries/varnish/issues/}
 }
 
 }
 \author{
-\strong{Maintainer}: Zhian N. Kamvar \email{zkamvar@carpentries.org} (\href{https://orcid.org/0000-0003-1458-7108}{ORCID})
+\strong{Maintainer}: Robert Davey \email{robertdavey@carpentries.org} (\href{https://orcid.org/0000-0002-5589-7754}{ORCID})
+
+Authors:
+\itemize{
+  \item Erin Becker \email{erinbecker@carpentries.org} (\href{https://orcid.org/0000-0002-6832-0233}{ORCID})
+  \item Zhian N. Kamvar \email{zkamvar@carpentries.org} (\href{https://orcid.org/0000-0003-1458-7108}{ORCID})
+}
 
 Other contributors:
 \itemize{
+  \item Ben Companjen (\href{https://orcid.org/0000-0002-7023-9047}{ORCID}) [contributor]
+  \item Toby Hodges \email{tobyhodges@carpentries.org} (\href{https://orcid.org/0000-0003-1766-456X}{ORCID}) [contributor]
   \item François Michonneau \email{francois@carpentries.org} [contributor]
+  \item Robert Chisholm \email{robert.chisholm@sheffield.ac.uk} (\href{https://orcid.org/0000-0003-3379-9042}{ORCID}) [contributor]
+  \item Joel H. Nitta \email{joelnitta@gmail.com} (\href{https://orcid.org/0000-0003-4719-7472}{ORCID}) [contributor]
+  \item Dimitrios Theodorakis \email{astrodimitrios@gmail.com} [contributor]
+  \item Olexandr Konovalov \email{obk1@st-andrews.ac.uk} (\href{https://orcid.org/0000-0001-5299-3292}{ORCID}) [contributor]
+  \item Matthew Armstrong \email{cs.matthewarmstrong@gmail.com} [contributor]
+  \item Sheargrub \email{sheargrub@gmail.com} [contributor]
 }
 
 }

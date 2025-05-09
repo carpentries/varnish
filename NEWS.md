@@ -1,3 +1,10 @@
+# varnish 1.0.7.9000
+
+## MISC
+
+* Fix pak install when trying to parse .editorconfig files (@froggleston)
+
+
 # varnish 1.0.6 [2025-05-06]
 
 ## NEW FEATURES

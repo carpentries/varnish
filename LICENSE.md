@@ -1,3 +1,5 @@
+This repository is a fork of The Carpentries Varnish, which is licensed under the following terms:
+
 # MIT License
 
 Copyright (c) 2020 The Carpentries
@@ -19,3 +21,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Any content, branding, images, or modifications in general made to this fork are under copyright of The University of Melbourne.
+ 

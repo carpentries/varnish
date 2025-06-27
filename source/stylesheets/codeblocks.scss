@@ -18,6 +18,7 @@ pre {
   padding: 25px;
   letter-spacing: 0.01em;
   background: $light-gray;
+  color: $black;
   &.input {
     border-top: 10px solid $light-blue;
   }
@@ -59,6 +60,7 @@ pre {
 // this prevents pkgdown syntax highlighting from destroying our wrappings
 pre, pre code {
   white-space: pre;
+  background: inherit;
 }
 
 pre.output > code::before {

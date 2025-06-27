@@ -42,7 +42,7 @@
 .callout li {
   margin-left: 0px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .callout-inner {
@@ -152,7 +152,7 @@
     font-family: $default_font;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
     &:first-of-type .accordion-button {
       border-radius: 0;
     }
@@ -177,7 +177,7 @@
       list-style-position: inside;
       margin-left: 0px;
       margin-top:10px;
-      margin-bottom:20px;
+      margin-bottom:10px;
     }
   }
   h2 {

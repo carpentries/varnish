@@ -300,6 +300,10 @@ dt > * {
   margin-right: 10px !important;
 }
 
+ul li {
+  margin-bottom: 10px;
+}
+
 @include media-breakpoint-up(xl) {
 
   .sidebar .accordion-button.collapsed::after {

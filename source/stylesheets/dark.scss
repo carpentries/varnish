@@ -615,13 +615,14 @@ $color-mode-type: data;
   }
 
   code {
-    font-family: 'Source Code Pro', monospace;
-    color: var(--bs-body-color);
+    color: #FFF8DC;
+    background-color: #2B3035;
   }
 
-  p > code {
-    background-color: var(--bs-tertiary-bg);
-  }
+//   p > code:hover {
+//     background-color: #46494d;
+//   }
+
 
   // CODE Style - arrow-dark theme
   pre code         /* Normal         */ {color:#f8f8f2}

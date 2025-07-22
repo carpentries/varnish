@@ -300,8 +300,9 @@ dt > * {
   margin-right: 10px !important;
 }
 
-ul li {
+p > li {
   margin-bottom: 10px;
+  color: $black;
 }
 
 @include media-breakpoint-up(xl) {

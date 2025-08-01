@@ -198,6 +198,10 @@ $color-mode-type: data;
   .callout-inner {
     background: var(--bs-tertiary-bg);
   }
+  .callout-header {
+    color: var(--bs-body-color);
+    background: var(--bs-light-border-subtle);
+  }
 
   /* Overrides for different callout types */
 

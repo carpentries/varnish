@@ -212,6 +212,11 @@ $color-mode-type: data;
     color: var(--bs-body-color);
   }
 
+  .prereq .callout-header {
+    background: shade-color($purple, 10%);
+    color: var(--bs-body-color);
+  }
+
   /* Keypoints */
 
   .keypoints {
@@ -219,6 +224,11 @@ $color-mode-type: data;
   }
 
   .keypoints .callout-square {
+    background: shade-color($teal, 30%);
+    color: var(--bs-body-color);
+  }
+
+  .keypoints .callout-header {
     background: shade-color($teal, 30%);
     color: var(--bs-body-color);
   }
@@ -234,6 +244,11 @@ $color-mode-type: data;
     color: var(--bs-body-color);
   }
 
+  .checklist .callout-header {
+    background: shade-color($bright-blue, 20%);
+    color: var(--bs-body-color);
+  }
+
   /* Testimonial */
 
   .testimonial {
@@ -245,6 +260,11 @@ $color-mode-type: data;
     color: var(--bs-body-color);
   }
 
+  .testimonial .callout-header {
+    background: $deep-purple;
+    color: var(--bs-body-color);
+  }
+
   /* Discussion */
 
   .discussion {
@@ -252,6 +272,11 @@ $color-mode-type: data;
   }
 
   .discussion .callout-square {
+    background: shade-color($yellow, 50%);
+    color: #fff;
+  }
+
+  .discussion .callout-header {
     background: shade-color($yellow, 50%);
     color: #fff;
   }
@@ -270,6 +295,12 @@ $color-mode-type: data;
     color: #fff;
   }
 
+  .challenge .callout-header {
+    background: shade-color($yellow, 50%);
+    color: #fff;
+  }
+
+
   /* Caution */
 
   .caution {
@@ -283,6 +314,12 @@ $color-mode-type: data;
     background: shade-color($red, 50%);
     color: #fff;
   }
+
+  .caution .callout-header {
+    background: shade-color($red, 50%);
+    color: #fff;
+  }
+
 
   /* Parent Class for Accordions in Learner View */
 

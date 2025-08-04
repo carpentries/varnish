@@ -115,6 +115,18 @@
         </ul>
       </div>
       {{/language}}{{/yaml}}
+      {{#yaml}}{{#languages}}
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          <b>{{default}}</b>  <i data-feather="chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          {{#other}}
+          <li><button class="dropdown-item" type="button"><a href="{{ url }}">{{lang}}</a></button></li>
+          {{/other}}
+        </ul>
+      </div>
+      {{/languages}}{{/yaml}}
       <div class="dropdown" id="instructor-dropdown">
         {{#instructor}}
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">

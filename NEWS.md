@@ -1,8 +1,14 @@
-# varnish 1.0.7.9000
+# varnish 1.0.7 [2025-08-07]
+
+## NEW FEATURES
+
+* Adjust text and background colour for inline code blocks - PR [172](https://github.com/carpentries/varnish/pull/172) ([reported](https://github.com/carpentries/workbench/issues/97) @gcapes, implemented @froggleston)
+* Fix CSS for accordion callout lists, fonts - PR [171](https://github.com/carpentries/varnish/pull/171) ([reported](https://github.com/carpentries/workbench/issues/98) @gcapes, fixed @froggleston)
 
 ## MISC
 
 * Fix pak install when trying to parse .editorconfig files (@froggleston)
+* Fix link anchor colour in dark mode - PR [169](https://github.com/carpentries/varnish/pull/169) (@astroDimitrios)
 
 
 # varnish 1.0.6 [2025-05-06]

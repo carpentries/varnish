@@ -82,12 +82,18 @@ pre.output > code::before {
 }
 // ZNK: end
 
-.code-label {
+.code-label, .copy-button {
   font-size: 18px;
   border-bottom: 1px solid $black;
   line-height: 23.4px;
   position: absolute;
-  right: 25px;
   margin-top:25px;
 }
 
+.code-label {
+  right: 25px;
+}
+
+.copy-button {
+  left: 25px;
+}

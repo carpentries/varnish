@@ -18,15 +18,24 @@
         {{/yaml}}
         | <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}CONTRIBUTING.md">{{ translate.Contributing }}</a>
         | <a href="{{#yaml}}{{source}}/{{/yaml}}">{{ translate.Source }}</a></p>
-				<p><a href="{{#yaml}}{{source}}/blob/{{branch}}/{{/yaml}}{{citation}}">{{ translate.Cite }}</a> | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">{{ translate.Contact }}</a> | <a href="https://carpentries.org/about/">{{ translate.About }}</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        {{#yaml}}
+        {{#citation}}
+        <a href="{{#site}}{{root}}{{/site}}citation.html">{{ translate.Cite }}</a>
+        {{/citation}}
+        {{^citation}}
+        <a href="{{#yaml}}{{source}}/blob/{{branch}}/{{cff}}{{/yaml}}">{{ translate.Cite }}</a>
+        {{/citation}}
+        {{/yaml}}
+        | <a href="mailto:{{#yaml}}{{contact}}{{/yaml}}">{{ translate.Contact }}</a> | <a href="https://carpentries.org/about/">{{ translate.About }}</a></p>
+		</div>
+		<div class="col-md-6">
         {{#yaml}}{{#license}}
         <p>{{& translate.MaterialsLicensedUnder }}</p>
         {{/license}}{{/yaml}}
         <p>{{& translate.TemplateLicense }}</p>
         <p>{{& translate.BuiltWith }}</p>
-			</div>
+		</div>
 		</footer>
 	</div> <!-- / div.container -->
 	<div id="to-top">

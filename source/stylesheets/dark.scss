@@ -405,6 +405,9 @@ $color-mode-type: data;
     &.output {
       border-top: 10px solid var(--bs-tertiary-color);
     }
+    &.citation {
+      border-top: 10px solid shade-color($green, 10%);
+    }
   }
 
   .callout pre {

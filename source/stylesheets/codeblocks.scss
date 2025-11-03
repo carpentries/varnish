@@ -36,6 +36,9 @@ pre {
   &.output {
     border-top: 10px solid $black;
   }
+  &.citation {
+    border-top: 10px solid $green;
+  }
   /* ZNK: added in 2022-01-07 */
   /* highlighted code uses spans that need a line break before to avoid */
   /* overlap with the header */
@@ -66,6 +69,12 @@ pre, pre code {
 pre.output > code::before {
   content: "\A";
 }
+
+pre.citation > code {
+  display: block;
+  white-space: pre-wrap;
+}
+
 // ZNK: end
 
 // ZNK: added in 2022-01-17

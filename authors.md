@@ -35,7 +35,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/carpentries/varnish/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/carpentries/varnish/blob/1.0.8/DESCRIPTION)
 
 Davey R, Becker E, Kamvar Z (2025). *varnish: Front-end for The
 Carpentries Lesson Infrastructure*. R package version 1.0.8,

@@ -1,3 +1,10 @@
+# varnish 1.0.9.9000 [2025-12-03]
+
+## HOTFIX RELEASE
+
+* Add ORCID icon in the correct source folder, not inst - PR [186](https://github.com/carpentries/varnish/pull/186)
+
+
 # varnish 1.0.8 [2025-12-02]
 
 ## NEW FEATURES

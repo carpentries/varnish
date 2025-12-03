@@ -1,4 +1,4 @@
-# varnish 1.0.9.9000 [2025-12-03]
+# varnish 1.0.9 [2025-12-03]
 
 ## HOTFIX RELEASE
 

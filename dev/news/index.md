@@ -1,5 +1,34 @@
 # Changelog
 
+## varnish 1.0.9.9000 \[2025-12-03\]
+
+### HOTFIX RELEASE
+
+- Add ORCID icon in the correct source folder, not inst - PR
+  [186](https://github.com/carpentries/varnish/pull/186)
+
+## varnish 1.0.8 \[2025-12-02\]
+
+### NEW FEATURES
+
+- Add ORCID icons for new Cite This Lesson pages - PR
+  [179](https://github.com/carpentries/varnish/pull/179)
+- Add parrot SVGs in place of Glosario superscript terms - PR
+  [177](https://github.com/carpentries/varnish/pull/177)
+- Add config.yaml and template support for dropdown menus to provide
+  links to multi-lingual lessons -
+  PR[175](https://github.com/carpentries/varnish/pull/175) (implemented
+  [@unode](https://github.com/unode))
+- Add support for [Mermaid
+  diagrams](https://css-tricks.com/making-mermaid-diagrams-in-markdown/) -
+  PR [125](https://github.com/carpentries/varnish/pull/125) (implemented
+  [@astroDimitrios](https://github.com/astroDimitrios))
+
+### BUG FIXES
+
+- Fix accordion underlining - PR
+  [180](https://github.com/carpentries/varnish/pull/180)
+
 ## varnish 1.0.7 \[2025-08-07\]
 
 ### NEW FEATURES

@@ -38,13 +38,13 @@ Source:
 [`DESCRIPTION`](https://github.com/carpentries/varnish/blob/main/DESCRIPTION)
 
 Davey R, Becker E, Kamvar Z (2025). *varnish: Front-end for The
-Carpentries Lesson Infrastructure*. R package version 1.0.8.9000,
+Carpentries Lesson Infrastructure*. R package version 1.0.9.9000,
 <https://carpentries.github.io/varnish/>.
 
     @Manual{,
       title = {varnish: Front-end for The Carpentries Lesson Infrastructure},
       author = {Robert Davey and Erin Becker and Zhian N. Kamvar},
       year = {2025},
-      note = {R package version 1.0.8.9000},
+      note = {R package version 1.0.9.9000},
       url = {https://carpentries.github.io/varnish/},
     }

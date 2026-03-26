@@ -26,8 +26,12 @@ $( document ).ready(function() {
         collapseToggle = $(".collapse-toggle");
         if ( sidebarVisible ) {
             collapseToggle.html(collapseToggle.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
+            collapseToggle.attr("aria-label", collapseToggle.attr("data-collapse"));
+            collapseToggle.attr("alt", collapseToggle.attr("data-collapse"));
         } else {
             collapseToggle.html(collapseToggle.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
+            collapseToggle.attr("aria-label", collapseToggle.attr("data-episodes"));
+            collapseToggle.attr("alt", collapseToggle.attr("data-episodes"));
         }
     } else {
         $(".collapse-toggle").html(feather.icons['x'].toSvg());
@@ -255,6 +259,8 @@ function showSidebarDesktop(){
     $primaryContent.attr('class', "col-xl-8 primary-content");
     $sidebarInner.css('visibility', 'visible');
     $collapseToggle.html($collapseToggle.attr("data-collapse") + feather.icons['chevron-left'].toSvg());
+    $collapseToggle.attr("aria-label", $collapseToggle.attr("data-collapse"));
+    $collapseToggle.attr("alt", $collapseToggle.attr("data-collapse"));
     $sidebar.attr('aria-hidden', 'false');
     $collapseToggle.attr('aria-expanded', 'true');
     $sidebar.show();
@@ -276,6 +282,8 @@ function hideSidebarDesktop(){
     var $collapseToggle = $('.collapse-toggle');
     $sidebarInner.css('visibility', 'hidden');
     $collapseToggle.html($collapseToggle.attr("data-episodes") + feather.icons['chevron-right'].toSvg());
+    $collapseToggle.attr("aria-label", $collapseToggle.attr("data-episodes"));
+    $collapseToggle.attr("alt", $collapseToggle.attr("data-episodes"));
     // resize primary content before sidebar col
     // when the primary content adjusts its size, the vertical content shrinks
     // and we need to account fo that.

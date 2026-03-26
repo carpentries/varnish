@@ -42,7 +42,7 @@ will install in the _`node_modules/`_ directory and will be ignored by git)
 with the following command:
 
 ```sh
-nvm install 16 # make sure we are using node version 16
+nvm install 24 # make sure we are using node version 24
 npm install    # install the packages defined in package.json
 ```
 

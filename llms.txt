@@ -49,7 +49,7 @@ Once you have `nvm` installed, you can install the node packages locally
 ignored by git) with the following command:
 
 ``` sh
-nvm install 16 # make sure we are using node version 16
+nvm install 24 # make sure we are using node version 24
 npm install    # install the packages defined in package.json
 ```
 

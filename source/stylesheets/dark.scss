@@ -158,6 +158,15 @@ $color-mode-type: data;
   p {
     color: $off-white;
   }
+  .callout-content p {
+    color: $bright-white;
+    background-color: $dark-grey;
+  }
+  .callout-content a {
+    color: $powder-blue;
+  }
+
+
   a {
     color: $light-blue;
     text-decoration: none;
@@ -213,7 +222,7 @@ $color-mode-type: data;
     background: var(--bs-light-border-subtle);
   }
   .callout-inner {
-    background: var(--bs-tertiary-bg);
+    background: $dark-grey;
   }
   .callout-header {
     color: $off-white;

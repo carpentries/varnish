@@ -4,7 +4,7 @@
   // View selector
   display: block;
   float: left;
-  width: 65px;
+  /* width: 65px; */
   button {
     .feather {
       margin-right: 0px;
@@ -53,7 +53,7 @@
   .dropdown-menu .dropdown-item.active {
     color: #fff;
     background-color: shade-color($bright-blue, 20%);
-    text-decoration: none; 
+    text-decoration: none;
     .bi {
       opacity: 100%;
       fill: #fff;

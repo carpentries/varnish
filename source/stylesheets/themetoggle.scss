@@ -1,5 +1,5 @@
 // Div styling for theme toggle
-#theme-selector {
+.theme-selector {
   // Float next to Leaner/Instructor
   // View selector
   display: block;
@@ -27,7 +27,7 @@
 }
 
 // Theme dropdown list styling
-#theme-button-list {
+.theme-button-list {
   display: block;
   margin-top: 0px;
   margin-right: 0px;
@@ -67,7 +67,7 @@
 // Styling for when the toggle is
 // a part of the phone sreen sidebar
 @include media-breakpoint-down(md) {
-  #theme-selector {
+  .theme-selector {
     width: 80px;
     // Icon the same size as
     // the eye below it & line up text

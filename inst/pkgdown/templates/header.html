@@ -67,8 +67,8 @@
       </div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu">
+        <li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
                   id="bd-theme"
                   type="button"
@@ -103,7 +103,7 @@
             </li>
           </ul>
         </li>
-      </div>
+    </menu>
       {{! NOTE: the language section will likely need to be generated on {sandpaper}, so we are not going to translate this now. }}
       {{#yaml}}{{#language}}
       <div class="dropdown">
@@ -241,18 +241,16 @@
   </div><!--/div.container-fluid -->
 </nav>
 
-<div class="col-md-12 mobile-title">
-  {{# site }}{{& title }}{{/ site }}
-</div>
-
 {{^overview}}
+{{#progress}}
 <aside class="col-md-12 lesson-progress">
   <div style="width: {{progress}}%" class="percentage">
     {{progress}}%
   </div>
   <div class="progress {{#yaml}}{{carpentry_icon}}{{/yaml}}">
-    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-label="{{ translate.LessonProgress }}" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" aria-label="{{ translate.LessonProgress }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progress}}" style="width: {{progress}}%">
     </div>
   </div>
 </aside>
+{{/progress}}
 {{/overview}}

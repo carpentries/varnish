@@ -4,3 +4,4 @@
 #= require vendor/feather-icons/feather
 #= require custom/menu
 #= require custom/tabs
+#= require custom/codeblocks

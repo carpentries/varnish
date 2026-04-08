@@ -242,7 +242,11 @@ figcaption {
 }
 
 .mermaid-img-wrapper {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-color: $light-gray;
+  border-width: 1px;
+  border-style: solid;
+
   // No gap between the figcaption
   // and the details dropdown
   figure {

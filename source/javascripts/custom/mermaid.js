@@ -6,12 +6,20 @@
       // Put the Mermaid contents in the expected <div class="mermaid">
       // plus keep the original contents in a nice <details>
       // Add a fig caption based on the accessible description
-      var figcaption
+      var figtitle
       try {
-        figcaption = $el.textContent.split('accDescr {')[1].split('}')[0]
+        figtitle = $el.textContent.split('accTitle: {')[1].split('}')[0]
       }
       catch (err) {
-        figcaption = "Please enter an accessible description."
+        figtitle = "Please enter an accessible title using 'accTitle'."
+      }
+
+      var figdesc
+      try {
+        figdesc = $el.textContent.split('accDescr: {')[1].split('}')[0]
+      }
+      catch (err) {
+        figdesc = "Please enter an accessible description using 'accDescr'."
       }
       var overflow_style
       if ($el.textContent.includes('overflow')) {
@@ -25,7 +33,10 @@
             <div class="mermaid"${overflow_style}>
             ${$el.textContent}
             </div>
-            <figcaption>${figcaption}</figcaption>
+            <figcaption>
+              <b>${figtitle}</b><br/>
+              <i>${figdesc}</i>
+            </figcaption>
           </figure>
           <details>
             <summary>Diagram source code</summary>

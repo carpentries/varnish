@@ -197,15 +197,19 @@ $color-mode-type: data;
   }
   figcaption {
     border-top: 1px solid $off-white;
-    background: var(--bs-tertiary-bg);
+    background: $dark-grey;
   }
   .mermaid-img-wrapper {
     figcaption {
       border-top: 1px solid $off-white;
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
     }
     details {
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
+
+      pre {
+        color: $off-white;
+      }
     }
   }
   .bottom-pagination {
@@ -640,7 +644,7 @@ $color-mode-type: data;
 
 // From sidenav.scss
   .sidebar {
-    background: var(--bs-tertiary-bg);
+    background: $dark-grey;
     color: $off-white;
     a {
       color: $off-white;
@@ -675,13 +679,13 @@ $color-mode-type: data;
   }
 
   .sidebar-collapsed {
-    background: var(--bs-tertiary-bg);
+    background: $dark-grey;
   }
 
 // Dark mode syntax highlighting
 // Adapted from pkgdown version 2.0.7 (c) RStudio 2024
   pre .img img, pre .r-plt img {
-    background-color: var(--bs-tertiary-bg);
+    background-color: $dark-grey;
   }
 
   code {

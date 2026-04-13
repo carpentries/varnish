@@ -2,4 +2,5 @@
 node_modules/*
 docs
 *.code-workspace
+**/*.DS_Store
 

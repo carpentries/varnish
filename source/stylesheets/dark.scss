@@ -49,14 +49,6 @@ $color-mode-type: data;
     filter: invert(1) hue-rotate(180deg) brightness(90%) saturate(90%);
   }
 
-  // Convert any logo to off white
-  .large-logo > img {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
-  }
-
-  .small-logo {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(52deg) brightness(105%) contrast(101%);
-  }
 
   // Darken alpha, beta etc. buttons
   .text-bg-danger {

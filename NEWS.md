@@ -18,6 +18,7 @@
   
 ## MAINTENANCE
 
+* Update MathJax from v2 to v4 to fix accessibility issues and be more up to date
 * Update README to state node24 should be installed
 
 ## MISC

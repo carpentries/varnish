@@ -1,6 +1,6 @@
 Package: varnish
 Title: Front-end for The Carpentries Lesson Infrastructure
-Version: 1.0.9
+Version: 1.1.0
 Authors@R: c(
     person(given = "Robert",
            family = "Davey",
@@ -56,6 +56,9 @@ Authors@R: c(
     person(given = "Sheargrub",
            role = c("ctb"),
            email = "sheargrub@gmail.com"),
+    person(given = "Jose Niño Muriel",
+           role = c("ctb"),
+           email = "jose_nino@ucsb.edu"),
     person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.

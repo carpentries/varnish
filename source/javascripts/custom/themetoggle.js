@@ -37,11 +37,6 @@
           var imgExt = imgSrc.slice((Math.max(0, imgSrc.lastIndexOf(".")) || Infinity) + 1);
           var newImgSrc = imgName + "-dark." + imgExt
           img.src = newImgSrc;
-          img.onerror = function() {
-            this.onerror = null;
-            this.src = imgSrc;
-            this.classList.add('dark-filter')
-          }
         }
       }
     })

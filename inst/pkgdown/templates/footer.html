@@ -33,7 +33,7 @@
         {{#yaml}}{{#license}}
         <p>{{& translate.MaterialsLicensedUnder }}.</p>
         {{/license}}{{/yaml}}
-        <p>{{& translate.TemplateLicense }}</p>
+        <p>{{& translate.TemplateLicense }} Custom fork by <a href="https://www.melbournebioinformatics.org.au/">Melbourne Bioinformatics</a>.</p>
         <p>{{& translate.BuiltWith }}</p>
 		</div>
 		</footer>
@@ -52,6 +52,9 @@
   {{/json}}
 	<script>
 		feather.replace();
+		document.querySelectorAll('footer p').forEach(function(p) {
+			p.innerHTML = p.innerHTML.replace(/\bvarnish\b/g, 'uom-varnish');
+		});
 	</script>
 
   {{#analytics}}

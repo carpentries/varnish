@@ -1,5 +1,5 @@
 Package: varnish
-Title: Front-end for The Carpentries Lesson Infrastructure
+Title: University of Melbourne Fork of The Carpentries Lesson Infrastructure
 Version: 1.1.0
 Authors@R: c(
     person(given = "Robert",
@@ -61,7 +61,10 @@ Authors@R: c(
            email = "jose_nino@ucsb.edu"),
     person()
     )
-Description: This package does nothing but contain template HTML CSS and JS files.
+Description: Melbourne Bioinformatics fork of the varnish package from The Carpentries
+    Workbench. Contains template HTML, CSS, and JS files adapted with University of
+    Melbourne branding. Package name kept as 'varnish' for compatibility with downstream
+    sandpaper-based lesson repositories.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

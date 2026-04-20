@@ -12,6 +12,13 @@ Melbourne [brand toolkit](https://brandhub.unimelb.edu.au/).
 Additionally, relevant additional links to training resources have been included
 in the footer.
 
+## Release cycle
+
+This fork maintains its own release cycle independent of the upstream
+[{varnish}](https://github.com/carpentries/varnish) package. We aim to track
+upstream releases as closely as practical, incorporating relevant upstream
+changes while preserving University of Melbourne branding and customisations.
+
 The html templates use [mustache templating
 language](https://mustache.github.io/mustache.5.html) while the CSS and
 JavaScript are compiled and minified on GitHub Actions.

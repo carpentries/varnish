@@ -44,12 +44,6 @@ $color-mode-type: data;
 // existing light themed sass file - these
 // are solely for a dark mode
 
-  // Darken any images and desaturate
-  img.dark-filter {
-    filter: invert(1) hue-rotate(180deg) brightness(90%) saturate(90%);
-  }
-
-
   // Darken alpha, beta etc. buttons
   .text-bg-danger {
     // var(--bs-danger-border-subtle) tinted

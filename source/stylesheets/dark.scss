@@ -375,7 +375,7 @@ $color-mode-type: data;
       border-color: $black;
     }
     .accordion-body {
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
     }
     h2 {
       border-left: 10px shade-color($yellow, 50%) solid;
@@ -659,13 +659,13 @@ $color-mode-type: data;
       }
     }
     .accordion-body {
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
     }
     .accordion-item {
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
     }
     .accordion-button {
-      background: var(--bs-tertiary-bg);
+      background: $dark-grey;
       &:hover {
         color: var(--bs-link-hover-color);
         text-decoration: underline;

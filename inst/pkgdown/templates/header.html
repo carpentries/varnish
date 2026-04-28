@@ -147,7 +147,6 @@
       </div>
     </div>
   </div>
-  <hr />
 </header>
 <nav class="navbar navbar-expand-xl bottom-nav {{#yaml}}{{carpentry_icon}}{{/yaml}}" aria-label="{{ translate.MainNavigation }}">
   <div class="container-fluid nav-container">
@@ -244,12 +243,8 @@
 {{^overview}}
 {{#progress}}
 <aside class="col-md-12 lesson-progress">
-  <div style="width: {{progress}}%" class="percentage">
-    {{progress}}%
-  </div>
-  <div class="progress {{#yaml}}{{carpentry_icon}}{{/yaml}}">
-    <div class="progress-bar {{#yaml}}{{carpentry_icon}}{{/yaml}}" role="progressbar" aria-label="{{ translate.LessonProgress }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{progress}}" style="width: {{progress}}%">
-    </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{progress}}%" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ translate.Progress }}">{{progress}}%</div>
   </div>
 </aside>
 {{/progress}}

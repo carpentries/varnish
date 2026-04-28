@@ -480,10 +480,11 @@ $color-mode-type: data;
   }
 
   .progress {
-    background: tint-color($dark-blue, 10%);
+    background: $dark-grey;
   }
   .progress-bar {
-    background: shade-color($light-blue, 20%);
+    background: shade-color($light-gray, 20%);
+    color: $dark-grey;
   }
   .progress.library {
     background: tint-color($red, 20%);
@@ -504,7 +505,7 @@ $color-mode-type: data;
     background: shade-color($light-purple, 40%);
   }
   .lesson-progress {
-    background: var(--bs-tertiary-bg);
+    background: $black;
   }
 
   .nav-container {

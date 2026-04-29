@@ -1,3 +1,11 @@
+# varnish 1.1.1.9000 []
+
+## HOTFIX RELEASE
+
+* Fix sidebar background colour
+* Improve the header to tidy it up, and improve the look and feel of the progress bar.
+
+
 # varnish 1.1.0 [2026-04-15]
 
 ## ACCESSIBILITY

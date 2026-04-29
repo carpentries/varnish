@@ -264,6 +264,14 @@ nav.lesson-content {
   text-overflow: ellipsis;
 }
 
+a[rel="prev"].chapter-link {
+  margin-left: 8px;
+}
+
+a[rel="next"].chapter-link {
+  margin-right: 15px;
+}
+
 .chapter-link:hover{
   text-decoration-thickness: 2px;
 }
@@ -444,6 +452,14 @@ nav.lesson-content {
     align-items: center;
     text-align:right;
   }
+
+  a[rel="prev"].chapter-link {
+    margin-left: -17px;
+  }
+
+  a[rel="next"].chapter-link {
+    margin-right: -10px;
+  }
 }
 
 @include media-breakpoint-up(xl) {
@@ -529,5 +545,13 @@ nav.lesson-content {
 
   .tablet-search-button {
     margin-right: 20px;
+  }
+
+  a[rel="prev"].chapter-link {
+    margin-left: -17px;
+  }
+
+  a[rel="next"].chapter-link {
+    margin-right: -10px;
   }
 }

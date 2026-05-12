@@ -21,6 +21,7 @@ repository](https://carpentries.r-universe.dev), which is updated
 hourly.
 
 ``` r
+
 install.packages("varnish", repos = "https://carpentries.r-universe.dev")
 ```
 

@@ -1,3 +1,8 @@
+nav.lesson-content {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 .bottom-nav {
   border-top: 45px solid $dark-blue;
   padding-bottom: 5px;
@@ -44,23 +49,28 @@
 
 .percentage {
   text-align: right;
-  position: relative;
-  top: 5px;
-  right: -20px;
+  position: sticky;
+  padding-left: 10px;
   color: $black;
 }
 
 .progress {
   background: $very-light-blue;
-  border-radius: 20px;
-  margin: 10px;
-  height: 5px;
+  margin-left: 28px;
+  margin-right: 12px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .progress-bar {
   background: $dark-blue;
   border-radius: 20px;
   height:5px;
+  padding: 10px;
 }
 
 .progress.library {
@@ -88,10 +98,9 @@
 }
 
 .lesson-progress {
-  background: $light-gray;
-  padding: 25px;
-  margin-bottom: 25px;
-  padding-top: 5px;
+//   background: $light-gray;
+//   padding: 25px;
+//   padding-top: 5px;
 }
 
 .nav-container {
@@ -255,6 +264,14 @@
   text-overflow: ellipsis;
 }
 
+a[rel="prev"].chapter-link {
+  margin-left: 8px;
+}
+
+a[rel="next"].chapter-link {
+  margin-right: 15px;
+}
+
 .chapter-link:hover{
   text-decoration-thickness: 2px;
 }
@@ -366,10 +383,10 @@
     font-size: 24px;
     line-height: 40px;
     position: absolute;
-    padding-left: 80px;
     margin-bottom: 30px;
     margin-top: 25px;
     margin-right: 200px;
+    margin-left: 85px;
   }
 
   // Top border and match the
@@ -434,6 +451,14 @@
     display: flex;
     align-items: center;
     text-align:right;
+  }
+
+  a[rel="prev"].chapter-link {
+    margin-left: -17px;
+  }
+
+  a[rel="next"].chapter-link {
+    margin-right: -10px;
   }
 }
 
@@ -514,11 +539,19 @@
     margin-left: -25px;
   }
   .progress {
-    margin-left: 65px;
-    margin-right: 65px;
+    margin-left: 67px;
+    margin-right: 52px;
   }
 
   .tablet-search-button {
     margin-right: 20px;
+  }
+
+  a[rel="prev"].chapter-link {
+    margin-left: -17px;
+  }
+
+  a[rel="next"].chapter-link {
+    margin-right: -10px;
   }
 }

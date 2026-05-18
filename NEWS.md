@@ -1,9 +1,11 @@
-# varnish 1.1.1.9000 []
+# varnish 1.1.1 [2026-05-19]
 
 ## HOTFIX RELEASE
 
 * Fix sidebar background colour
-* Improve the header to tidy it up, and improve the look and feel of the progress bar.
+* Improve the lesson header to tidy it up, and improve the look and feel of the progress bar
+* Remove accDescr property in figure caption, and retain in the mermaid desc property
+  PR [217](https://github.com/carpentries/varnish/pull/217) (reported @bielsnohr #189)
 
 
 # varnish 1.1.0 [2026-04-15]

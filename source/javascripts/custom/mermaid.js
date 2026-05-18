@@ -19,7 +19,7 @@
         figdesc = $el.textContent.split('accDescr: {')[1].split('}')[0]
       }
       catch (err) {
-        figdesc = "Please enter an accessible description using 'accDescr'."
+        console.log("WARNING: Please enter an accessible description using 'accDescr' for your mermaid diagrams.")
       }
       var overflow_style
       if ($el.textContent.includes('overflow')) {
@@ -34,8 +34,7 @@
             ${$el.textContent}
             </div>
             <figcaption>
-              <b>${figtitle}</b><br/>
-              <i>${figdesc}</i>
+              <b>${figtitle}</b>
             </figcaption>
           </figure>
           <details>

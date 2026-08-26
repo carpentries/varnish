@@ -1,3 +1,11 @@
+# varnish 1.1.2 [2026-08-26]
+
+## MAINTENANCE
+
+* Add ellipsis to prev/next breadcrumbs
+* Bump various dependencies
+
+
 # varnish 1.1.1 [2026-05-19]
 
 ## HOTFIX RELEASE

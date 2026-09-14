@@ -120,7 +120,7 @@ nav.lesson-content {
 .navbar-toggler {
   float: left;
   color: $black;
-  margin-left: 17px;
+  margin-left: 40px;
 }
 
 .nav-item button {
@@ -134,11 +134,11 @@ nav.lesson-content {
 
 .menu-title {
   padding-top: 5px;
+  display: none;
 }
 
 .nav-logo {
   position: absolute;
-  left: 50%;
   top: 20%;
   bottom: 43.66%;
 }
@@ -189,8 +189,8 @@ nav.lesson-content {
   font-family: $default_font;
   font-style: normal;
   font-weight: 800;
-  font-size: 18px;
-  margin-left: 140px;
+  font-size: 1.15rem;
+  margin-left: 105px;
 }
 
 
@@ -235,6 +235,14 @@ nav.lesson-content {
 .searchbox {
   width: 100%;
   display: none;
+}
+
+#search-button-nav {
+  display: none;
+}
+
+#search-button-sidebar {
+  display: block;
 }
 
 .tablet-search {
@@ -326,6 +334,14 @@ a[rel="next"].chapter-link {
 
   .search-form {
     margin-right: 20px;
+  }
+
+  #search-button-nav {
+    display: block;
+  }
+
+  #search-button-sidebar {
+    display: none;
   }
 
   .tablet-search {
@@ -469,6 +485,14 @@ a[rel="next"].chapter-link {
   }
 
   .lesson-resources-side {
+    display: none;
+  }
+
+  #search-button-nav {
+    display: block;
+  }
+
+  #search-button-sidebar {
     display: none;
   }
 

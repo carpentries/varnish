@@ -63,6 +63,17 @@
         </abbr>
         {{/doi}}
         {{/stable}}
+        {{#retired}}
+        <span class ="badge text-bg-secondary">
+          <abbr title="{{ translate.RetiredNote }}">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              {{ translate.iRetired }}
+            </a>
+            <span class="visually-hidden">{{ translate.RetiredNote }}</span>
+          </abbr>
+        </span>
+        {{/retired}}
         {{/life_cycle}}{{/yaml}}
       </div>
     </div>

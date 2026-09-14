@@ -86,6 +86,7 @@
         {{/instructor}}
                   </div><!--/div.accordion-item-->
                 </div><!--/div.accordion-flush-->
+
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
       {{#yaml}}{{#language}}
@@ -132,6 +133,52 @@
 
             <hr class="half-width"/>
 
+            <div class="accordion accordion-flush" id="accordion-links-toggle">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-links-toggle">
+                  <button class="accordion-button {{^overview}}collapsed{{/overview}}{{#overview}}show{{/overview}}" id="links" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-links-toggle" aria-expanded="false" aria-controls="flush-collapse-links-toggle">
+                    LINKS
+                  </button>
+                </h2>
+                <div id="flush-collapse-links-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-links-toggle">
+                    <div class="accordion-body">
+                        <ul>
+                            {{#instructor}}
+                            {{^overview}}
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}instructor/key-points.html">{{ translate.KeyPoints }}</a>
+                            </li>
+                            {{/overview}}
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">{{ translate.InstructorNotes }}</a>
+                            </li>
+                            {{^overview}}
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}instructor/images.html">{{ translate.ExtractAllImages }}</a>
+                            </li>
+                            {{/overview}}
+                            {{/instructor}}
+                            {{^instructor}}
+                            {{^overview}}
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}key-points.html">{{ translate.KeyPoints }}</a>
+                            </li>
+                            {{/overview}}
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">{{ translate.Glossary }}</a>
+                            </li>
+                            <li>
+                            <a href="{{#site}}{{root}}{{/site}}profiles.html">{{ translate.LearnerProfiles }}</a>
+                            </li>
+                            {{/instructor}}
+                        </ul>
+                    </div>
+                </div>
+                </div><!--/div.accordion-item-->
+            </div><!--/div.accordion-flush-->
+
+            <hr class="half-width"/>
+
             {{#resources}}
             <div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
@@ -150,34 +197,6 @@
                         <a href="index.html#setup">{{ translate.Setup }}</a>
                       </li>
                       {{/overview}}
-                      {{#instructor}}
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/key-points.html">{{ translate.KeyPoints }}</a>
-                      </li>
-                      {{/overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/instructor-notes.html">{{ translate.InstructorNotes }}</a>
-                      </li>
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}instructor/images.html">{{ translate.ExtractAllImages }}</a>
-                      </li>
-                      {{/overview}}
-                      {{/instructor}}
-                      {{^instructor}}
-                      {{^overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}key-points.html">{{ translate.KeyPoints }}</a>
-                      </li>
-                      {{/overview}}
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}reference.html#glossary">{{ translate.Glossary }}</a>
-                      </li>
-                      <li>
-                        <a href="{{#site}}{{root}}{{/site}}profiles.html">{{ translate.LearnerProfiles }}</a>
-                      </li>
-                      {{/instructor}}
                       {{{resources}}}
                     </ul>
                   </div>

@@ -18,7 +18,9 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
+        <a href="index.html">
         <img id="{{#yaml}}{{carpentry}}{{/yaml}}-logo" alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo.svg{{/yaml}}">
+        </a>
         {{#yaml}}{{#life_cycle}}
         {{#pre_alpha}}
         <span class ="badge text-bg-danger">
@@ -166,7 +168,9 @@
       <span class="menu-title">{{ translate.Menu }}</span>
     </button>
     <div class="nav-logo">
+      <a href="index.html">
       <img class="small-logo" alt="{{#yaml}}{{carpentry_name}}{{/yaml}}" src="{{#site}}{{root}}{{/site}}assets/images/{{#yaml}}{{carpentry_icon}}-logo-sm.svg{{/yaml}}">
+      </a>
     </div>
     <div class="lesson-title-md">
       {{# site }}{{& title }}{{/ site }}

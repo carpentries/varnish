@@ -16,6 +16,10 @@ nav.lesson-content {
   border-top: 45px solid $dark-green;
 }
 
+.bottom-nav.high-performance-computing {
+  border-top: 45px solid $brown;
+}
+
 .bottom-nav.library{
   border-top: 45px solid $red;
 }
@@ -73,20 +77,28 @@ nav.lesson-content {
   padding: 10px;
 }
 
-.progress.library {
-  background: $light-red;
-}
-
-.progress-bar.library {
-  background: $red;
-}
-
 .progress.data {
   background: $light-green;
 }
 
 .progress-bar.data {
   background: $dark-green;
+}
+
+.progress.high-performance-computing {
+  background: $orange;
+}
+
+.progress-bar.high-performance-computing {
+  background: $brown;
+}
+
+.progress.library {
+  background: $light-red;
+}
+
+.progress-bar.library {
+  background: $red;
 }
 
 .progress.software {
@@ -315,7 +327,7 @@ a[rel="next"].chapter-link {
     box-shadow: 0px 0px 10px 10px white;
   }
 
-  .bottom-nav.data, .bottom-nav.library, .bottom-nav.carpentries, .bottom-nav.software {
+  .bottom-nav.data, .bottom-nav.high-performance-computing, .bottom-nav.library, .bottom-nav.software, .bottom-nav.carpentries {
     border: none;
   }
 
@@ -420,16 +432,22 @@ a[rel="next"].chapter-link {
       border-color: $dark-green;
     }
   }
-  .top-nav.software {
-    border-top: 22px solid $dark-purple;
+    .top-nav.high-performance-computing {
+    border-top: 22px solid $brown;
     .peer-reviewed {
-      border-color: $dark-purple;
+      border-color: $brown;
     }
   }
   .top-nav.library {
     border-top: 22px solid $red;
     .peer-reviewed {
       border-color: $red;
+    }
+  }
+  .top-nav.software {
+    border-top: 22px solid $dark-purple;
+    .peer-reviewed {
+      border-color: $dark-purple;
     }
   }
 

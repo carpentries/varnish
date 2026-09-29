@@ -1,3 +1,11 @@
+# varnish 1.1.3 [2026-09-29]
+
+## IMPROVEMENTS
+
+* Add HPC Carpentry lesson support and styling
+* Fix navbar and sidebar styling for small screens
+
+
 # varnish 1.1.2 [2026-08-26]
 
 ## MAINTENANCE

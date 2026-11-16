@@ -34,19 +34,22 @@
 
 - **Jose Niño Muriel**. Contributor.
 
+- **Matthew Feickert**. Contributor.
+  [](https://orcid.org/0000-0003-4124-7862)
+
 ## Citation
 
 Source:
 [`DESCRIPTION`](https://github.com/carpentries/varnish/blob/main/DESCRIPTION)
 
 Davey R, Becker E, Kamvar Z (2026). *varnish: Front-end for The
-Carpentries Lesson Infrastructure*. R package version 1.1.3,
+Carpentries Lesson Infrastructure*. R package version 1.1.4,
 <https://carpentries.github.io/varnish/>.
 
     @Manual{,
       title = {varnish: Front-end for The Carpentries Lesson Infrastructure},
       author = {Robert Davey and Erin Becker and Zhian N. Kamvar},
       year = {2026},
-      note = {R package version 1.1.3},
+      note = {R package version 1.1.4},
       url = {https://carpentries.github.io/varnish/},
     }

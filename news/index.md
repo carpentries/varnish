@@ -1,5 +1,15 @@
 # Changelog
 
+## varnish 1.1.4 \[2026-11-16\]
+
+### IMPROVEMENTS
+
+- Fix list element bullet point rendering in callouts (reported
+  [\#238](https://github.com/carpentries/varnish/issues/238), fixed
+  [@matthewfeickert](https://github.com/matthewfeickert)
+  [239](https://github.com/carpentries/varnish/pull/239))
+- Various dependency updates
+
 ## varnish 1.1.3 \[2026-09-29\]
 
 ### IMPROVEMENTS
